@@ -1,0 +1,1602 @@
+{
+	"products":[
+	{
+    "Item_Number":"CM15138",
+    "Item_Image":["17-inch-LCD-Monitor-LM1778.jpg","Monitor-2.jpg","Monitor-3.jpg"],
+    "Item_List_Price":322.00,
+    "Item_Id":247,
+    "Org_Id":204,
+    "Uom_Code":"Ea",
+    "Category_Name":"Monitors",
+    "Item_Description":"Monitor - 17\"",
+    "Item_Feature":"The Flat Panel Monitor delivers high resolutions and business-class quality in a 17-inch flat panel monitor at a highly competitive price.\n\nDisplay LiteSaver feature allows you to schedule Sleep mode at preset times to help protect the monitor against image retention, drastically lower power consumption and energy costs, and extend the lifespan of the monitor.",
+    "Item_Specification":"",
+    "Item_Related_Product_id":[
+				{
+					"category":"CTO items",
+					"id":"189",				
+					"name":"CM47234",
+					"description":"DVD-ROM - 12X",
+					"img":"DVD-ROM-12X.jpg"
+				},
+				{
+					"category":"Processor Speeds",
+					"id":"4743",				
+					"name":"CM38120",
+					"description":"CPU - 3.0GHz",
+					"img":"CPU-2.2GHz.jpg"
+				},
+				{
+					"category":"Memory/Hard Disk",
+					"id":"4751",				
+					"name":"CM41520",
+					"description":"Hard Drive - 500GB",
+					"img":"harddisk-1.jpg"
+				}
+	]
+  },
+  {
+    "Item_Number":"CM15140",
+    "Item_Image":["17-inch-LCD-Monitor-LM1778.jpg","Monitor-2.jpg","Monitor-3.jpg"],
+    "Item_List_Price":447.00,
+    "Item_Id":225,
+    "Org_Id":204,
+    "Uom_Code":"Ea",
+    "Category_Name":"Monitors",
+    "Item_Description":"Monitor - 19\"",
+    "Item_Feature":"The Flat Panel Monitor delivers high resolutions and business-class quality in a 19-inch flat panel monitor at a highly competitive price.\n\nDisplay LiteSaver feature allows you to schedule Sleep mode at preset times to help protect the monitor against image retention, drastically lower power consumption and energy costs, and extend the lifespan of the monitor.",
+    "Item_Specification":"",
+    "Item_Related_Product_id":[
+				{
+					"category":"Processor Speeds",
+					"id":"4737",				
+					"name":"CM38060",
+					"description":"CPU - 2.2GHz",
+					"img":"CPU-2.2GHz.jpg"
+				},
+				{
+					"category":"Processor Speeds",
+					"id":"4743",				
+					"name":"CM38120",
+					"description":"CPU - 3.0GHz",
+					"img":"CPU-2.2GHz.jpg"
+				},
+				{
+					"category":"PC Cases",
+					"id":"4731",				
+					"name":"SB86666",
+					"description":"Tower Case - Mid",
+					"img":"Tower-Case-Mid.jpg"
+				},				
+				{
+					"category":"Memory/Hard Disk",
+					"id":"4749",				
+					"name":"CM41420",
+					"description":"Hard Drive - 40GB",
+					"img":"harddisk-1.jpg"
+				}
+	]
+  },
+  {
+    "Item_Number":"CM31556",
+    "Item_Image":[
+    "17-inch-LCD-Monitor-LM1778.jpg",
+    "Monitor-2.jpg",
+    "Monitor-3.jpg"
+    ],
+    "Item_List_Price":801.00,
+    "Item_Id":199,
+    "Org_Id":204,
+    "Uom_Code":"Ea",
+    "Category_Name":"Monitors",
+    "Item_Description":"Monitor - 19\" Flat",
+    "Item_Feature":"Slim, sleek, lightweight design offers portability and flexibility in places where space constraints are a critical issue.\n\nDisplay LiteSaver feature allows you to schedule Sleep mode at preset times to help protect the monitor against image retention, drastically lower power consumption and energy costs, and extend the lifespan of the monitor.",
+    "Item_Specification":"",
+    "Item_Related_Product_id":[
+				{
+					"category":"Mouse",
+					"id":"213",				
+					"name":"CM28287",
+					"description":"Optiball Wireless Mouse",
+					"img":"wireless-mouse.jpg"
+				},
+				{
+					"category":"Processor Speeds",
+					"id":"4743",				
+					"name":"CM38120",
+					"description":"CPU - 3.0GHz",
+					"img":"CPU-2.2GHz.jpg"
+				},
+				{
+					"category":"PC Cases",
+					"id":"175",				
+					"name":"SB86662",
+					"description":"Desktop Case",
+					"img":"Desktop-Case.jpg"
+				},				
+				{
+					"category":"Memory/Hard Disk",
+					"id":"4751",				
+					"name":"CM41520",
+					"description":"Hard Drive - 500GB",
+					"img":"harddisk-1.jpg"
+				}
+	]
+  },
+  {
+    "Item_Number":"CM28287",
+    "Item_Image":[
+    "wireless-mouse.jpg",
+    "mouse-2.jpg",
+    "mouse-3.jpg"
+    ],  
+    "Item_List_Price":43.00,
+    "Item_Id":213,
+    "Org_Id":204,
+    "Uom_Code":"Ea",
+    "Category_Name":"Mouse",
+    "Item_Description":"Optiball Wireless Mouse",
+    "Item_Feature":"Advanced optical tracking; smooth scroll wheel with tilt navigation; contoured shape; textured rubber grips; smart sleep mode; USB interface",
+    "Item_Specification":"",
+        "Item_Related_Product_id":[
+				{
+					"category":"Monitors",
+					"id":"199",				
+					"name":"CM31556",
+					"description":"Monitor - 19\" Flat",
+					"img":"17-inch-LCD-Monitor-LM1778.jpg"
+				},
+				{
+					"category":"CTO items",
+					"id":"245",				
+					"name":"CM99105",
+					"description":"RAM - 64MB",
+					"img":"ram-ch.jpg"
+				},			
+				{
+					"category":"Memory/Hard Disk",
+					"id":"4747",				
+					"name":"CM41020",
+					"description":"Hard Drive - 120GB",
+					"img":"harddisk-1.jpg"
+				},
+				{
+					"category":"Processor Speeds",
+					"id":"4743",				
+					"name":"CM38120",
+					"description":"CPU - 3.0GHz",
+					"img":"CPU-2.2GHz.jpg"
+				}
+	]
+  },
+  {
+    "Item_Number":"CM08512",
+    "Item_Image":[
+    "ram-ch.jpg",
+    "ram-2.jpg",
+    "ram-3.jpg"
+    ],
+    "Item_List_Price":250.00,
+    "Item_Id":4725,
+    "Org_Id":204,
+    "Uom_Code":"Ea",
+    "Category_Name":"CTO items",
+    "Item_Description":"RAM - 512MB",
+    "Item_Feature":"Guaranteed Compatible for the Laptops\nSpeed up your system with up to 1.0GB of Memory!\nLifetime Replacement Warranty!\nWill ship the same day when ordered at or before 4pm EST! All others ship next day!",
+    "Item_Specification":"",
+    "Item_Related_Product_id":[
+				{
+					"category":"Monitors",
+					"id":"247",				
+					"name":"CM15138",
+					"description":"Monitor - 17\"",
+					"img":"17-inch-LCD-Monitor-LM1778.jpg"
+				},
+				{
+					"category":"Monitors",
+					"id":"225",				
+					"name":"CM15140",
+					"description":"Monitor - 19\"",
+					"img":"17-inch-LCD-Monitor-LM1778.jpg"
+				},
+				{
+					"category":"PC Cases",
+					"id":"4729",				
+					"name":"SB86664",
+					"description":"Tower Case - Mini",
+					"img":"Tower-Case-Mini.jpg"
+				},
+				{
+					"category":"PC Cases",
+					"id":"4731",				
+					"name":"SB86666",
+					"description":"Tower Case - Mid",
+					"img":"Tower-Case-Mid.jpg"
+				},
+				{
+					"category":"PC Cases",
+					"id":"175",				
+					"name":"SB86662",
+					"description":"Desktop Case",
+					"img":"Desktop-Case.jpg"
+				}
+	]
+  },
+  {
+    "Item_Number":"CM08830",
+    "Item_Image":[
+    "ram-ch.jpg",
+    "ram-2.jpg",
+    "ram-3.jpg"
+    ],
+    "Item_List_Price":150.00,
+    "Item_Id":251,
+    "Org_Id":204,
+    "Uom_Code":"Ea",
+    "Category_Name":"CTO items",
+    "Item_Description":"RAM - 256MB",
+    "Item_Feature":"Guaranteed Compatible for the Laptops\nSpeed up your system with up to 1.0GB of Memory!\nLifetime Replacement Warranty!\nWill ship the same day when ordered at or before 4pm EST! All others ship next day!",
+    "Item_Specification":"",
+    "Item_Related_Product_id":[
+				{
+					"category":"Memory/Hard Disk",
+					"id":"4751",				
+					"name":"CM41520",
+					"description":"Hard Drive - 500GB",
+					"img":"harddisk-1.jpg"
+				},
+				{
+					"category":"PC Cases",
+					"id":"4731",				
+					"name":"SB86666",
+					"description":"Tower Case - Mid",
+					"img":"Tower-Case-Mid.jpg"
+				},
+				{
+					"category":"Processor Speeds",
+					"id":"4743",				
+					"name":"CM38120",
+					"description":"CPU - 3.0GHz",
+					"img":"CPU-2.2GHz.jpg"
+				}
+	]
+  },
+  {
+    "Item_Number":"CM60257",
+    "Item_Image":[
+    "ram-ch.jpg",
+    "ram-2.jpg",
+    "ram-3.jpg"
+    ],
+    "Item_List_Price":115.00,
+    "Item_Id":193,
+    "Org_Id":204,
+    "Uom_Code":"Ea",
+    "Category_Name":"CTO items",
+    "Item_Description":"RAM - 128MB",
+    "Item_Feature":"Guaranteed Compatible for the Laptops\nSpeed up your system with up to 512MB of Memory!\nLifetime Replacement Warranty!\nWill ship the same day when ordered at or before 4pm EST! All others ship next day!",
+    "Item_Specification":"",
+    "Item_Related_Product_id":[
+				{
+					"category":"Memory/Hard Disk",
+					"id":"4749",				
+					"name":"CM41420",
+					"description":"Hard Drive - 40GB",
+					"img":"harddisk-1.jpg"
+				},
+				{
+					"category":"Processor Speeds",
+					"id":"4739",				
+					"name":"CM38080",
+					"description":"CPU - 2.4GHz",
+					"img":"CPU-2.2GHz.jpg"
+				},
+				{
+					"category":"Processor Speeds",
+					"id":"4737",				
+					"name":"CM38060",
+					"description":"CPU - 2.2GHz",
+					"img":"CPU-2.2GHz.jpg"
+				}
+	]
+  },
+  {
+    "Item_Number":"CM99105",
+    "Item_Image":[
+    "ram-ch.jpg",
+    "ram-2.jpg",
+    "ram-3.jpg"
+    ],
+    "Item_List_Price":72.00,
+    "Item_Id":245,
+    "Org_Id":204,
+    "Uom_Code":"Ea",
+    "Category_Name":"CTO items",
+    "Item_Description":"RAM - 64MB",
+    "Item_Feature":"Guaranteed Compatible for the Laptops\nSpeed up your system with up to 256MB of Memory!\nLifetime Replacement Warranty!\nWill ship the same day when ordered at or before 4pm EST! All others ship next day!",
+    "Item_Specification":"",
+    "Item_Related_Product_id":[
+				{
+					"category":"Monitors",
+					"id":"247",				
+					"name":"CM15138",
+					"description":"Monitor - 17\"",
+					"img":"17-inch-LCD-Monitor-LM1778.jpg"
+				},
+				{
+					"category":"Memory/Hard Disk",
+					"id":"4747",				
+					"name":"CM41020",
+					"description":"Hard Drive - 120GB",
+					"img":"harddisk-1.jpg"
+				},
+				{
+					"category":"CTO items",
+					"id":"4725",				
+					"name":"CM08512",
+					"description":"RAM - 512MB",
+					"img":"ram-ch.jpg"
+				}
+	]
+  },
+  {
+    "Item_Number":"CM13139",
+    "Item_Image":[
+    "harddisk-1.jpg",
+    "hardisk-2.jpg",
+    "hardisk-3.jpg",
+    "hardisk-4.jpg"
+    ],
+    "Item_List_Price":269.00,
+    "Item_Id":249,
+    "Org_Id":204,
+    "Uom_Code":"Ea",
+    "Category_Name":"Memory/Hard Disk",
+    "Item_Description":"Hard Drive - 8GB",
+    "Item_Feature":"Internal hard drives of 8gb having two main connections ñ one for data and another for power. The data port is a SATA interface. This interface connects to the computer's hard drive controller, which enables the drive to communicate with the motherboard.",
+    "Item_Specification":"",
+    "Item_Related_Product_id":[
+				{
+					"category":"PC Cases",
+					"id":"4731",				
+					"name":"SB86666",
+					"description":"Tower Case - Mid",
+					"img":"Tower-Case-Mid.jpg"
+				},
+				{
+					"category":"Processor Speeds",
+					"id":"4741",				
+					"name":"CM38100",
+					"description":"CPU - 2.6GHz",
+					"img":"CPU-2.2GHz.jpg"
+				},
+				{
+					"category":"CTO items",
+					"id":"4725",				
+					"name":"CM08512",
+					"description":"RAM - 512MB",
+					"img":"ram-ch.jpg"
+				},
+				{
+					"category":"Mouse",
+					"id":"213",				
+					"name":"CM28287",
+					"description":"Optiball Wireless Mouse",
+					"img":"wireless-mouse.jpg"
+				}
+	]
+  },
+  {
+    "Item_Number":"CM25287",
+    "Item_Image":[
+    "harddisk-1.jpg",
+    "hardisk-2.jpg",
+    "hardisk-3.jpg",
+    "hardisk-4.jpg"
+    ],
+    "Item_List_Price":153.00,
+    "Item_Id":241,
+    "Org_Id":204,
+    "Uom_Code":"Ea",
+    "Category_Name":"Memory/Hard Disk",
+    "Item_Description":"Hard Drive - 20GB",
+    "Item_Feature":"Internal hard drives of 20gb having two main connections ñ one for data and another for power. The data port is a SATA interface. This interface connects to the computer's hard drive controller, which enables the drive to communicate with the motherboard.",
+    "Item_Specification":"",
+    "Item_Related_Product_id":[
+				{
+					"category":"PC Cases",
+					"id":"4731",				
+					"name":"SB86666",
+					"description":"Tower Case - Mid",
+					"img":"Tower-Case-Mid.jpg"
+				},
+				{
+					"category":"Processor Speeds",
+					"id":"4741",				
+					"name":"CM38100",
+					"description":"CPU - 2.6GHz",
+					"img":"CPU-2.2GHz.jpg"
+				},
+				{
+					"category":"CTO items",
+					"id":"4725",				
+					"name":"CM08512",
+					"description":"RAM - 512MB",
+					"img":"ram-ch.jpg"
+				},
+				{
+					"category":"Mouse",
+					"id":"213",				
+					"name":"CM28287",
+					"description":"Optiball Wireless Mouse",
+					"img":"wireless-mouse.jpg"
+				},
+				{
+					"category":"PC Cases",
+					"id":"4731",				
+					"name":"SB86666",
+					"description":"Tower Case - Mid",
+					"img":"Tower-Case-Mid.jpg"
+				},
+				{
+					"category":"PC Cases",
+					"id":"175",				
+					"name":"SB86662",
+					"description":"Desktop Case",
+					"img":"Desktop-Case.jpg"
+				}
+	]
+  },
+  {
+    "Item_Number":"CM41020",
+    "Item_Image":[
+    "harddisk-1.jpg",
+    "hardisk-2.jpg",
+    "hardisk-3.jpg",
+    "hardisk-4.jpg"
+    ],
+    "Item_List_Price":90.00,
+    "Item_Id":4747,
+    "Org_Id":204,
+    "Uom_Code":"Ea",
+    "Category_Name":"Memory/Hard Disk",
+    "Item_Description":"Hard Drive - 120GB",
+    "Item_Feature":"Internal hard drives of 120gb having two main connections ñ one for data and another for power. The data port is a ATA interface. This interface connects to the computer's hard drive controller, which enables the drive to communicate with the motherboard.",
+    "Item_Specification":"",
+    "Item_Related_Product_id":[
+				{
+					"category":"PC Cases",
+					"id":"4731",				
+					"name":"SB86666",
+					"description":"Tower Case - Mid",
+					"img":"Tower-Case-Mid.jpg"
+				},
+				{
+					"category":"Processor Speeds",
+					"id":"4741",				
+					"name":"CM38100",
+					"description":"CPU - 2.6GHz",
+					"img":"CPU-2.2GHz.jpg"
+				},
+				{
+					"category":"Processor Speeds",
+					"id":"4737",				
+					"name":"CM38060",
+					"description":"CPU - 2.2GHz",
+					"img":"CPU-2.2GHz.jpg"
+				},	
+				{
+					"category":"CTO items",
+					"id":"261",				
+					"name":"CM73946",
+					"description":"CD-ROM - 48X",
+					"img":"CD-ROM-48X.jpg"
+				},
+				{
+					"category":"PC Cases",
+					"id":"4731",				
+					"name":"SB86666",
+					"description":"Tower Case - Mid",
+					"img":"Tower-Case-Mid.jpg"
+				},
+				{
+					"category":"PC Cases",
+					"id":"175",				
+					"name":"SB86662",
+					"description":"Desktop Case",
+					"img":"Desktop-Case.jpg"
+				}
+	]
+  },
+  {
+    "Item_Number":"CM41420",
+    "Item_Image":[
+    "harddisk-1.jpg",
+    "hardisk-2.jpg",
+    "hardisk-3.jpg",
+    "hardisk-4.jpg"
+    ],
+    "Item_List_Price":258.00,
+    "Item_Id":4749,
+    "Org_Id":204,
+    "Uom_Code":"Ea",
+    "Category_Name":"Memory/Hard Disk",
+    "Item_Description":"Hard Drive - 40GB",
+    "Item_Feature":"Internal hard drives of 40gb having two main connections ñ one for data and another for power. The data port is a SATA interface. This interface connects to the computer's hard drive controller, which enables the drive to communicate with the motherboard.\n",
+    "Item_Specification":"",
+    "Item_Related_Product_id":[
+				{
+					"category":"PC Cases",
+					"id":"4731",				
+					"name":"SB86666",
+					"description":"Tower Case - Mid",
+					"img":"Tower-Case-Mid.jpg"
+				},
+				{
+					"category":"Processor Speeds",
+					"id":"4741",				
+					"name":"CM38100",
+					"description":"CPU - 2.6GHz",
+					"img":"CPU-2.2GHz.jpg"
+				},
+				{
+					"category":"Processor Speeds",
+					"id":"4737",				
+					"name":"CM38060",
+					"description":"CPU - 2.2GHz",
+					"img":"CPU-2.2GHz.jpg"
+				},	
+				{
+					"category":"CTO items",
+					"id":"261",				
+					"name":"CM73946",
+					"description":"CD-ROM - 48X",
+					"img":"CD-ROM-48X.jpg"
+				},
+				{
+					"category":"PC Cases",
+					"id":"4731",				
+					"name":"SB86666",
+					"description":"Tower Case - Mid",
+					"img":"Tower-Case-Mid.jpg"
+				},
+				{
+					"category":"PC Cases",
+					"id":"175",				
+					"name":"SB86662",
+					"description":"Desktop Case",
+					"img":"Desktop-Case.jpg"
+				}
+	]
+  },
+  {
+    "Item_Number":"CM41520",
+    "Item_Image":[
+    "harddisk-1.jpg",
+    "hardisk-2.jpg",
+    "hardisk-3.jpg",
+    "hardisk-4.jpg"
+    ],
+    "Item_List_Price":845.00,
+    "Item_Id":4751,
+    "Org_Id":204,
+    "Uom_Code":"Ea",
+    "Category_Name":"Memory/Hard Disk",
+    "Item_Description":"Hard Drive - 500GB",
+    "Item_Feature":"Internal hard drives of 500gb having two main connections ñ one for data and another for power. The data port is a SATA interface. This interface connects to the computer's hard drive controller, which enables the drive to communicate with the motherboard.\n",
+    "Item_Specification":"",
+    "Item_Related_Product_id":[
+				{
+					"category":"PC Cases",
+					"id":"4731",				
+					"name":"SB86666",
+					"description":"Tower Case - Mid",
+					"img":"Tower-Case-Mid.jpg"
+				},
+				{
+					"category":"Processor Speeds",
+					"id":"4741",				
+					"name":"CM38100",
+					"description":"CPU - 2.6GHz",
+					"img":"CPU-2.2GHz.jpg"
+				},
+				{
+					"category":"Processor Speeds",
+					"id":"4737",				
+					"name":"CM38060",
+					"description":"CPU - 2.2GHz",
+					"img":"CPU-2.2GHz.jpg"
+				},	
+				{
+					"category":"CTO items",
+					"id":"261",				
+					"name":"CM73946",
+					"description":"CD-ROM - 48X",
+					"img":"CD-ROM-48X.jpg"
+				},
+				{
+					"category":"PC Cases",
+					"id":"4731",				
+					"name":"SB86666",
+					"description":"Tower Case - Mid",
+					"img":"Tower-Case-Mid.jpg"
+				},
+				{
+					"category":"PC Cases",
+					"id":"175",				
+					"name":"SB86662",
+					"description":"Desktop Case",
+					"img":"Desktop-Case.jpg"
+				}
+	]
+  },
+  {
+    "Item_Number":"CM41684",
+    "Item_Image":[
+    "harddisk-1.jpg",
+    "hardisk-2.jpg",
+    "hardisk-3.jpg",
+    "hardisk-4.jpg"
+    ],
+    "Item_List_Price":653.00,
+    "Item_Id":185,
+    "Org_Id":204,
+    "Uom_Code":"Ea",
+    "Category_Name":"Memory/Hard Disk",
+    "Item_Description":"Hard Drive - 60GB",
+    "Item_Feature":"Internal hard drives of 60gb having two main connections ñ one for data and another for power. The data port is a ATA interface. This interface connects to the computer's hard drive controller, which enables the drive to communicate with the motherboard.",
+    "Item_Specification":"",
+    "Item_Related_Product_id":[
+				{
+					"category":"PC Cases",
+					"id":"4731",				
+					"name":"SB86666",
+					"description":"Tower Case - Mid",
+					"img":"Tower-Case-Mid.jpg"
+				},
+				{
+					"category":"Processor Speeds",
+					"id":"4741",				
+					"name":"CM38100",
+					"description":"CPU - 2.6GHz",
+					"img":"CPU-2.2GHz.jpg"
+				},
+				{
+					"category":"Processor Speeds",
+					"id":"4737",				
+					"name":"CM38060",
+					"description":"CPU - 2.2GHz",
+					"img":"CPU-2.2GHz.jpg"
+				},	
+				{
+					"category":"CTO items",
+					"id":"261",				
+					"name":"CM73946",
+					"description":"CD-ROM - 48X",
+					"img":"CD-ROM-48X.jpg"
+				},
+				{
+					"category":"PC Cases",
+					"id":"4731",				
+					"name":"SB86666",
+					"description":"Tower Case - Mid",
+					"img":"Tower-Case-Mid.jpg"
+				},
+				{
+					"category":"PC Cases",
+					"id":"175",				
+					"name":"SB86662",
+					"description":"Desktop Case",
+					"img":"Desktop-Case.jpg"
+				}
+	]
+  },
+  {
+    "Item_Number":"CM67433",
+    "Item_Image":[
+    "Floppy-Drive-1.44MB.jpg",
+    "floppy-2.jpg",
+    "floppy-3.jpg"
+    ],
+    "Item_List_Price":100.00,
+    "Item_Id":187,
+    "Org_Id":204,
+    "Uom_Code":"Ea",
+    "Category_Name":"CTO items",
+    "Item_Description":"Floppy Drive - 1.44 MB",
+    "Item_Feature":"1.44MB 3.5\" Floppy Drive Color: Black General Features: # USB interface # 1.44 MB disk capacity # Perfect for notebook users # 2 ft long USB cable # PC and Macintosh compatible",
+    "Item_Specification":"",
+    "Item_Related_Product_id":[
+				{
+					"category":"PC Cases",
+					"id":"4731",				
+					"name":"SB86666",
+					"description":"Tower Case - Mid",
+					"img":"Tower-Case-Mid.jpg"
+				},
+				{
+					"category":"Processor Speeds",
+					"id":"4741",				
+					"name":"CM38100",
+					"description":"CPU - 2.6GHz",
+					"img":"CPU-2.2GHz.jpg"
+				},
+				{
+					"category":"Processor Speeds",
+					"id":"4737",				
+					"name":"CM38060",
+					"description":"CPU - 2.2GHz",
+					"img":"CPU-2.2GHz.jpg"
+				},	
+				{
+					"category":"PC Cases",
+					"id":"4731",				
+					"name":"SB86666",
+					"description":"Tower Case - Mid",
+					"img":"Tower-Case-Mid.jpg"
+				},
+				{
+					"category":"PC Cases",
+					"id":"175",				
+					"name":"SB86662",
+					"description":"Desktop Case",
+					"img":"Desktop-Case.jpg"
+				}
+	]
+  },
+  {
+    "Item_Number":"CM93827",
+    "Item_Image":[
+    "ZIP-DRIVE.jpg",
+    "zip-drive-2.jpg",
+    "zip-drive-3.jpg"
+    ],
+    "Item_List_Price":1000.00,
+    "Item_Id":544,
+    "Org_Id":204,
+    "Uom_Code":"Ea",
+    "Category_Name":"CTO items",
+    "Item_Description":"ZIP DRIVE",
+    "Item_Feature":"Powered through your computer's USB connection\nOne 100 MB Zip disk (not included) holds the equivalent of 85 floppy disks\nData transfer rate of 0.9 MB/sec\nUses 100 MB Zip disks\nPC and Mac compatible",
+    "Item_Specification":"",
+    "Item_Related_Product_id":[
+				{
+					"category":"PC Cases",
+					"id":"4731",				
+					"name":"SB86666",
+					"description":"Tower Case - Mid",
+					"img":"Tower-Case-Mid.jpg"
+				},
+				{
+					"category":"PC Cases",
+					"id":"4731",				
+					"name":"SB86666",
+					"description":"Tower Case - Mid",
+					"img":"Tower-Case-Mid.jpg"
+				},
+				{
+					"category":"PC Cases",
+					"id":"175",				
+					"name":"SB86662",
+					"description":"Desktop Case",
+					"img":"Desktop-Case.jpg"
+				},
+				{
+					"category":"Monitors",
+					"id":"199",				
+					"name":"CM31556",
+					"description":"Monitor - 19\" Flat",
+					"img":"17-inch-LCD-Monitor-LM1778.jpg"
+				},
+				{
+					"category":"Processor Speeds",
+					"id":"4741",				
+					"name":"CM38100",
+					"description":"CPU - 2.6GHz",
+					"img":"CPU-2.2GHz.jpg"
+				}
+	]
+  },
+  {
+    "Item_Number":"CM73946",
+    "Item_Image":[
+    "CD-ROM-48X.jpg",
+    "cdrom-2.jpg"
+    ],
+    "Item_List_Price":250.00,
+    "Item_Id":261,
+    "Org_Id":204,
+    "Uom_Code":"Ea",
+    "Category_Name":"CTO items",
+    "Item_Description":"CD-ROM - 48X",
+    "Item_Feature":"SATA interface; buffer underrun protection, up to 48x CD-R write speeds",
+    "Item_Specification":"",
+    "Item_Related_Product_id":[
+				{
+					"category":"PC Cases",
+					"id":"4731",				
+					"name":"SB86666",
+					"description":"Tower Case - Mid",
+					"img":"Tower-Case-Mid.jpg"
+				},
+				{
+					"category":"PC Cases",
+					"id":"175",				
+					"name":"SB86662",
+					"description":"Desktop Case",
+					"img":"Desktop-Case.jpg"
+				},
+				{
+					"category":"Monitors",
+					"id":"199",				
+					"name":"CM31556",
+					"description":"Monitor - 19\" Flat",
+					"img":"17-inch-LCD-Monitor-LM1778.jpg"
+				},
+				{
+					"category":"Processor Speeds",
+					"id":"4741",				
+					"name":"CM38100",
+					"description":"CPU - 2.6GHz",
+					"img":"CPU-2.2GHz.jpg"
+				}
+	]
+  },
+  {
+    "Item_Number":"CM47234",
+    "Item_Image":"DVD-ROM-12X.jpg",
+    "Item_Image":[
+    "DVD-ROM-12X.jpg",
+    "dvd-2.jpg",
+    "dvd-3.jpg"
+    ],
+    "Item_List_Price":298.00,
+    "Item_Id":189,
+    "Org_Id":204,
+    "Uom_Code":"Ea",
+    "Category_Name":"CTO items",
+    "Item_Description":"DVD-ROM - 12X",
+    "Item_Feature":"Latest model, the CM47234, is capable of reading DVD's at 12x, and CD ROM's at 40x (both rating are \"maximum\" speeds, which are usually only attainable at the outermost regions of a disc).",
+    "Item_Specification":"",
+    "Item_Related_Product_id":[
+				{
+					"category":"Monitors",
+					"id":"199",				
+					"name":"CM31556",
+					"description":"Monitor - 19\" Flat",
+					"img":"17-inch-LCD-Monitor-LM1778.jpg"
+				},
+				{
+					"category":"Processor Speeds",
+					"id":"4741",				
+					"name":"CM38100",
+					"description":"CPU - 2.6GHz",
+					"img":"CPU-2.2GHz.jpg"
+				}
+	]
+  },
+  {
+    "Item_Number":"CM94043",
+    "Item_Image":[
+    "Modem-56k.jpg",
+    "modem-3.jpg"
+    ],
+    "Item_List_Price":128.00,
+    "Item_Id":197,
+    "Org_Id":204,
+    "Uom_Code":"Ea",
+    "Category_Name":"CTO items",
+    "Item_Description":"Modem - 56k",
+    "Item_Feature":"Controller-based modem that integrates powerful communications processing functions\nCompatible with most major operating systems, Windows, Linux and Macintosh\nSend and receive faxes through your computer while running other applications\nBus-powered so it doesn't require an external power supply",
+    "Item_Specification":"",
+    "Item_Related_Product_id":[
+				{
+					"category":"PC Cases",
+					"id":"4731",				
+					"name":"SB86666",
+					"description":"Tower Case - Mid",
+					"img":"Tower-Case-Mid.jpg"
+				},
+				{
+					"category":"Memory/Hard Disk",
+					"id":"4749",				
+					"name":"CM41420",
+					"description":"Hard Drive - 40GB",
+					"img":"harddisk-1.jpg"
+				}
+	]
+  },
+  {
+    "Item_Number":"CM22473",
+    "Item_Image":[
+    "Motherboard-600-Series.jpg",
+    "motherboard-2.jpg"
+    ],
+    "Item_List_Price":240.00,
+    "Item_Id":183,
+    "Org_Id":204,
+    "Uom_Code":"Ea",
+    "Category_Name":"MotherBoards",
+    "Item_Description":"Motherboard - 600 Series",
+    "Item_Feature":"The CM22473 is a powerful, flexible platform for high availability computing. It is a versatile board that has been validated for pedestal and rack configurations. The ICs are mounted on daughter cards specifically designed to plug into the connectors.\n\nOne Primary IDE connector\nOne Secondary IDE connector\nOne Floppy disk drive connector\nOne 20-pin ATX power connector\nOne 4-pin ATX 12V power connector\nOne USB 2.0 connector supports two additional USB 2.0 ports\nIEEE 1394a connector\nOne CPU fan connector\nOne Chassis fan connector\nOne CD in connector\nOne AUX connector\nFront panel audio connector\nSystem panel connector",
+    "Item_Specification":"",
+        "Item_Related_Product_id":[
+				{
+					"category":"Monitors",
+					"id":"199",				
+					"name":"CM31556",
+					"description":"Monitor - 19\" Flat",
+					"img":"17-inch-LCD-Monitor-LM1778.jpg"
+				},
+				{
+					"category":"PC Cases",
+					"id":"4731",				
+					"name":"SB86666",
+					"description":"Tower Case - Mid",
+					"img":"Tower-Case-Mid.jpg"
+				},
+				{
+					"category":"Memory/Hard Disk",
+					"id":"4749",				
+					"name":"CM41420",
+					"description":"Hard Drive - 40GB",
+					"img":"harddisk-1.jpg"
+				},
+				{
+					"category":"PC Cases",
+					"id":"175",				
+					"name":"SB86662",
+					"description":"Desktop Case",
+					"img":"Desktop-Case.jpg"
+				}
+	]
+  },
+  {
+    "Item_Number":"CM74237",
+    "Item_Image":[
+    "Sound-Card.jpg",
+    "Sound-Card-2.jpg",
+    "sound-card-3.jpg"
+    ],
+    "Item_List_Price":119.00,
+    "Item_Id":195,
+    "Org_Id":204,
+    "Uom_Code":"Ea",
+    "Category_Name":"Computer Parts",
+    "Item_Description":"Sound Card",
+    "Item_Feature":"The sound card is an expansion card that allows the computer to send audio information to an audio device like speakers or a pair of headphones.",
+    "Item_Specification":"",
+        "Item_Related_Product_id":[
+				{
+					"category":"Monitors",
+					"id":"199",				
+					"name":"CM31556",
+					"description":"Monitor - 19\" Flat",
+					"img":"17-inch-LCD-Monitor-LM1778.jpg"
+				},
+				{
+					"category":"PC Cases",
+					"id":"4731",				
+					"name":"SB86666",
+					"description":"Tower Case - Mid",
+					"img":"Tower-Case-Mid.jpg"
+				},
+				{
+					"category":"Memory/Hard Disk",
+					"id":"4749",				
+					"name":"CM41420",
+					"description":"Hard Drive - 40GB",
+					"img":"harddisk-1.jpg"
+				}
+	]
+  },
+  {
+    "Item_Number":"CM76962",
+    "Item_Image":[
+    "Video-Card.jpg",
+    "video-card-2.jpg",
+    "video-card-3.jpg"
+    ],
+    "Item_List_Price":105.00,
+    "Item_Id":191,
+    "Org_Id":204,
+    "Uom_Code":"Ea",
+    "Category_Name":"PCI Cards",
+    "Item_Description":"Video Card",
+    "Item_Feature":"The video card is an expansion card that allows the computer to send graphical information to a video display device such as a monitor or projector.",
+    "Item_Specification":"",
+        "Item_Related_Product_id":[
+				{
+					"category":"Monitors",
+					"id":"199",				
+					"name":"CM31556",
+					"description":"Monitor - 19\" Flat",
+					"img":"17-inch-LCD-Monitor-LM1778.jpg"
+				},
+				{
+					"category":"Memory/Hard Disk",
+					"id":"249",				
+					"name":"CM13139",
+					"description":"Hard Drive - 8GB",
+					"img":"harddisk-1.jpg"
+				},	
+				{
+					"category":"CTO items",
+					"id":"251",				
+					"name":"CM08830",
+					"description":"RAM - 256MB",
+					"img":"ram-ch.jpg"
+				},
+				{
+					"category":"CTO items",
+					"id":"245",				
+					"name":"CM99105",
+					"description":"RAM - 64MB",
+					"img":"ram-ch.jpg"
+				},
+				{
+					"category":"CTO items",
+					"id":"4725",				
+					"name":"CM08512",
+					"description":"RAM - 512MB",
+					"img":"ram-ch.jpg"
+				}
+	]
+  },
+  {
+    "Item_Number":"CM18759",
+    "Item_Image":[
+    "Keyboard-101-Key.jpg",
+    "Keyboard-2.jpg",
+    "Keyboard-3.jpg"
+    ],
+    "Item_List_Price":42.00,
+    "Item_Id":201,
+    "Org_Id":204,
+    "Uom_Code":"Ea",
+    "Category_Name":"Keyboards",
+    "Item_Description":"Keyboard - 101 Key",
+    "Item_Feature":"Sleek, low-profile keys: Easy and comfortable typing on quiet keys with bold, easy-to-read characters\nBuilt-in multi-touch touchpad: Large (3.5-inch) touchpad with multi-touch navigation for easier web browsing\nLong-range wireless: Control your TV-connected laptop from the couch with 33 feet/10 meter wireless range\nPlug-and-play setup: Plug the tiny Logitech Unifying wireless receiver into your laptop and start surfing the web\nFor Windows-based laptops: Works with Windows 7, Windows Vista and Windows X",
+    "Item_Specification":"",
+        "Item_Related_Product_id":[
+				{
+					"category":"Monitors",
+					"id":"199",				
+					"name":"CM31556",
+					"description":"Monitor - 19\" Flat",
+					"img":"17-inch-LCD-Monitor-LM1778.jpg"
+				},
+				{
+					"category":"Memory/Hard Disk",
+					"id":"249",				
+					"name":"CM13139",
+					"description":"Hard Drive - 8GB",
+					"img":"harddisk-1.jpg"
+				},	
+				{
+					"category":"CTO items",
+					"id":"251",				
+					"name":"CM08830",
+					"description":"RAM - 256MB",
+					"img":"ram-ch.jpg"
+				},
+				{
+					"category":"CTO items",
+					"id":"245",				
+					"name":"CM99105",
+					"description":"RAM - 64MB",
+					"img":"ram-ch.jpg"
+				},
+				{
+					"category":"CTO items",
+					"id":"4725",				
+					"name":"CM08512",
+					"description":"RAM - 512MB",
+					"img":"ram-ch.jpg"
+				}
+	]
+  },
+  {
+    "Item_Number":"CM42047",
+    "Item_Image":[
+    "Power-Cord.jpg",
+    "Power-Cord-2.jpg",
+    "Power-Cord-3.jpg",
+    "Power-Cord-4.jpg"
+    ],
+    "Item_List_Price":10.00,
+    "Item_Id":211,
+    "Org_Id":204,
+    "Uom_Code":"Ea",
+    "Category_Name":"Cable",
+    "Item_Description":"Power Cord",
+    "Item_Feature":"A power supply unit (PSU) converts mains AC to low-voltage regulated DC power for the internal components of a computer. Modern personal computers universally use a switched-mode power supply. Some power supplies have a manual selector for input voltage, while others automatically adapt to the supply voltage.",
+    "Item_Specification":"",
+        "Item_Related_Product_id":[
+				{
+					"category":"Monitors",
+					"id":"199",				
+					"name":"CM31556",
+					"description":"Monitor - 19\" Flat",
+					"img":"17-inch-LCD-Monitor-LM1778.jpg"
+				},
+				{
+					"category":"Memory/Hard Disk",
+					"id":"249",				
+					"name":"CM13139",
+					"description":"Hard Drive - 8GB",
+					"img":"harddisk-1.jpg"
+				},	
+				{
+					"category":"CTO items",
+					"id":"251",				
+					"name":"CM08830",
+					"description":"RAM - 256MB",
+					"img":"ram-ch.jpg"
+				},
+				{
+					"category":"CTO items",
+					"id":"245",				
+					"name":"CM99105",
+					"description":"RAM - 64MB",
+					"img":"ram-ch.jpg"
+				},
+				{
+					"category":"CTO items",
+					"id":"4725",				
+					"name":"CM08512",
+					"description":"RAM - 512MB",
+					"img":"ram-ch.jpg"
+				}
+	]
+  },
+  {
+    "Item_Number":"CM38060",
+    "Item_Image":[
+    "CPU-2.2GHz.jpg",
+    "processor-2.jpg"
+    ],
+    "Item_List_Price":50.00,
+    "Item_Id":4737,
+    "Org_Id":204,
+    "Uom_Code":"Ea",
+    "Category_Name":"Processor Speeds",
+    "Item_Description":"CPU - 2.2GHz",
+    "Item_Feature":"Intel Core\n4.8 Intel QuickPath Interconnect\n3 Channel Memory\n8MB L3 Cache\nLGA-1366 package",
+    "Item_Specification":"",
+    "Item_Related_Product_id":[
+				{
+					"category":"Monitors",
+					"id":"199",				
+					"name":"CM31556",
+					"description":"Monitor - 19\" Flat",
+					"img":"17-inch-LCD-Monitor-LM1778.jpg"
+				},
+				{
+					"category":"Memory/Hard Disk",
+					"id":"249",				
+					"name":"CM13139",
+					"description":"Hard Drive - 8GB",
+					"img":"harddisk-1.jpg"
+				},	
+				{
+					"category":"CTO items",
+					"id":"251",				
+					"name":"CM08830",
+					"description":"RAM - 256MB",
+					"img":"ram-ch.jpg"
+				},
+				{
+					"category":"CTO items",
+					"id":"245",				
+					"name":"CM99105",
+					"description":"RAM - 64MB",
+					"img":"ram-ch.jpg"
+				},
+				{
+					"category":"CTO items",
+					"id":"4725",				
+					"name":"CM08512",
+					"description":"RAM - 512MB",
+					"img":"ram-ch.jpg"
+				}
+	]
+  },
+  {
+    "Item_Number":"CM38080",
+    "Item_Image":[
+    "CPU-2.2GHz.jpg",
+    "processor-2.jpg"
+    ],
+    "Item_List_Price":80.00,
+    "Item_Id":4739,
+    "Org_Id":204,
+    "Uom_Code":"Ea",
+    "Category_Name":"Processor Speeds",
+    "Item_Description":"CPU - 2.4GHz",
+    "Item_Feature":"Intel Core\n3.8 Intel QuickPath Interconnect\n2 Channel Memory\n6MB L3 Cache\nLGA-1366 package",
+    "Item_Specification":"",
+    "Item_Related_Product_id":[
+				{
+					"category":"Monitors",
+					"id":"199",				
+					"name":"CM31556",
+					"description":"Monitor - 19\" Flat",
+					"img":"17-inch-LCD-Monitor-LM1778.jpg"
+				},
+				{
+					"category":"Memory/Hard Disk",
+					"id":"249",				
+					"name":"CM13139",
+					"description":"Hard Drive - 8GB",
+					"img":"harddisk-1.jpg"
+				},	
+				{
+					"category":"CTO items",
+					"id":"251",				
+					"name":"CM08830",
+					"description":"RAM - 256MB",
+					"img":"ram-ch.jpg"
+				},
+				{
+					"category":"CTO items",
+					"id":"245",				
+					"name":"CM99105",
+					"description":"RAM - 64MB",
+					"img":"ram-ch.jpg"
+				},
+				{
+					"category":"CTO items",
+					"id":"4725",				
+					"name":"CM08512",
+					"description":"RAM - 512MB",
+					"img":"ram-ch.jpg"
+				}
+	]
+  },
+  {
+    "Item_Number":"CM38100",
+    "Item_Image":[
+    "CPU-2.2GHz.jpg",
+    "processor-2.jpg"
+    ],
+    "Item_List_Price":100.00,
+    "Item_Id":4741,
+    "Org_Id":204,
+    "Uom_Code":"Ea",
+    "Category_Name":"Processor Speeds",
+    "Item_Description":"CPU - 2.6GHz",
+    "Item_Feature":"Intel Core\n3.4 Intel QuickPath Interconnect\n3 Channel Memory\n6MB L3 Cache\nLGA-1366 package",
+    "Item_Specification":"",
+    "Item_Related_Product_id":[
+				{
+					"category":"Monitors",
+					"id":"199",				
+					"name":"CM31556",
+					"description":"Monitor - 19\" Flat",
+					"img":"17-inch-LCD-Monitor-LM1778.jpg"
+				},
+				{
+					"category":"Memory/Hard Disk",
+					"id":"249",				
+					"name":"CM13139",
+					"description":"Hard Drive - 8GB",
+					"img":"harddisk-1.jpg"
+				},	
+				{
+					"category":"CTO items",
+					"id":"251",				
+					"name":"CM08830",
+					"description":"RAM - 256MB",
+					"img":"ram-ch.jpg"
+				},
+				{
+					"category":"CTO items",
+					"id":"245",				
+					"name":"CM99105",
+					"description":"RAM - 64MB",
+					"img":"ram-ch.jpg"
+				},
+				{
+					"category":"CTO items",
+					"id":"4725",				
+					"name":"CM08512",
+					"description":"RAM - 512MB",
+					"img":"ram-ch.jpg"
+				}
+	]
+  },
+  {
+    "Item_Number":"CM38120",
+    "Item_Image":[
+    "CPU-2.2GHz.jpg",
+    "processor-2.jpg"
+    ],
+    "Item_List_Price":200.00,
+    "Item_Id":4743,
+    "Org_Id":204,
+    "Uom_Code":"Ea",
+    "Category_Name":"Processor Speeds",
+    "Item_Description":"CPU - 3.0GHz",
+    "Item_Feature":"Intel Core\n6.8 Intel QuickPath Interconnect\n6 Channel Memory\n16MB L3 Cache\nLGA-1366 package",
+    "Item_Specification":"",
+    "Item_Related_Product_id":[
+				{
+					"category":"Monitors",
+					"id":"199",				
+					"name":"CM31556",
+					"description":"Monitor - 19\" Flat",
+					"img":"17-inch-LCD-Monitor-LM1778.jpg"
+				},
+				{
+					"category":"Memory/Hard Disk",
+					"id":"249",				
+					"name":"CM13139",
+					"description":"Hard Drive - 8GB",
+					"img":"harddisk-1.jpg"
+				},	
+				{
+					"category":"CTO items",
+					"id":"251",				
+					"name":"CM08830",
+					"description":"RAM - 256MB",
+					"img":"ram-ch.jpg"
+				},
+				{
+					"category":"CTO items",
+					"id":"245",				
+					"name":"CM99105",
+					"description":"RAM - 64MB",
+					"img":"ram-ch.jpg"
+				},
+				{
+					"category":"CTO items",
+					"id":"4725",				
+					"name":"CM08512",
+					"description":"RAM - 512MB",
+					"img":"ram-ch.jpg"
+				}
+	]
+  },
+  {
+    "Item_Number":"CM38140",
+    "Item_Image":[
+    "CPU-2.2GHz.jpg",
+    "processor-2.jpg"
+    ],
+    "Item_List_Price":300.00,
+    "Item_Id":4745,
+    "Org_Id":204,
+    "Uom_Code":"Ea",
+    "Category_Name":"Processor Speeds",
+    "Item_Description":"CPU - 3.4GHz",
+    "Item_Feature":"Intel Core\n6.8 Intel QuickPath Interconnect\n8 Channel Memory\n16MB L3 Cache\nLGA-1366 package",
+    "Item_Specification":"",
+    "Item_Related_Product_id":[
+				{
+					"category":"Monitors",
+					"id":"199",				
+					"name":"CM31556",
+					"description":"Monitor - 19\" Flat",
+					"img":"17-inch-LCD-Monitor-LM1778.jpg"
+				},
+				{
+					"category":"Memory/Hard Disk",
+					"id":"249",				
+					"name":"CM13139",
+					"description":"Hard Drive - 8GB",
+					"img":"harddisk-1.jpg"
+				},	
+				{
+					"category":"CTO items",
+					"id":"251",				
+					"name":"CM08830",
+					"description":"RAM - 256MB",
+					"img":"ram-ch.jpg"
+				},
+				{
+					"category":"CTO items",
+					"id":"245",				
+					"name":"CM99105",
+					"description":"RAM - 64MB",
+					"img":"ram-ch.jpg"
+				},
+				{
+					"category":"CTO items",
+					"id":"4725",				
+					"name":"CM08512",
+					"description":"RAM - 512MB",
+					"img":"ram-ch.jpg"
+				}
+	]
+  },
+  {
+    "Item_Number":"SB86662",
+    "Item_Image":[
+    "Desktop-Case.jpg",
+    "computer-case-2.jpg",
+    "computer-case-3.jpg",
+    "computer-case-4.jpg"
+    ],
+    "Item_List_Price":68.59,
+    "Item_Id":175,
+    "Org_Id":204,
+    "Uom_Code":"Ea",
+    "Category_Name":"PC Cases",
+    "Item_Description":"Desktop Case",
+    "Item_Feature":"Case Type: ATX Mid Tower, SECC Steel\nM/B Type: ATX, MicroATX, Baby AT\nExternal Bay: 3x 5.25\", 2x 3.5\", Internal Bay: 4x 3.5\"\nExpansion Slots: 7\nFront I/O Panel: 2x USB 2.0 Ports, 1x eSATA Port, Audio\nPower Supply: None (Bottom Mounted)",
+    "Item_Specification":"",
+    "Item_Related_Product_id":[
+				{
+					"category":"PC Cases",
+					"id":"4729",				
+					"name":"SB86664",
+					"description":"Tower Case - Mini",
+					"img":"Tower-Case-Mini.jpg"
+				},
+				{
+					"category":"Memory/Hard Disk",
+					"id":"241",				
+					"name":"CM25287",
+					"description":"Hard Drive - 20GB",
+					"img":"harddisk-1.jpg"
+				},
+				{
+					"category":"Memory/Hard Disk",
+					"id":"4747",				
+					"name":"CM41020",
+					"description":"Hard Drive - 120GB",
+					"img":"harddisk-1.jpg"
+				},
+				{
+					"category":"Memory/Hard Disk",
+					"id":"4749",				
+					"name":"CM41420",
+					"description":"Hard Drive - 40GB",
+					"img":"harddisk-1.jpg"
+				}
+	]
+  },
+  {
+    "Item_Number":"SB86664",
+    "Item_Image":[
+    "Tower-Case-Mini.jpg",
+    "computer-case-2.jpg",
+    "computer-case-3.jpg",
+    "computer-case-4.jpg"
+    ],
+    "Item_List_Price":30.00,
+    "Item_Id":4729,
+    "Org_Id":204,
+    "Uom_Code":"Ea",
+    "Category_Name":"PC Cases",
+    "Item_Description":"Tower Case - Mini",
+    "Item_Feature":"Case Type: ATX Mid Tower, SECC Steel\nM/B Type: ATX, MicroATX, Baby AT\nExternal Bay: 3x 3.25\", 2x 2.5\", Internal Bay: 4x 2.5\"\nExpansion Slots: 4\nFront I/O Panel: 1x USB 2.0 Ports, 1x eSATA Port, Audio\nPower Supply: None (Bottom Mounted)",
+    "Item_Specification":"",
+    "Item_Related_Product_id":[
+				{
+					"category":"Memory/Hard Disk",
+					"id":"4751",				
+					"name":"CM41520",
+					"description":"Hard Drive - 500GB",
+					"img":"harddisk-1.jpg"
+				},
+				{
+					"category":"Memory/Hard Disk",
+					"id":"249",				
+					"name":"CM13139",
+					"description":"Hard Drive - 8GB",
+					"img":"harddisk-1.jpg"
+				},
+				{
+					"category":"CTO items",
+					"id":"251",				
+					"name":"CM08830",
+					"description":"RAM - 256MB",
+					"img":"ram-ch.jpg"
+				},
+				{
+					"category":"CTO items",
+					"id":"245",				
+					"name":"CM99105",
+					"description":"RAM - 64MB",
+					"img":"ram-ch.jpg"
+				}
+	]
+  },
+  {
+    "Item_Number":"SB86666",
+    "Item_Image":[
+    "Tower-Case-Mid.jpg",
+    "computer-case-2.jpg",
+    "computer-case-3.jpg",
+    "computer-case-4.jpg"
+    ],
+    "Item_List_Price":40.00,
+    "Item_Id":4731,
+    "Org_Id":204,
+    "Uom_Code":"Ea",
+    "Category_Name":"PC Cases",
+    "Item_Description":"Tower Case - Mid",
+    "Item_Feature":"Case Type: ATX Mid Tower, SECC Steel\nM/B Type: ATX, MicroATX, Baby AT\nExternal Bay: 3x 5.25\", 2x 3.5\", Internal Bay: 4x 3.5\"\nExpansion Slots: 6\nFront I/O Panel: 3x USB 2.0 Ports, 1x eSATA Port, Audio\nPower Supply: None (Bottom Mounted)",
+    "Item_Specification":"",
+    "Item_Related_Product_id":[
+				{
+					"category":"Memory/Hard Disk",
+					"id":"4751",				
+					"name":"CM41520",
+					"description":"Hard Drive - 500GB",
+					"img":"harddisk-1.jpg"
+				},
+				{
+					"category":"Memory/Hard Disk",
+					"id":"249",				
+					"name":"CM13139",
+					"description":"Hard Drive - 8GB",
+					"img":"harddisk-1.jpg"
+				},
+				{
+					"category":"CTO items",
+					"id":"251",				
+					"name":"CM08830",
+					"description":"RAM - 256MB",
+					"img":"ram-ch.jpg"
+				},
+				{
+					"category":"CTO items",
+					"id":"245",				
+					"name":"CM99105",
+					"description":"RAM - 64MB",
+					"img":"ram-ch.jpg"
+				}
+	]
+  },
+  {
+    "Item_Number":"SB86668",
+    "Item_Image":[
+    "Tower-Case-Full.jpg",
+    "computer-case-2.jpg",
+    "computer-case-3.jpg",
+    "computer-case-4.jpg"
+    ],
+    "Item_List_Price":50.00,
+    "Item_Id":4733,
+    "Org_Id":204,
+    "Uom_Code":"Ea",
+    "Category_Name":"PC Cases",
+    "Item_Description":"Tower Case - Full",
+    "Item_Feature":"Case Type: ATX Mid Tower, SECC Steel\nM/B Type: ATX, MicroATX, Baby AT\nExternal Bay: 3x 5.25\", 2x 3.5\", Internal Bay: 4x 3.5\"\nExpansion Slots: 12\nFront I/O Panel: 8x USB 2.0 Ports, 2x eSATA Port, Audio\nPower Supply: None (Bottom Mounted)",
+    "Item_Specification":"",
+    "Item_Related_Product_id":[
+				{
+					"category":"Processor Speeds",
+					"id":"4737",				
+					"name":"CM38060",
+					"description":"CPU - 2.2GHz",
+					"img":"CPU-2.2GHz.jpg"
+				},				
+				{
+					"category":"CTO items",
+					"id":"189",				
+					"name":"CM47234",
+					"description":"DVD-ROM - 12X",
+					"img":"DVD-ROM-12X.jpg"
+				},
+				{
+					"category":"CTO items",
+					"id":"187",				
+					"name":"CM67433",
+					"description":"Floppy Drive - 1.44 MB",
+					"img":"Floppy-Drive-1.44MB.jpg"
+				},
+				{
+					"category":"CTO items",
+					"id":"261",				
+					"name":"CM73946",
+					"description":"CD-ROM - 48X",
+					"img":"CD-ROM-48X.jpg"
+				}
+	]
+  }
+]
+}

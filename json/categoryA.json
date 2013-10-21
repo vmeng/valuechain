@@ -1,0 +1,149 @@
+{
+	"products": [
+		{
+			"id":4725,
+			"name": "Pressure Reducing",
+			"type":"TYPE ABC1SW23",
+			"avatar": "p.jpg",
+			"name": "Pressure Valve",
+			"avatar": "o.jpg",
+			"desc": "Desc",
+			"price":"$123",
+			"pic_detail":[
+				{
+					"img_small": "prod_pic1.png",
+					"img_medium": "prod_pic.png"
+				},{
+					"img_small": "prod_pic2.png",
+					"img_medium": "prod_pic0.png"
+				},{
+					"img_small": "prod_pic3.png",
+					"img_medium": "prod_pic0.png"
+				},{
+					"img_small": "prod_pic3.png",
+					"img_medium": "prod_pic0.png"
+				},{
+					"img_small": "prod_pic3.png",
+					"img_medium": "prod_pic0.png"
+				}
+			],
+			"prod_feature":"<Content> <p> <strong>Application:</strong> Provides complete, independent pressure control to two or more clamping systems operated by a single power source.<br/><br/><strong>Operation:</strong> Can be used to provide different pressures in various stages of a single system. Virtually zero leakage across valve means each system can be operated by a single continuous pressure source. Adjustable from 1,000 to 5,000 psi at outlet port °∞B°± (secondary).</p></Content>",
+			"pro_spec":"<Content> <table border='1' width='100%'> <tbody> <tr> <th width='10%'>Order No.</th> <th>Cylinder<br/>Application *</th> <th>Operation</th> <th>Valve Type</th> <th width='5%'>Volt</th> <th width='10%'>Advance / Return</th> <th width='10%'>Advance / Hold Return</th> <th width='10%'>Posi-Check? Feature</th> <th width='10%'>Weight (lbs.)</th> </tr> <tr> <td> <strong>9608</strong> </td> <td>S.A. & D.A.</td> <td>Automatic</td> <td>Pressure Reducing Valve</td> <td>°™</td> <td>°™</td> <td>°™</td> <td>°™</td> <td>5.8</td> </tr> <tr> <td colspan='9'>* °∞S.A.°± represents single-acting cylinders, °∞D.A.°± represents double-acting cylinders</td> </tr> </tbody> </table> </Content>",
+			"prod_related":[
+				{
+					"name":"Relief Valve",
+					"img":"a.jpg"
+				},{
+					"name":"Pressure Relief Valve",
+					"img":"a.jpg"
+				},
+				{
+					"name":"Pilot Operated Valve",
+					"img":"a.jpg"
+				}
+			]
+		},
+		{
+			"id":251,
+			"name": "Relief Valve",
+			"avatar": "n.jpg",
+			"desc": "Desc",
+			"price":"$123",
+			"pic_detail":[
+				{
+					"img_small": "proc_pic1.png",
+					"img_medium": "prod_pic0.png"
+				},{
+					"img_small": "proc_pic2.png",
+					"img_medium": "prod_pic.png"
+				},{
+					"img_small": "proc_pic3.png",
+					"img_medium": "prod_pic0.png"
+				}
+			],
+			"prod_feature":"<Content> <p> <strong>Application:</strong> Provide an economical means of protecting an hydraulic circuit against over pressurization.</p> <p> <strong>Operation:</strong> These factory preset valves are designed for maximum flow rate of 5 gpm. Furnished with 1/8 NPTF male port. All valves weigh 0.2 lb. See chart in ''Specifications'' for ordering information.<br/><br/><strong>NOTE: Care should be exercised to protect workers from hot, pressurized hydraulic oil. Install these valves only in an enclosed or shielded area.</strong></p> </Content>",
+			"pro_spec":"<Content> <table border='1' width='100%'> <tbody> <tr> <th style='WIDTH: 20%'>Order No.</th> <th>Pressure Setting<br/>(psi)</th> <th style='WIDTH: 10%'>Weight (lbs)</th> <th width='5px' rowspan='17'> </th> <th style='WIDTH: 20%'>Order No.</th> <th>Pressure Setting<br/>(psi)</th> <th style='WIDTH: 10%'>Weight (lbs)</th> </tr> <tr> <td> <strong>RV21278</strong> </td> <td>10,100 / 10,700</td> <td>0.2</td> <td> <strong>RV21278-50</strong> </td> <td>5,100 / 5,700</td> <td>0.2</td> </tr> <tr> <td> <strong>RV21278-6</strong> </td> <td>600 /640</td> <td>0.2</td> <td> <strong>RV21278-52</strong> </td> <td>5,300 / 5,900</td> <td>0.2</td> </tr> <tr> <td> <strong>RV21278-10</strong> </td> <td>900 / 1,000</td> <td>0.2</td> <td> <strong>RV21278-55</strong> </td> <td>5,600 / 6,200</td> <td>0.2</td> </tr> <tr> <td> <strong>RV21278-15</strong> </td> <td>1,500 / 1,700</td> <td>0.2</td> <td> <strong>RV21278-57</strong> </td> <td>5,800 / 6,400</td> <td>0.2</td> </tr> <tr> <td> <strong>RV21278-17</strong> </td> <td>1,600 / 1,800</td> <td>0.2</td> <td> <strong>RV21278-60</strong> </td> <td>6,100 / 6,700</td> <td>0.2</td> </tr> <tr> <td> <strong>RV21278-20</strong> </td> <td>1,900 / 2,200</td> <td>0.2</td> <td> <strong>RV21278-65</strong> </td> <td>6,600 / 7,200</td> <td>0.2</td> </tr> <tr> <td> <strong>RV21278-25</strong> </td> <td>2,300 / 2,700</td> <td>0.2</td> <td> <strong>RV21278-70</strong> </td> <td>7,100 / 7,700</td> <td>0.2</td> </tr> <tr> <td> <strong>RV21278-27</strong> </td> <td>2,600 / 2,800</td> <td>0.2</td> <td> <strong>RV21278-75</strong> </td> <td>7,600 / 8,200</td> <td>0.2</td> </tr> <tr> <td> <strong>RV21278-28</strong> </td> <td>2,700 / 3,000</td> <td>0.2</td> <td> <strong>RV21278-80</strong> </td> <td>8,100 / 8,700</td> <td>0.2</td> </tr> <tr> <td> <strong>RV21278-30</strong> </td> <td>3,000 / 3,400</td> <td>0.2</td> <td> <strong>RV21278-83</strong> </td> <td>8,400 / 9,000</td> <td>0.2</td> </tr> <tr> <td> <strong>RV21278-32</strong> </td> <td>3,100 / 3,300</td> <td>0.2</td> <td> <strong>RV21278-86</strong> </td> <td>8,700 / 9,300</td> <td>0.2</td> </tr> <tr> <td> <strong>RV21278-35</strong> </td> <td>3,500 / 3,800</td> <td>0.2</td> <td> <strong>RV21278-88</strong> </td> <td>8,900 / 9,600</td> <td>0.2</td> </tr> <tr> <td> <strong>RV21278-38</strong> </td> <td>3,750 / 3,950</td> <td>0.2</td> <td> <strong>RV21278-90</strong> </td> <td>9,100 / 9,700</td> <td>0.2</td> </tr> <tr> <td> <strong>RV21278-40</strong> </td> <td>4,100 / 4,500</td> <td>0.2</td> <td> <strong>RV21278-114</strong> </td> <td>11,500 / 12,100</td> <td>0.2</td> </tr> <tr> <td> <strong>RV21278-43</strong> </td> <td>4,400 / 4,800</td> <td>0.2</td> <td> <strong>RV21278-6280</strong> </td> <td>6,380 / 6,900</td> <td>0.2</td> </tr> <tr> <td> <strong>RV21278-48</strong> </td> <td>4,900 / 5,300</td> <td>0.2</td> <td>Preset °™ Non-Serviceable</td> <td> <br/> </td> <td> <br/> </td> </tr> </tbody> </table> </Content>",
+			"prod_related":[
+				{
+					"name":"Pressure Valve",
+					"img":"a.jpg"
+				},{
+					"name":"Pressure Relief Valve",
+					"img":"a.jpg"
+				},
+				{
+					"name":"Pilot Operated Valve",
+					"img":"a.jpg"
+				}
+			]
+		},
+		{
+			"id":249,
+			"name": "Pilot Operated Valve",
+			"avatar": "d.jpg",
+			"desc": "Desc",
+			"price":"$123",
+			"pic_detail":[
+				{
+					"img_small": "proc_pic1.png",
+					"img_medium": "prod_pic0.png"
+				},{
+					"img_small": "proc_pic2.png",
+					"img_medium": "prod_pic.png"
+				},{
+					"img_small": "prod_pic3.png",
+					"img_medium": "prod_pic0.png"
+				}
+			],
+			"prod_feature":"<Content> <strong>Application:</strong> For use with open or tandem center valves. Permits free flow of fluid in one direction.<br/><br/><strong>Operation:</strong> Flow is blocked in opposite direction until pilot oil pressure is applied. This prevents the loss of pressure if the valve is inadvertently shifted or the pump line is broken. Minimum cracking pressure is 60 psi. Required pilot pressure is approximately 16% of checked system pressure.<br/><br/></Content>",
+			"pro_spec":"<Content> <table border='1' width='100%'> <tbody> <tr> <th width='10%'>Order No.</th> <th>Cylinder<br/>Application *</th> <th>Operation</th> <th>Valve Type</th> <th width='5%'>Volt</th> <th width='10%'>Advance / Return</th> <th width='10%'>Advance / Hold Return</th> <th width='10%'>Posi-Check? Feature</th> <th width='10%'>Weight (lbs)</th> </tr> <tr> <td> <strong>9581</strong> </td> <td>S.A. & D.A.</td> <td>Automatic</td> <td>Pilot Op. Check Valve</td> <td>°™</td> <td>°™</td> <td>°™</td> <td>°™</td> <td>3.8</td> </tr> <tr> <td colspan='9'>* °∞S.A.°± represents single-acting cylinders, °∞D.A.°± represents double-acting cylinders</td> </tr> </tbody> </table> </Content>",
+			"prod_related":[
+				{
+					"name":"Pressure Valve",
+					"img":"a.jpg"
+				},{
+					"name":"Pressure Relief Valve",
+					"img":"a.jpg"
+				},
+				{
+					"name":"Relief Valve",
+					"img":"a.jpg"
+				}
+			]
+		},
+		{
+			"id":247,
+			"name": "Pressure Relief Valve",
+			"avatar": "k.jpg",
+			"desc": "Desc",
+			"price":"$123",
+			"pic_detail":[
+				{
+					"img_small": "proc_pic1.png",
+					"img_medium": "prod_pic0.png"
+				},{
+					"img_small": "proc_pic2.png",
+					"img_medium": "prod_pic.png"
+				},{
+					"img_small": "prod_pic3.png",
+					"img_medium": "prod_pic0.png"
+				}
+			],
+			"prod_feature":"<Content> <strong>Application:</strong> Single or double-acting cylinders. For remote locations in a hydraulic circuit where maximum pressure requirements are less than basic overload valve setting in pump.<br/><br/><strong>Operation:</strong> Adjustable from 1,000 to 10,000 psi. Valve is spring-loaded and direct-acting.<br/><br/></Content>",
+			"pro_spec":"<Content> <table border='1' width='100%'> <tbody> <tr> <th width='10%'>Order No.</th> <th>Cylinder<br/>Application *</th> <th>Operation</th> <th>Valve Type</th> <th width='5%'>Volt</th> <th width='10%'>Advance / Return</th> <th width='10%'>Advance / Hold Return</th> <th width='10%'>Posi-Check? Feature</th> <th width='10%'>Weight (lbs.)</th> </tr> <tr> <td> <strong>9623</strong> </td> <td>S.A. & D.A.</td> <td>Automatic</td> <td>Pressure Relief Valve</td> <td>°™</td> <td>°™</td> <td>°™</td> <td>°™</td> <td>2.0</td> </tr> <tr> <td colspan='9'>* °∞S.A.°± represents single-acting cylinders, °∞D.A.°± represents double-acting cylinders</td> </tr> </tbody> </table> </Content>",
+			"prod_related":[
+				{
+					"name":"Pressure Valve",
+					"img":"a.jpg"
+				},{
+					"name":"Pilot Operated Valve",
+					"img":"a.jpg"
+				},
+				{
+					"name":"Relief Valve",
+					"img":"a.jpg"
+				}
+			]
+		}
+	]
+}

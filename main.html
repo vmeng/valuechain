@@ -1,0 +1,988 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<title>Value Chain</title>
+		<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<meta name="description" content="">
+		<meta name="author" content="">
+		<!-- Le styles -->
+		<link href="stylesheets/bootstrap.css" rel="stylesheet" type="text/css" media="screen">
+		<link rel="stylesheets" href="style/jquery.mobile-1.3.2.min.css" type="text/css" media="screen"/>
+		<link href="stylesheets/poc.css" rel="stylesheet" type="text/css" media="screen"/>
+		<link href="stylesheets/toggle-switch.css" rel="stylesheet" type="text/css" media="screen"/>
+	</head>
+	<body>
+		<div class="page" id="customer-page">
+			<div class="title-bar-left">
+				<h2>Value Chain</h2>
+				<img src="img/pwc_logo.png" class="pwc-logo">
+			</div>
+			<div class="page-content">
+				<div class="content-wrapper">
+					<div id="maincontainer" class="clearfix">
+						<div class="right-column">
+							<div id="right-column">
+								<div class="customer-map">
+									<div id="map-canvas"></div>
+								</div>
+
+								<div class="other-functions">
+									<ul class="link-item clearfix">
+										<li class="other-functions-li">
+											<!-- <a href="#" ><img id="quotelist-img" src="img/openQuotes.png"></a> -->
+											<div id="gotoQuote" style="width:219px;
+											height:186px;
+											background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(232,232,232,1) 100%);
+											border-radius: 4px;
+											border: 1px solid rgb(184,184,184);
+											color: rgb(100,100,100);
+											">
+											<div  style="margin-left: 30px;margin-top:15px; font-weight:800;font-size:13.5pt;font-family: Helvetica;">Historical Quotes</div>
+											<div id="quote-speed-meter" style="width: 170px; height: 170px; margin-left: 23px;position: absolute; pointer-events:none"></div>
+											</div>
+										</li>
+										<li class="other-functions-li" id="historical-quotes">
+											<div style="width:219px;
+											height:186px;
+											background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(232,232,232,1) 100%);
+											border-radius: 4px;
+											border: 1px solid rgb(184,184,184);
+											color: rgb(31,133,190);
+											">
+												<div class="clearfix" pointer-events:none style=" color: #fc5412; ">
+													<div class="pull-left" style="width:50%;height:186px;padding: 25px 0 25px 20px;">
+														<div style="font-size:8pt" class="rgb100">Fulfillment Rate</div>
+														<div ><span id="v-full-rates" style="font-size:32pt">0</span><span>%</span></div>
+														<div style="font-size:8pt" class="rgb100">Revenue</div>
+														<div><span id="v-revenue" style="font-size:32pt">0</span><span id="v-revenue-metric"></span></div>
+													</div>
+													<div class="pull-right" style="width:50%;height:186px;padding: 25px 0 25px 20px;">
+														<div style="font-size:8pt" class="rgb100">Open Quotes</div>
+														<div><span  id="v-open-quotes" style="font-size:32pt">0</span><span id="v-open-quotes-metric"></span></div>
+														<div style="font-size:8pt" class="rgb100">Completed Quotes</div>
+														<div style="margin-top: -15px;"><span id="v-completed-quotes" style="font-size:32pt">0</span><span id="v-completed-quotes-metric"></span></div>
+													</div>
+												</div>
+											</div>
+										</li>
+										<li class="other-functions-li">
+											<a id="gotoProductCatalog" href="#"><img src="img/ProductCatalog.png"></a>
+										</li>
+									</ul>
+								</div>
+
+							</div>
+						</div>
+
+						<div class="left-column">
+							<div id="customer-scroll-outer">
+							<div id="customer-scroll" class="all-scroll-wrapper">
+								<div class="customer-content">
+									<div class="customer-list" id="customer-listview">
+										<ul data-role="listview" data-filter="true" data-filter="true" data-filter-reveal="false" data-filter-placeholder="Search Customer">
+										</ul>																			
+									</div>
+								</div>
+							</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="page" id="contact-list-page">		
+			<div class="title-bar-left">
+				<a data-role="none" class="nav-btn-home btnTohome" ><span class="icon-home"></span></a>
+				<a data-role="none" class="nav-btn-back btnTohome" id="btn-back-to-home" href="#"><span class="icon-back"></span></a>
+				<h2 id="customer-name"></h2>
+				<img src="img/pwc_logo.png" class="pwc-logo">
+			</div>
+			<div class="page-content c-page-content">
+				<div class="content-wrapper">
+					<div class="cl1">
+						<div id="kpi">
+							<h4>KPI</h4>
+							<div class="kpi-viewport">
+								<div id="kpi-wrapper">
+									<div id="kpi-scroller">
+										<div id="chart-container2" class="slide-chart"></div>
+										<div id="chart-container3" class="slide-chart"></div>
+									</div>
+								</div>
+								<div id="kpi-nav">
+									<ul id="kpi-indicator">
+										<li class="kpi-active">1</li>
+										<li>2</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="cr5">
+							<div class="cr5-title-with-switch">
+								<h6>News Feeds</h6>
+								<div data-role="none" id="news-select" class="switch candy oriange" style="width: 142px;margin-top: 2;position: absolute;left: 146px;top: 4px;">
+									<input data-role="none" id="week" name="view" type="radio" checked />
+									<label id="company-option" data-role="none" data-attr='' for="week" >Comp</label>
+									<input data-role="none" id="month" name="view" type="radio" />
+									<label id="industry-option" data-role="none" data-attr='' for="month">Indus</label>
+									<span data-role="none" class="slide-button"></span>
+								</div>
+								<!-- 											<div class="containing-element">
+								<select  id="news-select" data-role="slider">
+								<option id="company-option" value="off">Company</option>
+								<option id="industry-option" value="on">Industry</option>
+								</select>
+								</div> -->
+							</div>
+							<div class="cr6-content">
+								<div class="cr5-scroll contact-scroll-wrapper" id="news-scroll-wrapper">
+									<div class="cr5-wrapper" id="news-feeds-content">
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="cr1"> 
+						<div class="cr3 clearfix">
+							<h4 style="margin: 0 0 5px 0;color: #5A5A5A;">Contacts</h4>
+							<div class="pull-left" style=" width: 302px; margin-left: -12px">
+								<div id="contact-scroll" >
+									<div class="cr77" id="contact-list-wrap"> 
+										<div id="contact-content">
+										</div>
+									</div>
+								</div>
+								<div class="cr5">
+									<div class="cr5-title">
+										<h6>Customer Visit History</h6>
+									</div>
+									<div class="cr5-content" id="cust-visit-history">
+										<div class="cr5-scroll contact-scroll-wrapper" id="visit-history-scroll-wrapper">
+											<div class="cr5-wrapper">
+												<table id="contact-visit-history-list" style="margin-left:15px;margin-right: 15px;margin-top: 4px">
+													<!--content generated with template-->
+												</table>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="cr4 pull-right" style="margin-right: -5px">
+								<div class="cr8">
+									<div class="clearfix">
+										<table class="pull-left" style="width:50%;">
+											<tbody>
+												<tr>
+													<td><img src="img/phone.png" style="width: 20px"></td>
+													<td style="padding-left: 15px" id="contact-phone-a"></td>
+												</tr>
+												<tr>
+													<td><img src="img/mail.png" style="width: 20px" /></td>
+													<td style="padding-left: 15px;color:#428bca" id="contact-email-a"></td>
+												</tr>
+												<tr>
+													<td><img src="img/location.png" style="width: 20px" /></td>
+													<td style="padding-left: 15px" id="contact-addr-a"></td>
+												</tr>
+											</tbody>
+										</table>
+										<div class="pull-right">
+											<div class="contact-avatar">
+												<img id="contact-avatar-a" />
+											</div>
+										</div>
+									</div>
+									<div style=" height: 100px; ">
+										<a class="btn btn-primary btn-lg" id="contact-notes" data-role="none" style=" margin-left: 30%; margin-top: 8%;">Meeting Notes</a>
+									</div> 
+								</div>
+								<div class="cr5">
+									<div class="cr5-title" style="position: relative">
+										<h6>Social Feeds</h6>
+										<img id="linkedin-login"  style="position: absolute;top: 0;right: 0" src="img/js-signin.png"/>
+										<img id="linkedin-logout"  style="position: absolute;top: 0;right: 0" src="img/js-logout.png"/>
+									</div>
+									<div class="cr5-content">
+										<div class="cr5-scroll" id="social-scroll-wrapper">
+											<div id="social-entry-wrapper">
+												<!--content added by Handlebar template-->
+											</div>
+									 	</div>
+								 	</div>
+								</div>
+							</div>
+						</div>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="page" id="customer-contact-detail">
+			<div class="title-bar-left">
+				<a data-role="none" class="nav-btn-home btnTohome"><span class="icon-home"></span></a>
+				<a id="contact-back-detail" data-role="none" class="nav-btn-back"><span class="icon-back"></span></a>
+
+<!-- 				<a class="arrow_button_left" id="contact-back-detail" data-role="none"><span class="arrow_button_title">Back</span></a> -->
+				<h2 id="crm-person-name" style=" left: 105px; "></h2>
+				<img src="img/pwc_logo.png" class="pwc-logo">
+			</div>
+			<div class="page-content">
+				<div class="content-wrapper">
+						<div>
+							<div class="right-column">
+								<div class="page-content" style="margin-left: 5px">
+										<div class="meeting-notes" id="meetingNotes">
+											<div><h4 style="color:#5A5A5A;display: inline-block;padding-left: 5px;" >Meeting Notes</h4>																					
+											</div>
+											<div class="meetingNotes-content" style="margin-left: 5px;width: 696px;">	
+														<div id="notes-horizon-content">									
+															<div id="notes-wrapper" class="all-scroll-wrapper" style="display: inline-block;width: 300px;margin-left: 20px;height: 250px;margin-top: 8px">
+															<div id="meetingNotes-content">
+															<table class="table table-stripe">
+																<tbody id="meetingNotes-tbody">
+																	<tr>
+																		<td></td>
+																	</tr>
+																	<tr>
+																		<td></td>
+																	</tr>
+																</tbody>
+															</table>
+															</div>
+															</div>
+															</div>
+															<textarea id="input-meeting" style="width:300px; height: 200px;in-width:300px;min-height:200px;max-width:300px;max-height:200px;resize: none;float: right;margin-right: 20px;margin-top: -243px" placeholder="We need...."></textarea>
+															<a class="btn btn-primary"  id="meeting-record" style="  height: 40px; width: 138px; margin-top: -25px;margin-right: 20px; padding-top: 8px; padding-left: 13px;" href="#" target="_self">Save</a>												
+		
+											</div>
+											
+											<div style="height: 50px;margin-top: 80px;">	
+												<a class="btn btn-primary" id="gotoCatalog" style="  padding-left: 25px; width: 139px; margin-right: 29px;  " href="#"><img style=" width: 20px; " align="left" src="img/cart2.png">Catalog</a>												
+												<h4 style=" margin-top: 30px; color:#5A5A5A;padding-left: 5px; ">Products</h4>
+											</div>
+	
+											<div  class="detail-interested-prod">
+												<div class="panel" style="  height: 210px; width: 697px; ">
+													<div class="panel-heading">
+														Products of Interest
+													</div>
+													<div class="carousel-wrapper">
+														<div class="scroll-bottomRight-Content">
+															<ul class="thelist" style="display: inline-block;padding:0px;">
+															</ul>
+														</div>
+													</div>
+													<div class="indicator-wrapper contact-indicator-wrapper">
+														<ul class="indicator">
+															<li class="active">
+																1
+															</li>
+														</ul>
+													</div>	
+												</div>
+											</div>
+										</div>
+								</div>
+						</div>
+						<div id="left-column" class="left-column">
+							<div>
+								<img class="contact-pic" id="crm-person-headPic" style=" width: 200px; margin-top: 20px; margin-left: 50px;" src="img/potrait1.png" style=" width: 300px; margin-top: 50px; "/>
+							</div>
+							<div class="customer-name">
+								<h3 style="color:#fc5412"><span id="crm-comp-name">ABC Company</span></h3>
+							</div>
+							<div class="role-title">
+								<h3><span id="crm-person-title">IT Manager</span></h3>
+							</div>
+							<table id="contact-detail-table">
+								<tbody>
+									<tr>
+										<td><img style=" width: 20px; margin-right: 20px; " src="img/phone.png"></td>
+										<td><span id="crm-person-tel">123-456-8910</span></td>
+									</tr>
+									<tr>
+										<td><img style=" width: 20px; margin-right: 20px; " src="img/mail.png"></td>
+										<td><span id="crm-person-email">Micheal@abc.com</span></td>
+									</tr>
+									<tr>
+										<td><img style=" width: 20px; margin-right: 20px; " src="img/location.png"></td>
+										<td><span id="crm-person-street">No.5, IOC Street, NY</span></td>
+									</tr>
+								</tbody>
+							</table>
+							<div class="contact-detail" style=" padding-left: 10px; ">
+								<!-- <img style=" width: 20px; margin-right: 20px; " src="img/phone.png"><span id="crm-person-tel">123-456-8910</span> -->
+							</div>
+							<div class="contact-detail" style=" padding-left: 10px; ">
+								
+							</div>
+							<div class="" style=" margin-top:30px;padding-left: 10px;width: 300px ">
+								<!-- <div style="float: left;margin-left: 53px;color: darkgray;"></div>
+								<div style="float: left;margin-left: -165px;"></div> -->
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="page" id="category-page">
+			<div class="title-bar">
+				<a  data-role="none" class="nav-btn-home btnTohome" ><span class="icon-home"></span></a>
+				<a  data-role="none" class="nav-btn-back btnBack" id="btn-back-to-home1" href="#"><span class="icon-back"></span></a>
+<!-- 				<a class="arrow_button_left btnTohome" id="btn-back-to-home1"><span class="arrow_button_title">Home</span></a> -->
+				<h2>Categories</h2>
+				<a class="contact-btn" data-role="none" style=" position: absolute;"><span class="currentContact" ></span></a>
+				<div class="toolBar">
+					<table class="toolBarTable">
+						<tbody>
+							<tr>
+								<td><img src="img/cart.png" width="24" height="24" class="cartbutton-product"></td>
+								<td><img class="searchButton" src="img/search.png" width="24" height="24"></td>
+								<td><input class ='search-input-style search-input' data-role="none"  placeholder="Enter product name"></td>
+							</tr>																				
+						</tbody>
+					</table>
+				</div>
+				<img src="img/pwc_logo.png" class="pwc-logo">
+			</div>
+			<div class="page-content none-search" id="category-page-content">
+				<div class="item-scroll-wrapper" id="category-scroll-wrapper">
+					<div class="category-wrapper">
+						<ul class="item-list clearfix" id="category-list">
+							<li class="_feed hidden" id="category-feed">
+								<div class="up-wrapper">
+									<div class="img-wrapper">
+										<img src="img/b.jpg"/>
+									</div>
+									<div class="desc-wrapper">&nbsp;</div>
+									<div class="title-wrapper">Dollingo</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>				
+			</div>			
+		</div>
+		<div class="page" id="product-list-page">
+			<div class="title-bar">
+				<a  data-role="none" class="nav-btn-home btnTohome" ><span class="icon-home"></span></a>
+				<a  data-role="none" class="nav-btn-back" id="btn-back-to-category" href="#"><span class="icon-back"></span></a>				
+<!-- 				<a class="arrow_button_left" id="btn-back-to-category"><span class="arrow_button_title">Category</span></a> -->
+				<h2>Products</h2>
+				<a class="contact-btn" data-role="none"  style="position: absolute;"><span class="currentContact"></span></a>				
+				<div class="toolBar">
+					<table class="toolBarTable">
+						<tbody>
+							<tr>
+								<td><img src="img/cart.png" width="24" height="24" class="cartbutton-product"></td>
+								<td><img class="searchButton" src="img/search.png" width="24" height="24"></td>
+								<td><input class ='search-input-style search-input' data-role="none"  placeholder="Enter product name"></td>
+							</tr>																				
+						</tbody>
+					</table>
+				</div>
+				<img src="img/pwc_logo.png" class="pwc-logo">
+			</div>
+			<div class="page-content none-search" id="product-page-content">
+				<div class="item-scroll-wrapper" id="product-scroll-wrapper">
+					<div class="product-content-wrapper">
+						<ul class="item-list clearfix" id="product-list">
+							<li class="_feed hidden" id="product-feed">
+								<div class="up-wrapper">
+									<div class="img-wrapper">
+										<img class="product-img" src="img/b.jpg"/>
+									</div>
+									<div class="desc-wrapper">&nbsp;</div>
+									<div class="title-wrapper">Dollingo</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>				
+			</div>			
+		</div>
+		<div class="page" id="product-detail-page">
+<!-- 			<div id="my-popover-productDetail">
+  					<div class="header">
+    					<h5>Search</h5>
+  					</div>
+  					<div class="content">
+  						<div class="searchField">
+  							<button id="search-img2" type="submit" data-role="none"><img src="img/search1.png" alt="Search" style="width: 18px height:18px"></button>
+  							<input id="search-input-productDetail" type="text" placeholder="Enter product name" data-role="none">
+  						</div>
+  					</div>
+			</div> -->
+			<div class="title-bar">
+				<a  data-role="none" class="nav-btn-home btnTohome" ><span class="icon-home"></span></a>
+				<a  data-role="none" class="nav-btn-back" id="btn-back-to-product" href="#"><span class="icon-back"></span></a>					
+<!-- 				<a class="arrow_button_left" id="btn-back-to-product"><span class="arrow_button_title">Products</span></a> -->
+				<h2>Detail</h2>
+				<a class="contact-btn" data-role="none"  style="position: absolute;"><span class="currentContact"></span></a>				
+				<div class="toolBar">
+					<table class="toolBarTable">
+						<tbody>
+							<tr>
+								<td><img src="img/cart.png" width="24" height="24" class="cartbutton-product"></td>
+								<td><img class="searchButton" src="img/search.png" width="24" height="24"></td>
+								<td><input class ='search-input-style search-input' data-role="none" placeholder="Enter product name"></td>
+							</tr>																				
+						</tbody>
+					</table>
+				</div>
+				<img src="img/pwc_logo.png" class="pwc-logo">
+			</div>
+			<div class="page-content none-search">
+				<div class="content-wrapper" style="padding-top: 5px">
+						<div id="contentwrapper">
+							<div id="rightcolumn">
+								<div class="detail-all">
+									<div class="panel" style="min-height: 484px">
+										<h4>Features</h4>
+											<div id="featureCarousel-wrapper">
+												<!-- <div class="scroll-topRight-Content">
+													<ul class="thelist" style="display: inline-block;padding:0px;height:340px">
+														<li>
+															<div class="feature-wrapperx" style="overflow-y: scroll">
+																<div class="scroll-content" id="prod_feature">
+																</div>
+															</div>
+														</li>
+														<li>
+															<div class="feature-wrapperx" style="overflow-y: scroll">
+																<div class="scroll-content" id="pro_spec">
+																</div>
+															</div>
+														</li>
+													</ul>
+												</div> ** need for horizontal scroll class="feature-wrapperx"**-->
+												<div class="feature-wrapper" style="overflow-y: scroll">
+													<div class="scroll-content" id="prod_feature">
+													</div>
+												</div>
+											</div>
+									
+<!-- 											<div class="indicator-wrapper contact-indicator-wrapper">
+												<ul class="indicator">
+													<li class="active">
+														1
+													</li>
+													<li>
+														2
+													</li>
+												</ul>
+											</div>	 -->										
+										
+									</div>
+								</div>
+								<div  class="detail-related-prod">
+										<div class="panel" style=" height: 200px; ">
+											<div class="panel-heading">
+												Related Products
+											</div>
+											<div class="carousel-wrapper">
+												<div class="scroll-bottomRight-Content">
+													<ul class="thelist" style="display: inline-block;padding:0px;">
+													</ul>
+												</div>
+											</div>
+											<div class="indicator-wrapper contact-indicator-wrapper">
+												<ul class="indicator">
+													<li class="active">
+														1
+													</li>
+												</ul>
+											</div>	
+										</div>
+								</div>
+							</div>
+						</div>
+
+						<div id="leftcolumn">
+							<div class="detail-picture">
+								<div class="detail-prod-name-and-type">
+									<p style=" margin-bottom: 0px; " id="prod-name">PA60APF5FP: ISP Series-Air</p>
+									<p style=" margin-bottom: 0px; " id="prod-description"></p>
+									<span>Product Type:</span><span style="margin-left: 5px;" id="prod-type">default</span>
+								</div>
+								<div class="detail-prod-pic">
+									<img class="prod-pic" src="img/prod_pic.png" />
+								</div>
+								<div class="detail-prod-pic-list">
+									<div class="carousel-wrapper">
+										<div class="scroll-leftTop-Content">
+											<ul class="thelist" style="display: inline-block;padding:0px;">
+												
+											</ul>
+										</div>
+									</div>
+									<div class="indicator-wrapper contact-indicator-wrapper">
+										<ul class="indicator">
+											<li class="active">
+												1
+											</li>
+										</ul>
+									</div>																
+								</div>
+
+							</div>
+
+							<div class="detail-share-info" style="padding-left: 2px;padding-right: 2px">
+								<table class="table table-stripe cart-table"  id="detail-table">
+									<thead>
+										<tr>
+											<th>List Price</th>
+											<th>Quoted Price</th>
+											<th>Quantity</th>
+											
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td><span id="prod-price">$00.00</span></td>
+											<td style="padding: 2px"><input type="text" data-role="none"  class="quote-float-input" style="width: 87px;height:34px;text-align: center; padding:0px;border: 1px solid #ccc" id="qutoed-Price" pattern="[0-9]*" maxlength="10" placeholder=0></input></td>
+											<td style="padding: 2px"><input type="text" data-role="none"  class="quote-count-input" style="width: 60px;height:34px;text-align: center; padding:0px;border: 1px solid #ccc" id="quantity-num" pattern="[0-9]*" maxlength="3"></input></td>
+											
+										</tr>				
+										<tr style="background-color:#eee;background-color:rgba(0,0,0,.04)">
+											<td style="font-weight: bold">Total</td>
+											<td colspan=2 style="text-align: right">$<span id="quotedTotal-price" style="padding-right: 14px"></span></td>
+										</tr>																										
+									</tbody>
+								</table>				
+									<div>
+									<a class="btn btn-primary" id="btn-add-Product" data-role="none">Add to Cart</a>
+									<a class="btn btn-primary" id="btn-To-Cart" data-role="none">Check out</a>
+									</div>
+									
+							</div>
+						</div>				
+				</div>
+			</div>
+		</div>
+		<div class="page" id="product-cart-page">
+			<div class="title-bar">
+				<a  class="nav-btn-home btnTohome" ><span class="icon-home"></span></a>
+				<a  class="nav-btn-back" id="btn-back-to-details" href="#"><span class="icon-back"></span></a>					
+				<!--<a class="arrow_button_left" id="btn-back-to-details" style="position: absolute"><span class="arrow_button_title">Back</span></a>	-->			
+				<h2>Cart</h2>
+				<a class="contact-btn" data-role="none"  style=" position: absolute;"><span class="currentContact"></span></a>
+				<img src="img/pwc_logo.png" class="pwc-logo">
+			</div>
+			<div class="page-content" style=" height: 698px;">
+				<div class="scroll-wrapper">
+					<div class="content-wrapper-cart">
+							<div class="panel">
+								<div class="panel-heading">
+<!-- 									<h1 style="display: inline-block;width: 63%">Quote ID :<span id="quoteID">1376890400980</span></h1> -->
+									<select class="btn btn-primary" data-role ="none"  style="width: 180px;position:relative;margin-left:628px" id="cart-contact-comp">
+									</select>
+									<select class="btn btn-primary"  data-role ="none" id="cart-contact-per" style="width: 180px;position:relative;">
+									</select>
+								</div>	
+								<table class="table table-stripe cart-table">
+									<thead>
+										<tr>
+											<th>Pro</th>
+											<th>Quoted Item</th>
+											<th>List Price</th>
+											<th>Quoted Price</th>
+											<th>Quantity</th>
+											<th>List Total</th>
+											<th>Quoted Total</th>
+											<th></th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+										 <td></td>
+										 <td></td>
+										 <td></td>
+										 <td></td>
+										 <td></td>
+										 <td></td>
+										 <td></td>
+										</tr>
+										<tr>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td></td>
+										</tr>
+									</tbody>
+								</table>				
+								<div style="font-size: 17px;margin-top: 20px">
+									<form class="form-horizontal quote-form" role="form">
+									 <div class="form-group">
+									 	<label class="col-sm-4">Total Quoted Price Amount: $</label>
+									 	<label class="col-sm-2" id="total-quoted"></label>
+									 </div>
+									 <div class="form-group">
+									 	<label class="col-sm-4">Total List Price Amount: $</label>
+									 	<label class="col-sm-2" id="total-tag"></label>
+									 </div>
+									</form>
+								</div>
+							<div>
+							<a href="#" class="btn btn-primary " data-role ="none" style="float: right;width: 200px;margin-top: -60px" id="request-quote"> Request Quote Approval</a>	
+						</div>	
+					  </div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="page" id="quotelist-page" style="color: #5a5a5a;" >
+		<div class="title-bar-left">
+				<a  class="nav-btn-home btnTohome" ><span class="icon-home"></span></a>
+				<a  class="nav-btn-back btnBack" href="#" id="quotelist-back-btn"><span class="icon-back"></span></a>	
+				<!--<a class="arrow_button_left btnTohome"  data-role="none"><span class="arrow_button_title">Back</span></a>-->
+				<h2>Quote List</h2>
+				<img src="img/pwc_logo.png" class="pwc-logo">
+		</div>
+		<div class="page-content">
+					<div class="content-wrapper">
+						<div id="maincontainer">
+							<div id="contentwrapper">
+								<div id="right-column-quotelist">
+									<div class="page-content" style="margin-left: 5px">
+										<div class="quote-detail-wrapper">
+											<div class="quote-detail" id="quoteslist-detail">
+												<div class="panel">
+													<div class="panel-heading quote-heading">
+														<h3 style="display: inline-block;width: 41%">Quote Number : <span id ="quote-id">0<span></h3>
+														<label style="width: 212px;margin-top: -20px" id="lable-company" for="flip-0"></label>
+														<span class="hidden">,</span>
+														<label style="width: 108px;margin-top: -20px" id="lable-contact" for="flip-0"></label>
+														<a href="#" class="btn btn-primary" id="email-quote" data-role="none" style="width: 50px;margin-top: -20px" ><span id="quote-email"></span></a>
+													</div>
+													<div class="quote-detail-table" id="quoteslist-detail-table">
+														<div class="panel1">
+															<table class="table table-stripe quote-item-table" id="quotelist-detail-table">
+																<thead>
+																	<tr>
+																		<th style="width: 60px">ID</th>
+																		<th style="width: 155px">Quoted Item</th>
+																		<th style="width: 80px">List Price</th>
+																		<th style="width: 95px">Quoted Price</th>
+																		<th style="width: 80px">Quantity</th>
+																		<th style="width: 95px">List Total</th>
+																		<th style="width: 95px">Quoted Total</th>
+																	</tr>
+																</thead>
+																<tbody id="quote-item-tbody">
+																	<tr>
+																		<td></td>
+																		<td></td>
+																		<td></td>
+																		<td></td>
+																		<td></td>
+																		<td></td>
+																		<td></td>
+																	</tr>
+																</tbody>
+															</table>
+															
+															<div class="quote-total-form">
+																<form class="form-horizontal quote-form " role="form">
+																	 <div class="form-group">
+																	 	<label class="col-sm-4" style="width: 32.3333%">Total Quoted Price Amount: $</label>
+																	 	<label class="col-sm-2" id="total-quoted1"></label>
+																	 </div>
+																	 <div class="form-group">
+																	 	<label class="col-sm-4" style="width: 32.3333%">Total List Price Amount: $</label>
+																	 	<label class="col-sm-2" id="total-tag1"></label>
+																	 </div>
+																</form>														
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="quote-status">
+										<div class="page-content" style="margin-left: 5px">
+											<div class="quto-scroll-wrapper">
+												<div id="quote-status">
+													<div class="panel">
+														<table class="table table-stripe quote-status-table">
+															<thead>
+																<tr>
+																	<th style='width:360px'>Quote Status</th>
+																	<th style='width:300px'>Date</th>
+																</tr>
+															</thead>
+															<tbody id="quote-status-tbody">
+																<tr>
+																	<td></td>
+																	<td></td>
+																</tr>
+																<tr>
+																	<td></td>
+																	<td></td>
+																</tr>
+															</tbody>
+														</table>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+
+								</div>
+							</div>
+
+							<div id="left-column">
+								<div id="quote-scroll-outer">								
+									<div id="quote-list-scroll" class="all-scroll-wrapper">
+										<div id="quote-scroll-content">
+											<div class="quote-list-div" id="quote-list" >
+												<ul id="quoto-list-ul" data-role="listview" data-filter="true" data-filter-reveal="false" data-filter-placeholder="Search Quote"  ></ul>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+		</div>
+		<div class="page" id="product-search-page">
+			<div class="title-bar">
+				<a  data-role="none" class="nav-btn-home btnTohome"><span class="icon-home"></span></a>
+				<a  data-role="none" class="nav-btn-back" id="btn-back-search" href="#"><span class="icon-back"></span></a>	
+				<h2>Search Results</h2>
+				<a class="contact-btn" data-role="none" style="position: absolute;"><span class="currentContact"></span></a>
+			
+				<div class="toolBar">
+					<table class="toolBarTable">
+						<tbody>
+							<tr>
+								<td><img src="img/cart.png" width="24" height="24" class="cartbutton-product"></td>
+								<td><img class="searchButton" src="img/search.png" width="24" height="24"></td>
+								<td>
+								<input class ='search-input-style search-input' data-role="none"  placeholder="Enter product name">
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<img src="img/pwc_logo.png" class="pwc-logo">
+			</div>
+			<div class="no page-content" style=" height: 698px; position: relative ">
+				<div class="item-scroll-wrapper" id="search-scroll-wrapper" >
+					<div class="product-content-wrapper">
+						<ul class="item-list clearfix" id="search-list">
+							<li class="_feed hidden" id="search-feed">
+								<div class="trangle search-item-category">
+									<span>Monitor</span>									
+								</div>
+								<div class="up-wrapper">
+									<div class="img-wrapper">
+										<img class="product-img" src="img/b.jpg"/>
+									</div>
+									<div class="desc-wrapper">
+										&nbsp;
+									</div>
+									<div class="title-wrapper">
+										Dollingo
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="na page-content hidden">
+					<div class="na-inner">
+						<div>i
+							<img src="img/na.png" width="42px" style="margin-bottom: 10px;">
+						</div>
+						<div>
+							No Data Available
+						</div>
+					</div>
+			</div>
+		</div>
+		<!-- Le javascript
+		================================================== -->
+		<!-- Placed at the end of the document so the pages load faster -->
+		<script src="javascripts/jquery-1.10.2.js"></script>
+		<script type="text/javascript" src="javascripts/cordova-2.2.0.js"></script>
+		<script type="text/javascript" src="javascripts/ChildBrowser.js"></script>
+		<script type="text/javascript" src="javascripts/EmailComposer.js"></script>
+		<script src="javascripts/bootstrap.js"></script>
+		<script src="javascripts/jquery.mobile-1.3.2.min.js"></script>
+		<script src="javascripts/highchart.js"></script>
+		<script src="javascripts/highcharts-more.js"></script>
+		<script src="javascripts/OAuthSimple.js"></script>
+		<script src="javascripts/handlebars.js"></script>
+		<script src="javascripts/iscroll.js"></script>
+		<script src="javascripts/moment.min.js"></script>
+		<script src="javascripts/jquery.xml2json.js"></script>
+		<script src="javascripts/poc.js"></script>
+		<script src="javascripts/integration.js"></script>
+		<script src="javascripts/util.js"></script>
+		<script id="template-RightBottomCarousel" type="text/x-handlebars-template">
+			<li>
+				{{#each prod_related}}
+				<div class="relative-pro"  >
+							<div class="relative-title">
+								{{shortDesc description}}
+							</div>
+							<div class="relate-back">
+								<div class="relative-img">
+									<img src={{fullPath img}} alt="" style="width: 80%;height: 100%;margin-left: 15px;"/>
+								</div>
+							</div>
+				</div>
+				{{/each}}
+			</li>
+		</script>
+		<script id="template-leftTopImageCarousel" type="text/x-handlebars-template">			
+			<li class="leftcontactitem">
+				{{#each pic_detail}}
+				<img class="leftTop-carouse-item" src={{fullName img_small}} alt="">
+				{{/each}}
+			</li>
+		</script>	
+		<script id="template-RightBottomCarousel1" type="text/x-handlebars-template">
+			<li>
+				{{#each prod_related}}
+				<div class="relative-pro"  >
+					<div class="relative-title">
+						{{shortDesc Item_Description}}
+					</div>
+					<div class="relate-back">
+						<div class="relative-img">
+							<img src={{fullPath img}} alt="" style="width: 80%;height: 100%;margin-left: 15px;"/>
+						</div>
+					</div>
+				</div>
+				{{/each}}
+			</li>
+		</script>
+		<script id="customer-template" type="text/x-handlebars-template">
+				{{#each li_related}}
+				<li class="customer-li " data-icon="false" data-customer-id="customer-{{PARTY_ID}}" data-id="{{PARTY_ID}}" data-index="{{@index}}">
+					<a class="customer-li-a" href="#"><img  class="customer-li-img" src={{logoPath PARTY_IMAGE}}><h6>{{PARTY_NAME}}</h6><p>{{CATEGORY_CODE}}</p></a>
+				</li>
+				{{/each}}
+		</script>	
+		
+		<script id="contact-list-template" type="text/x-handlebars-template">
+				{{#each li_related}}
+				<div class="cr66">
+					<div class="cr666 contact-personnel"  data-linkedin-id="{{Contact_Linkedin}}" data-index="{{@index}}">
+						<div class="cr6666">
+							<div class="cr-name">{{fullName Contact_First_Name Contact_Last_Name}}</div>
+							<div class="cr-title">{{Contact_job_title}}</div>
+						</div>
+					</div>
+				</div>
+				{{/each}}
+		</script>	
+		<script id="quote-template" type=" type="text/x-handlebars-template"">
+			{{#each li_related1}}
+			<li class="quote-li" data-icon="false" id="quote-feed">
+				<a href="#">
+				<div class="quote-item-left" style="color: grey">
+					{{id}}
+				</div>
+				<div class="quote-item-content1" style="font-size: 12px;">
+					{{desc}}
+				</div>
+				<div class="quote-item-content2" style="font-size: 12px;color: red">
+					{{company_name}}
+				</div>
+				<div>
+					<p class="ui-li-aside" style="color: grey">
+						{{date}}
+					</p>
+				</div> </a>
+
+			</li>
+			{{/each}}
+		</script>
+		<script id="create-quoto-request-template" type=" type="text/x-handlebars-template"">
+			<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sin="http://xmlns.oracle.com/singleString">
+			   <soapenv:Header/>
+			   <soapenv:Body>
+			      <sin:InputParameters>
+			         <sin:P_QTE_HEADER_REC>
+			            <sin:QuoteName>{{quotoName}}</sin:QuoteName>
+			            <sin:CustomerID>{{customerId}}</sin:CustomerID>
+			            <sin:CustomerAccountID>{{custAcctId}}</sin:CustomerAccountID>
+			            <sin:BillToSiteID>{{partySiteId}}</sin:BillToSiteID>
+			            <sin:ContactID>{{contactId}}</sin:ContactID>
+			            <sin:SalesRepName></sin:SalesRepName>
+			            <sin:CurrencyCode>USD</sin:CurrencyCode>
+			         </sin:P_QTE_HEADER_REC>
+			         {{#each lineItems}}
+			         <sin:P_QTE_LINE_TBL>
+			            <sin:InventoryItemId>{{itemId}}</sin:InventoryItemId>
+			            <sin:Quantity>{{quantity}}</sin:Quantity>
+			            <sin:UomCode>Ea</sin:UomCode>
+			            <sin:LineAdjustmentAmount></sin:LineAdjustmentAmount>
+			            <sin:LineListPrice>{{price}}</sin:LineListPrice>
+			            <sin:LineQuotePrice>{{quotePrice}}</sin:LineQuotePrice>
+			        </sin:P_QTE_LINE_TBL> 
+			         {{/each}}
+			      </sin:InputParameters>
+			   </soapenv:Body>
+			</soapenv:Envelope>
+		</script>
+		<script id="visit-history-template" type="text/x-handlebars-template">
+			{{#each arr}}
+			<tr>
+				<td>
+				<div class="cr99">
+						<div class="cr9999">
+							<div class="cr-list">{{dateFormat}}</div>
+						</div>
+				</div>
+				</td>
+			</tr>
+			{{/each}}
+		</script>
+		<script id="social-entry-template" type=" type="text/x-handlebars-template"">
+			{{#each arr}}
+			<tr>
+				<td>
+				<div class="social-entry">
+					<div class="s-e-1">
+						<span class="s-e-name">{{name}} comments:</span> 
+					</div>
+					<div class="s-e-2">
+						<span class="s-e-comment">{{comment}} about</span> 
+					</div>
+					<div class="s-e-3">
+						<p href={{url}} class="s-e-description">{{c}}</p>
+					</div>
+				</div>
+				</td>
+			</tr>
+			{{/each}}
+		</script>
+		<script id="get-interested-item-request-template" type=" type="text/x-handlebars-template"">
+			<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sin="http://xmlns.oracle.com/singleString">
+			   <soapenv:Header/>
+			   <soapenv:Body>
+			      <sin:InputParameters>
+			         <sin:P_IN_CONTACT_ID>{{contactId}}</sin:P_IN_CONTACT_ID>
+			      </sin:InputParameters>
+			   </soapenv:Body>
+			</soapenv:Envelope>
+		</script>
+		<script type="text/javascript" src="http://www.google.com/jsapi"></script>
+		<script type="text/javascript">
+			google.load("feeds", "1")
+		</script>
+	</body>
+</html>

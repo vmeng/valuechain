@@ -1,0 +1,62 @@
+{
+	"products": [
+		{
+			"id":544,
+			"name": "Product A",
+			"type":"TYPE CDE34WE5",
+			"avatar": "p.jpg",
+			"desc": "Desc",
+			"price":"$123",
+			"pic_detail":[
+				{
+					"img_small": "prod_pic1.png",
+					"img_medium": "prod_pic.png"
+				},{
+					"img_small": "prod_pic2.png",
+					"img_medium": "prod_pic0.png"
+				},{
+					"img_small": "prod_pic3.png",
+					"img_medium": "prod_pic0.png"
+				}
+			],
+			"prod_desc":"",
+			"prod_feature":"",
+			"pro_spec":"",
+			"prod_related":[
+				{
+					"name":"Product B",
+					"img":"a.jpg"
+				}
+			]
+		}, 
+		{
+			"id":197,
+			"name": "Product B",
+			"type":"TYPE RGT3D45",
+			"avatar": "p.jpg",
+			"desc": "Desc",
+			"price":"$123",
+			"pic_detail":[
+				{
+					"img_small": "prod_pic1.png",
+					"img_medium": "prod_pic.png"
+				},{
+					"img_small": "prod_pic2.png",
+					"img_medium": "prod_pic0.png"
+				},{
+					"img_small": "prod_pic3.png",
+					"img_medium": "prod_pic0.png"
+				}
+			],
+			"prod_desc":"",
+			"prod_feature":"",
+			"pro_spec":"",
+			"prod_related":[
+				{
+					"name":"Product B",
+					"img":"a.jpg"
+				}
+			]
+		}
+	]
+}

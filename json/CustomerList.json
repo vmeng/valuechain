@@ -1,0 +1,75 @@
+{
+	"customers": [
+		{
+			"id":100,
+			"name": "Google Inc.",
+			"industry":"Search Engine",
+			"addr":"1600 Amphitheatre Parkway Mountain View, CA  94043",
+			"avatar": "logo.png",
+			"desc": "Google Inc.",
+			"contact":"(212) 210 -2100",
+			"fullRates":"66%",
+			"revenue":"200",
+			"openQuotes":30,
+			"completedQuotes":10,
+			"lat":37.42,
+			"lng":-122.08
+		}, {
+			"id":101,
+			"name": "Oracle",
+			"industry":"DataBase",
+			"addr":"100 Oracle Pkwy, Redwood City, CA 94065",
+			"avatar": "logo.png",
+			"desc": "Oracle",
+			"contact":"(212) 210 -2100",
+			"fullRates":"80%",
+			"revenue":"300",
+			"openQuotes":300,
+			"completedQuotes":120,
+			"lat":37.529,
+			"lng":-122.266
+		}, {
+			"id":102,
+			"name": "IBM Corporation",
+			"industry":"IT Service",
+			"addr":"1 New Orchard Road Armonk, New York 10504-1722",
+			"avatar": "logo.png",
+			"desc": "IBM Corporation",
+			"contact":"(212) 210 -2100",
+			"fullRates":"96%",
+			"revenue":"800",
+			"openQuotes":130,
+			"completedQuotes":110,
+			"lat":38.107,
+			"lng":-121.721
+		}, {
+			"id":103,
+			"name": "Apple Inc.",
+			"industry":"Phone",
+			"addr":"1 Infinite Loop, Cupertino, CA 95014",
+			"avatar": "logo.png",
+			"desc": "Apple Inc.",
+			"contact":"(212) 210 -2100",
+			"fullRates":"69%",
+			"revenue":"2000",
+			"openQuotes":300,
+			"completedQuotes":210,
+			"lat":37.331,
+			"lng":-122.03
+		}, {
+			"id":104,
+			"name": "HP",
+			"industry":"printer",
+			"addr":"3000 Hanover Street Palo Alto, CA 94304-1185",
+			"avatar": "logo.png",
+			"desc": "Hewlett-Packard Company",
+			"contact":"(212) 210 -2100",
+			"fullRates":"33%",
+			"revenue":"202",
+			"openQuotes":300,
+			"completedQuotes":102,
+			"lat":37.415,
+			"lng":-122.146
+		}
+	]
+}

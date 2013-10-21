@@ -1,0 +1,65 @@
+{
+	"id":100,
+	"name": "ABC Company",
+	"street address": "",
+	"postal code": "",
+	"city":"Montgomery",
+	"state":"AL",
+	"country":"US",
+	"revenue":"",
+	"feeds":"",
+	"visitHistory":[
+		{
+			"date": "2013-08-01 10:30",
+			"eventType": "Client Visit",
+			"detail":""
+		},{
+			"date": "2013-08-02 10:30",
+			"eventType": "Promotion",
+			"detail":""
+		},{
+			"date": "2013-08-03 10:30",
+			"eventType": "Client Visit",
+			"detail":""
+		}
+	],
+	"contactList":[
+		{
+			"name": "cindy",
+			"email": "cindy@yahoo.com",
+			"phone":"123-4555-12",
+			"jobTitle":"Manager",
+			"address":"No.5, IOC Street, NY",
+			"avatar": "avatar2.png",
+			"linkedin":""
+		},{
+			"name": "jker",
+			"email": "jker@yahoo.com",
+			"phone":"12345",
+			"jobTitle":"Sales Representative",
+			"address":"",
+			"avatar": "avatar1.png",
+			"linkedin":""
+		},{
+			"name": "roger",
+			"email": "roger@yahoo.com",
+			"phone":"12345",
+			"jobTitle":"Marketing",
+			"address":"",
+			"avatar": "avatar3.png",
+			"linkedin":""
+		}
+	],
+	"meetingNotes":[
+		{
+			"date": "2013-08-01 10:30",
+			"detail":"product purchase"
+		},{
+			"date": "2013-08-02 10:30",
+			"detail":"client visit"
+		},{
+			"date": "2013-08-03 10:30",
+			"detail":"promotion"
+		}
+	]
+}

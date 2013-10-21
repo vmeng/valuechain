@@ -1,0 +1,37 @@
+{
+	"categories": [
+		{
+			"name": "Category A",
+			"avatar": "a.jpg",
+			"desc": "Category A"
+		}, {
+			"name": "Category B",
+			"avatar": "b.jpg",
+			"desc": "Category B"
+		}, {
+			"name": "Category C",
+			"avatar": "c.jpg",
+			"desc": "Category C"
+		}, {
+			"name": "Category D",
+			"avatar": "d.jpg",
+			"desc": "Category D"
+		}, {
+			"name": "Category E",
+			"avatar": "e.jpg",
+			"desc": "Category E"
+		}, {
+			"name": "Category F",
+			"avatar": "f.jpg",
+			"desc": "Category F"
+		}, {
+			"name": "Category G",
+			"avatar": "g.jpg",
+			"desc": "Category G"
+		}, {
+			"name": "Category H",
+			"avatar": "h.jpg",
+			"desc": "Category H"
+		}
+	]
+}

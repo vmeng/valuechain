@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Module specificationVersion="1">
-  <ModulePrefs title="valuechange_poc01"
-               description="Description of valuechange_poc01"
+  <ModulePrefs title="valuechain_poc"
+               description="Description of valuechain_poc"
                author="vmeng"
                author_affiliation="PWC"
                author_email="jmeng2007@163.com">

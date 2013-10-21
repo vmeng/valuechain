@@ -12,8 +12,9 @@
 		<link href="stylesheets/poc.css" rel="stylesheet" type="text/css" />
 		<link href="stylesheets/toggle-switch.css" rel="stylesheet" type="text/css"/>
 		<!-- Jive api key: gi4f39ttp3q3-->
+		<!-- Localhost api key: n9fvq3key7m8-->
 		<script type="text/javascript" src="http://platform.linkedin.com/in.js">
-			api_key: gi4f39ttp3q3
+			api_key: n9fvq3key7m8
 			authorize: true
 			lang:  es_ES
 		</script>
@@ -1030,7 +1031,7 @@
 		</script>
 
 		<script type="IN/Login">
-			<form action="/register.html">
+			<form action="/register.html" id='linkedLoginForm'>
 			<p>Your Name: <input type="text" name="name" value="<?js= firstName ?> <?js= lastName ?>" /></p>
 			<p>Your Password: <input type="password" name="password" /></p>
 			<input type="hidden" name="linkedin-id" value="<?js= id ?>" />

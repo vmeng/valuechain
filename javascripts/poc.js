@@ -7,6 +7,7 @@ var consumer_key = "247fmvid6e8k";
 var shared_secret = "4WWHRnj9YbTsw4cr";
 var callbackUrl = "http://ec2-75-101-169-93.compute-1.amazonaws.com:8080/callback.html";
 var oauth_info = {};
+var jive_img_url = "https://sandbox.jiveon.com/gadgets/proxy?container=default&gadget=http%3A%2F%2Fapphosting.jivesoftware.com%2Fapps%2Fdev%2Fvaluechain_poc%2Fapp.xml&debug=0&nocache=1&html_tag_context=img&url=http%3A%2F%2Fapphosting.jivesoftware.com%2Fapps%2Fdev%2Fvaluechain_poc%2Fimages%2F";
 var oauth = OAuthSimple(consumer_key, shared_secret);
 var product={  
     id:0,  
@@ -193,7 +194,7 @@ var app = {
             var $prod = $("#search-list");
             $.each(searchResult, function(index, val) {
                 var $feed = $("#search-feed").clone();
-                $feed.find("img").attr("src", "images/" + val.Item_Image[0]);
+                $feed.find("img").attr("src", jive_img_url + val.Item_Image[0]);
                 $feed.find(".title-wrapper").html(val.Item_Number);
                 $feed.find(".desc-wrapper").html(val.Item_Description);
                 $feed.find(".search-item-category span").html(val.Category_Name);
@@ -448,7 +449,7 @@ var app = {
 	        var subtotal =parseFloat((Number(item.num) *Number(item.price)).toFixed(2));
 	        
 	        var subqutoed =parseFloat((item.quoted *Number(item.num)).toFixed(2));
-	            tag = "<tr class='cart_item'>" + ("<td><img src =' images/"+item.pic+"' width='40px' height='30px'></td>");
+	            tag = "<tr class='cart_item'>" + ("<td><img src ='"+ jive_img_url + item.pic+"' width='40px' height='30px'></td>");
                 tag += ("<td>" + (item.name ? item.name : "") + "</td>");
                 tag += ("<td>" + (item.price ? "$"+item.price : "") + "</td>");
                 tag += ("<td style='padding:2px'><input type='text' data-role='none' style='width: 80px;height:34px;text-align: center;border:1px solid #ccc' maxlength='10' placeholder=0 class='cart-qutoed-input quote-float-input' value="+(item.quoted ? item.quoted : "") + "></td>");
@@ -936,7 +937,8 @@ var app = {
 				data = CategoryList_new_json;
 				$.each(data.categories, function(index, val) {
 					var $feed = $("#category-feed").clone();
-					$feed.find("img").attr("src", "images/" + val.avatar);
+					
+					$feed.find("img").attr("src", jive_img_url + val.avatar);
 					$feed.find(".title-wrapper").html(val.name);
 					$feed.data("CATEGORY",val);
 					$category.append($feed.removeClass("hidden").addClass("_category-item"));
@@ -974,7 +976,7 @@ var app = {
 		$.each(app.allProducts.products, function(index, val) {
 			if(val.Category_Name==categoryName){
 				var $feed = $("#product-feed").clone();
-				$feed.find("img").attr("src", "images/" + val.Item_Image[0]);
+				$feed.find("img").attr("src", jive_img_url + val.Item_Image[0]);
 				$feed.find(".title-wrapper").html(val.Item_Number);
 				$feed.find(".desc-wrapper").html(val.Item_Description);
 				$feed.data("PRODUCT",val);
@@ -993,7 +995,7 @@ var app = {
 	},
 	loadDetialPicImage:function(e){
 	    var pic =  $(e.target).closest('img').data('ITEMDETAILPIC');
-	    $(".prod-pic").attr('src',"images/"+pic);
+	    $(".prod-pic").attr('src',jive_img_url + pic);
 	},
 	onProductClick: function(e) {
 	    $('.search-input').blur();
@@ -1038,7 +1040,7 @@ var app = {
 	           'pic_detail':array
 	       };
 	       Handlebars.registerHelper('fullName', function() {
-	            return "images/"+ this;
+	            return jive_img_url + this;
 	       });
 	       $(".detail-prod-pic-list .thelist").append(temple(context));
             $(".detail-prod-pic-list .thelist li").last().find('img').each(function(index, value) {
@@ -1072,7 +1074,7 @@ var app = {
                 'prod_related' : array
             };
             Handlebars.registerHelper('fullPath', function() {
-                return "images/" + this.img;
+                return jive_img_url + this.img;
             });
             Handlebars.registerHelper('shortDesc', function() {
                 var desc =this.description;
@@ -1108,7 +1110,7 @@ var app = {
 		$("#prod-price").text(data.Item_List_Price);
 		$("#qutoed-Price").val(data.Item_List_Price);
 		$("#quantity-num").val(1);
-		$(".prod-pic").attr("src", "images/" + data.Item_Image[0]);
+		$(".prod-pic").attr("src", jive_img_url + data.Item_Image[0]);
 		// var currentPrice = Number(data.Item_List_Price.replace(/\$/g,""));
 		var currentPrice = Number(data.Item_List_Price);
 		if(currentPrice!=undefined){
@@ -1744,7 +1746,7 @@ var sdc = {
         };
 
         Handlebars.registerHelper('logoPath', function() {
-            return "images/" + this.PARTY_IMAGE;
+            return jive_img_url + this.PARTY_IMAGE;
         });
         $("#customer-listview>ul").append(temple(context)).listview().listview("refresh");
         $("#customer-listview input.ui-input-text").unbind("keyup").keyup(map.updateMapCenter);
@@ -1822,7 +1824,7 @@ var sdc = {
     	}
         $("#crm-person-name").text(currentContact.Contact_First_Name+" "+currentContact.Contact_Last_Name);
         $("#crm-person-title").text(currentContact.Contact_job_title);
-        $("#crm-person-headPic").attr('src', 'images/' + currentContact.Contact_Image);
+        $("#crm-person-headPic").attr('src', jive_img_url + currentContact.Contact_Image);
         $("#crm-person-tel").text(currentContact.Contact_Phone_Number);
         $("#crm-person-email").text(currentContact.Contact_Email_Address);
         $("#crm-person-street").text(valueChain.tool.readableAddress([currentContact.Contact_Address1,currentContact.Contact_Address2,currentContact.Contact_City,currentContact.Contact_Postal_Code]));
@@ -1893,7 +1895,7 @@ var sdc = {
 				'prod_related' : array
 			};
 			Handlebars.registerHelper('fullPath', function() {
-				return "images/" + this.Item_Image[0];
+				return jive_img_url + this.Item_Image[0];
 			});
 			
             Handlebars.registerHelper('shortDesc', function() {
@@ -2225,7 +2227,7 @@ var map = {
         controlDiv.appendChild(controlUI); 
         
         var controlText = document.createElement('div');
-        controlText.style.background = 'url(images/location.png) no-repeat';
+        controlText.style.background = 'url('+jive_img_url+'location.png) no-repeat';
         controlText.style.width='12px';
         controlText.style.height='18px';
         controlText.style.display='inline-block';
@@ -2240,7 +2242,7 @@ var map = {
                     var marker = new google.maps.Marker({
                         position : initialLocation,
                         map : map.map,
-                        icon:'images/gpsloc.png'
+                        icon:jive_img_url + 'gpsloc.png'
                     }); 
 
                  }, function() {
@@ -2783,7 +2785,7 @@ var contact = {
 		$("#contact-phone-a").html(contact.currentContact.Contact_Phone_Number);
 		$("#contact-email-a").html(contact.currentContact.Contact_Email_Address);
 		$("#contact-addr-a").html(contact.currentContact.Contact_Address1);
-		$("#contact-avatar-a").attr("src","images/"+contact.currentContact.Contact_Image);
+		$("#contact-avatar-a").attr("src",jive_img_url + contact.currentContact.Contact_Image);
 	},
 	sendEmail : function(e){
 		var email = window.plugins.emailComposer;

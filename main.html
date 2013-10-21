@@ -14,9 +14,9 @@
 		<!-- Jive api key: gi4f39ttp3q3-->
 		<!-- Localhost api key: n9fvq3key7m8-->
 		<script type="text/javascript" src="http://platform.linkedin.com/in.js">
-			api_key: n9fvq3key7m8
-			authorize: true
-			lang:  es_ES
+			api_key:n9fvq3key7m8 
+			authorize:true
+			lang:es_ES
 		</script>
 
 	</head>
@@ -1030,12 +1030,14 @@
 			google.load("feeds", "1")
 		</script>
 
-		<script type="IN/Login">
-			<form action="/register.html" id='linkedLoginForm'>
-			<p>Your Name: <input type="text" name="name" value="<?js= firstName ?> <?js= lastName ?>" /></p>
-			<p>Your Password: <input type="password" name="password" /></p>
-			<input type="hidden" name="linkedin-id" value="<?js= id ?>" />
-			<input type="submit" name="submit" value="Sign Up"/>
+		<script type="text/javascript">
+			function onLinkedInAuth() {
+				IN.API.Profile("me").result(function(me) {
+					var id = me.values[0].id;
+					console.log(id);
+					// AJAX call to pass back id to your server
+				});
+			}
 		</script>
 	</body>
 </html>

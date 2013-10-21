@@ -937,12 +937,9 @@ var app = {
 		// categoryJsonFileArray = new Array();
 		productNameArray = [];
 		allCategory = [];
-		$.ajax({
-			url : JSON_SERVER + "json/CategoryList_new.json",
-			dataType : "JSON",
-			success : function(data) {
+		
 				$category = $("#category-list");
-				allCategory =data;
+				data = CategoryList_new_json;
 				$.each(data.categories, function(index, val) {
 					var $feed = $("#category-feed").clone();
 					$feed.find("img").attr("src", "images/" + val.avatar);
@@ -958,8 +955,8 @@ var app = {
 				//traversal all categories' json file
 				app.traversalAllProducts();
 				app.refresh();			
-			}
-		});
+				
+
 	},
 	changePage : function($from, $to) {
 		$from.fadeOut(500).hide();

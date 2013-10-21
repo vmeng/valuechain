@@ -1196,13 +1196,14 @@ var app = {
 				console.log("error:" + errorMsg);
 			}
 
-			function onSuccess(responseString, textStatus, jqXHR) {
-				var error = $(responseString).find("Error");
-				if (error && error.length > 0) {
-					handleErrorResponse(responseString);
-					return;
-				}
-				var item = $.xml2json(responseString).Body.OutputParameters.X_REVENUE_ALL_TBL_TYPE.X_REVENUE_ALL_TBL_TYPE_ITEM;
+			function onSuccess(res) {
+				// var error = $(responseString).find("Error");
+				// if (error && error.length > 0) {
+					// handleErrorResponse(responseString);
+					// return;
+				// }
+				// var item = $.xml2json(responseString).Body.OutputParameters.X_REVENUE_ALL_TBL_TYPE.X_REVENUE_ALL_TBL_TYPE_ITEM;
+				var item = res;
 				if (item != undefined) {
 					 var rev = item.REVENUE_EARNED;
 					 if(rev==undefined||rev==""){
@@ -1265,16 +1266,17 @@ var app = {
 			if(id==="all"){
 				requestId="";
 			}
-			valueChain.tool.callServiceNoLoadingShow({
-				url : soapUrl,
-				soapAction : action,
-				success : onSuccess,
-				error : app.onServiceError,
-				complete : onComplete,
-				data : valueChain.ws.getCustomerStatisticRevenueRequest({
-					customerAccId : requestId
-				})
-			}); 
+			// valueChain.tool.callServiceNoLoadingShow({
+				// url : soapUrl,
+				// soapAction : action,
+				// success : onSuccess,
+				// error : app.onServiceError,
+				// complete : onComplete,
+				// data : valueChain.ws.getCustomerStatisticRevenueRequest({
+					// customerAccId : requestId
+				// })
+			// }); 
+			onSuccess(libLoadRevenue(requestId));
 
 		}
 		if (service.revenue[id] === undefined) {
@@ -1997,13 +1999,14 @@ var sdc = {
             console.log("error:" + errorMsg);
         };
 
-       function onSuccess(responseString, textStatus, jqXHR){
-            var error = $(responseString).find("Error");
-            if (error && error.length > 0) {
-                handleErrorResponse(responseString);
-                return;
-            }
-            notesList = $.xml2json(responseString).Body.OutputParameters.X_FETCH_MM_TBL_TYPE.X_FETCH_MM_TBL_TYPE_ITEM;
+       function onSuccess(notesList){
+            // var error = $(responseString).find("Error");
+            // if (error && error.length > 0) {
+                // handleErrorResponse(responseString);
+                // return;
+            // }
+            // notesList = $.xml2json(responseString).Body.OutputParameters.X_FETCH_MM_TBL_TYPE.X_FETCH_MM_TBL_TYPE_ITEM;
+            console.log(notesList);
             if(notesList !=undefined&&notesList!=''){ 
                 if ($.isArray(notesList)) {
                     $.each(notesList, function(index, val) {
@@ -2053,19 +2056,20 @@ var sdc = {
         }
         var createDate = moment(date,'YYYY-MM-DD').format('YYYY-MM-DD');
 
-       	valueChain.tool.callService({
-                url : getMeetingURL,
-                soapAction : getMeetingAction,
-                success : onSuccess,
-                error : app.onServiceError,
-                complete : onComplete,
-                data : valueChain.ws.findMeetingMinutes({
-                    salesName : salesName,
-                    constomerId : constomerId,
-                    contactId : contactId,
-                    createDate:createDate
-                })
-            });    	
+       	// valueChain.tool.callService({
+                // url : getMeetingURL,
+                // soapAction : getMeetingAction,
+                // success : onSuccess,
+                // error : app.onServiceError,
+                // complete : onComplete,
+                // data : valueChain.ws.findMeetingMinutes({
+                    // salesName : salesName,
+                    // constomerId : constomerId,
+                    // contactId : contactId,
+                    // createDate:createDate
+                // })
+            // });    	
+       onSuccess(showMeetingNotes(constomerId, contactId, createDate));
 	}, 
 	onMeetingNotesClick : function(e) {
         var $tr = $(this).closest("tr");
@@ -2768,13 +2772,15 @@ var contact = {
 			console.log("error:" + errorMsg);
 		}
 
-		function onSuccess(responseString, textStatus, jqXHR) {
-			var error = $(responseString).find("Error"), arr = [];
-			if (error && error.length > 0) {
-				handleErrorResponse(responseString);
-				return;
-			}
-			var items = $.xml2json(responseString).Body.OutputParameters.X_VISIT_HISTORICAL_TBL.X_VISIT_HISTORICAL_TBL_ITEM;
+		function onSuccess(items) {
+			// var error = $(responseString).find("Error")
+			var arr = [];
+			// if (error && error.length > 0) {
+				// handleErrorResponse(responseString);
+				// return;
+			// }
+			// var items = $.xml2json(responseString).Body.OutputParameters.X_VISIT_HISTORICAL_TBL.X_VISIT_HISTORICAL_TBL_ITEM;
+			console.log(items);
 			var template = Handlebars.compile($("#visit-history-template").html());
 			if(!$.isArray(items)){
                 if (items != undefined && items != "") {
@@ -2816,23 +2822,24 @@ var contact = {
 			}
 			
 		}
-		valueChain.tool.callServiceNoLoadingShow({
-			url : soapUrl,
-			soapAction : action,
-			success : onSuccess,
-			error : app.onServiceError,
-			complete : onComplete,
-			data : valueChain.ws.getVisitHistoryRequest({
-
-				name : "Lewis, Mr. David",
-	           // customerAccId:"5453",
-	            //customerContactId:"442698",
-	            //orgId:"204"
-	            customerAccId:contact.currentContact.Customer_account_id,
-	            customerContactId:contact.currentContact.Contact_id,
-	            orgId:"204"
-			})
-		}); 
+		// valueChain.tool.callServiceNoLoadingShow({
+			// url : soapUrl,
+			// soapAction : action,
+			// success : onSuccess,
+			// error : app.onServiceError,
+			// complete : onComplete,
+			// data : valueChain.ws.getVisitHistoryRequest({
+// 
+				// name : "Lewis, Mr. David",
+	           // // customerAccId:"5453",
+	            // //customerContactId:"442698",
+	            // //orgId:"204"
+	            // customerAccId:contact.currentContact.Customer_account_id,
+	            // customerContactId:contact.currentContact.Contact_id,
+	            // orgId:"204"
+			// })
+		// }); 
+		onSuccess(buildVisitHistory(contact.currentContact.Customer_account_id, contact.currentContact.Contact_id));
 	},
 	buildContactDetail : function(){
 		$("#contact-phone-a").html(contact.currentContact.Contact_Phone_Number);
@@ -2989,17 +2996,17 @@ var chart = {
 		var a = valueChain.ws.soapAction.GETHISTORICALQUOTES;
 		var u = valueChain.ws.url.GET_HISTORICAL_QUOTES;
 		// var u = "json/a.xml";
-		function onSuccess(data, textStatus, jqXHR) {
+		function onSuccess(items) {
+		  console.log('LoadQuote');
 			var dates = [];
 			var series = [];
 			var openQuoteCount = {};
 			var closedQuoteCount = {};
-			var $json = $.xml2json(data);
-			if($json.Body.OutputParameters.X_HISTORICAL_QUOTE_TBL == undefined || $json.Body.OutputParameters.X_HISTORICAL_QUOTE_TBL == ""){
-				$('#chart-container2').html("<div style='line-height:300px; height:300px;text-align:center'>No Data Found</div>");
-				return false;
-			}
-			var items = $json.Body.OutputParameters.X_HISTORICAL_QUOTE_TBL.X_HISTORICAL_QUOTE_TBL_ITEM;
+			// var $json = $.xml2json(data);
+			// if(items == undefined || $json.Body.OutputParameters.X_HISTORICAL_QUOTE_TBL == ""){
+				// $('#chart-container2').html("<div style='line-height:300px; height:300px;text-align:center'>No Data Found</div>");
+				// return false;
+			// }
 			$.each(items, function(index, val) {
 				var transformedDate = moment(val.QUOTE_CREATE_DATE).format("MMM DD");
 				if ($.inArray(transformedDate, dates)<0 && dates.length < 7) {
@@ -3051,15 +3058,7 @@ var chart = {
 			console.log(data);
 		}
 
-		valueChain.tool.callService({
-			url : u,
-			soapAction : a,
-			success : onSuccess,
-			error : onError,
-			data : valueChain.ws.getHistoricalQuotesRequest({
-				accountId : customerId
-			})
-		}); 
+		onSuccess(loadQuote(customerId));
 
 		// $.ajax({
 			// url : u,
@@ -3070,16 +3069,17 @@ var chart = {
 		var a = valueChain.ws.soapAction.GETHISTORICALQUOTES;
 		var u = valueChain.ws.url.GET_CUSTOMER_REVENUE;
 		// var u = "json/b.xml";
-		function onSuccess(data, textStatus, jqXHR) {
+		function onSuccess(items) {
+      console.log('loadRevenue');
 			var dates = [];
 			var revenues = [];
 			var margins = [];
-			var $json = $.xml2json(data);
-			if($json.Body.OutputParameters.X_C_REVENUE_PER_MONTH_REC == undefined || $json.Body.OutputParameters.X_C_REVENUE_PER_MONTH_REC == ""){
-				$('#chart-container3').html("<div style='line-height:300px; height:300px;text-align:center'>No Data Found</div>");
-				return false;
-			}
-			var items = $json.Body.OutputParameters.X_C_REVENUE_PER_MONTH_REC.X_C_REVENUE_PER_MONTH_REC_ITEM;
+			// var $json = $.xml2json(data);
+			// if($json.Body.OutputParameters.X_C_REVENUE_PER_MONTH_REC == undefined || $json.Body.OutputParameters.X_C_REVENUE_PER_MONTH_REC == ""){
+				// $('#chart-container3').html("<div style='line-height:300px; height:300px;text-align:center'>No Data Found</div>");
+				// return false;
+			// }
+			// var items = $json.Body.OutputParameters.X_C_REVENUE_PER_MONTH_REC.X_C_REVENUE_PER_MONTH_REC_ITEM;
 			//sort the items
 			items.sort(function(a,b){
 				var _a = Number(a.YEAR_)*12+Number(a.MONTH_);
@@ -3109,7 +3109,7 @@ var chart = {
 			var opt = $.extend({}, chart.chartOption3, {
 				series : series
 			});
-
+      console.log(opt);
 			$('#chart-container3').highcharts(opt);
 		}
 
@@ -3118,15 +3118,16 @@ var chart = {
 		}
 
 
-		valueChain.tool.callService({
-			url : u,
-			soapAction : a,
-			success : onSuccess,
-			error : onError,
-			data : valueChain.ws.getCustomerRevenueRequest({
-				customerAccId : customerId
-			})
-		}); 
+		// valueChain.tool.callService({
+			// url : u,
+			// soapAction : a,
+			// success : onSuccess,
+			// error : onError,
+			// data : valueChain.ws.getCustomerRevenueRequest({
+				// customerAccId : customerId
+			// })
+		// }); 
+		onSuccess(loadRevenue(customerId));
 
 		// $.ajax({
 			// url : u,

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Module specificationVersion="1">
-  <ModulePrefs title="valuechain_poc"
+  <ModulePrefs title="Demo for value chain application"
                description="Description of valuechain_poc"
                author="vmeng"
                author_affiliation="PWC"
@@ -71,7 +71,7 @@
 
   <!--
   <Content type="html" view="home" href="home.html" preferred_height="400" /-->
-  <Content type="html" view="canvas" href="main.html" preferred_height="800"/>
+  <Content type="html" view="canvas" href="main.html" preferred_height="768"/>
   
 
 </Module>

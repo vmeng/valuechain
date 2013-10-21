@@ -1,3 +1,4 @@
+var JSON_SERVER = "";
 var TESTING = false,allCategory = [];networkStatus="online";
 	// TESTING = true;
 var categoryname="",notesVisitTime,productNameArray,allProducts=[],previousPage,newsTopic,pushpinCompanyId="",isClickPushpin=false, mapLoaded = false;isClickFromContactPage = false;
@@ -911,7 +912,7 @@ var app = {
 	loadRelatedProduct:function(e){
 	   var item = $(e.target).closest($(".relative-pro")).data('RELATEDPROITEM');
         // var str = "json/"+item.category+".json";
-        var str = "json/ProductList_new.json";
+        var str = JSON_SERVER + "json/ProductList_new.json";
         $.ajax({
             url : str,
             dataType : "JSON",
@@ -937,7 +938,7 @@ var app = {
 		productNameArray = [];
 		allCategory = [];
 		$.ajax({
-			url : "json/CategoryList_new.json",
+			url : JSON_SERVER + "json/CategoryList_new.json",
 			dataType : "JSON",
 			success : function(data) {
 				$category = $("#category-list");
@@ -997,7 +998,7 @@ var app = {
 	loadProduct : function(categoryName) {
 		// var str = "json/"+path+".json";
 		$.ajax({
-			url : "json/ProductList_new.json",
+			url : JSON_SERVER + "json/ProductList_new.json",
 			dataType : "JSON",
 			success : function(data) {
 				app.allProducts = data;
@@ -1150,7 +1151,7 @@ var app = {
 	traversalAllProducts:function() {
 		
 		$.ajax({
-				url : "json/ProductList_new.json",
+				url : JSON_SERVER + "json/ProductList_new.json",
 				dataType : "JSON",
 				success : function(successData) {
 					tempArray = [];
@@ -1168,7 +1169,7 @@ var app = {
 			// productNameArray[index] = [];
 			// allProducts[index] = [];
 			// $.ajax({
-				// url : "json/" + value + ".json",
+				// url : JSON_SERVER ＋ "json/" + value + ".json",
 				// dataType : "JSON",
 				// success : function(successData) {
 					// tempArray = [];
@@ -1765,7 +1766,7 @@ var sdc = {
     },
 	loadCustomer : function() {
 		$.ajax({
-			url : "json/CustomerList_new.json",
+			url : JSON_SERVER + "json/CustomerList_new.json",
 			dataType : "JSON",
 			success : function(data) {
 				var arr = [];
@@ -1967,8 +1968,8 @@ var sdc = {
 	},
 	loadInterestedProduct2:function(e){
 	   var item = $(e.target).closest($(".relative-pro")).data('INTERESTEDPROITEM');
-        // var str = "json/"+item.category+".json";
-        var str = "json/ProductList_new.json";
+        // var str = JSON_SERVER + "json/"+item.category+".json";
+        var str = JSON_SERVER + "json/ProductList_new.json";
         $.ajax({
             url : str,
             dataType : "JSON",
@@ -2636,7 +2637,7 @@ var contact = {
 			contact.dynaBind();
 		}else{
 			if(contact.allContacts == null){
-				var url = "json/ContactList_new.json";
+				var url = JSON_SERVER + "json/ContactList_new.json";
 				$.ajax({
 					url : url,
 					dataType : "JSON",

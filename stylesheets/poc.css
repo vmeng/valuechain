@@ -29,7 +29,7 @@
 }
 #quote-email
 {
-	background:url(../img/email_icon.png) no-repeat;
+	background:url(../images/email_icon.png) no-repeat;
 	width: 50px;
 	height: 21px;
 	display:block;
@@ -105,7 +105,7 @@ html, body {
 .page {
 	width: 1024px;
 	margin: 0 auto;
-	background-image: url(../img/brillant.png);
+	background-image: url(../images/brillant.png);
 	display: none;
 	overflow-x:hidden;
 }
@@ -715,7 +715,7 @@ border-radius: 10px;
 
 .icon-home
 {
-	background:url(../img/home.png) no-repeat;
+	background:url(../images/home.png) no-repeat;
 	display:inline-block;
 	vertical-align:top;
 	width:24px;
@@ -726,7 +726,7 @@ border-radius: 10px;
 
 .icon-back
 {
-	background:url(../img/back.png) no-repeat;
+	background:url(../images/back.png) no-repeat;
 	display:inline-block;
 	vertical-align:top;
 	width:24px;
@@ -807,7 +807,7 @@ border-radius: 10px;
 
 .minus , .plus
 {
-	background:url(../img/cartAddMinIcons.png) no-repeat;
+	background:url(../images/cartAddMinIcons.png) no-repeat;
 	background-color:#fff;
 	display:inline-block;
 	vertical-align:top;
@@ -1086,7 +1086,7 @@ border-radius: 10px;
 	background: rgba(196,196,198,0.7);
 	box-sizing: border-box;
 	-moz-box-sizing:border-box;
-	background-image: url(../img/loading.gif);
+	background-image: url(../images/loading.gif);
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: 30%;
@@ -1210,7 +1210,7 @@ border-radius: 10px;
 
 .cr1{
 	width:67%;
-	background:url(../img/brillant.png);
+	background:url(../images/brillant.png);
 	height:698px;
 	float: right;	
 }
@@ -1339,7 +1339,7 @@ li .ui-li-heading{
 	width:100%;
 }
 #cust-visit-history ul{
-	list-style-image:url(../img/b_point.png);
+	list-style-image:url(../images/b_point.png);
 }
 #cust-visit-history ul>li{
 	line-height:40px;
@@ -1463,7 +1463,7 @@ li .ui-li-heading{
 	padding:10px;
 }
 .s-e-1{
-	background:url(../img/linkedin_s.png);
+	background:url(../images/linkedin_s.png);
 	background-size: auto 30px;
 	padding-left: 50px;
 	height: 30px;

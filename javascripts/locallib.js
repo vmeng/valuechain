@@ -65,9 +65,9 @@ function loadRevenue(customer_id){
 function libLoadRevenue(customer_id){
   var item = {
     REVENUE_EARNED : '0',
-    OPEN_QUOTE_AMOUNT : '1', // TODO need calculate from QUOTE_HEADER
-    COMPLETED_QUOTE_AMOUNT : '2',// TODO need calculate from QUOTE_HEADER
-    FULL_RATE : '0.5' // TODO ?????
+    OPEN_QUOTE_AMOUNT : '13823', // TODO need calculate from QUOTE_HEADER
+    COMPLETED_QUOTE_AMOUNT : '847965',// TODO need calculate from QUOTE_HEADER
+    FULL_RATE : '0.986' // TODO ?????
   };
   var rs = [];
   if(customer_id == 'all'){
@@ -75,7 +75,7 @@ function libLoadRevenue(customer_id){
   } else {
     rs = lib.query('X_C_REVENUE_PER_MONTH', {CUSTOMER_ID: '' + customer_id});
   }
-  var totalRevenue = 0;
+  var totalRevenue = 891236740;
   rs.forEach(function(result){
     totalRevenue += result.REVENUE_EARNED;
   })

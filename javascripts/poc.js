@@ -912,11 +912,7 @@ var app = {
 	loadRelatedProduct:function(e){
 	   var item = $(e.target).closest($(".relative-pro")).data('RELATEDPROITEM');
         // var str = "json/"+item.category+".json";
-        var str = JSON_SERVER + "json/ProductList_new.json";
-        $.ajax({
-            url : str,
-            dataType : "JSON",
-            success : function(data) {
+            	var data = ProductList_new_json; 
                 $.each(data.products,function(index,value){
                     if(value.Item_Id == item.id){
                         // app.changePage($("#product-detail-page"), $("#product-detail-page"));
@@ -928,8 +924,6 @@ var app = {
                         $('.carousel').carousel("cycle");
                         return;
                     }
-                });
-            }
         });
                 
 	},
@@ -994,16 +988,8 @@ var app = {
 	},
 	loadProduct : function(categoryName) {
 		// var str = "json/"+path+".json";
-		$.ajax({
-			url : JSON_SERVER + "json/ProductList_new.json",
-			dataType : "JSON",
-			success : function(data) {
+				var data = ProductList_new_json;
 				app.allProducts = data;
-			},
-			error:function(data){
-				console.log(data);
-			}
-		});
 	},
 	loadDetialPicImage:function(e){
 	    var pic =  $(e.target).closest('img').data('ITEMDETAILPIC');
@@ -1147,39 +1133,16 @@ var app = {
 	},
 	traversalAllProducts:function() {
 		
-		$.ajax({
-				url : JSON_SERVER + "json/ProductList_new.json",
-				dataType : "JSON",
-				success : function(successData) {
-					tempArray = [];
-					temp = [];
+					var successData = ProductList_new_json; 
+					var tempArray = [];
+					var temp = [];
 					$.each(successData.products, function(i, val) {
 						tempArray[i] = val.Item_Number;
 						temp[i]=val;
 					});
 				productNameArray=tempArray;	
 				allProducts=temp;
-				}
-			});
 			
-		// $.each(data,function(index,value){
-			// productNameArray[index] = [];
-			// allProducts[index] = [];
-			// $.ajax({
-				// url : JSON_SERVER ＋ "json/" + value + ".json",
-				// dataType : "JSON",
-				// success : function(successData) {
-					// tempArray = [];
-					// temp = [];
-					// $.each(successData.products, function(i, val) {
-						// tempArray[i] = val.name;
-						// temp[i]=val;
-					// });
-				// productNameArray[index]=tempArray;	
-				// allProducts[index]=temp;
-				// }
-			// });
-		// });
 	},
 	updateRevenue:function (id) {
 		function onUpdate() {
@@ -1762,10 +1725,8 @@ var sdc = {
         
     },
 	loadCustomer : function() {
-		$.ajax({
-			url : JSON_SERVER + "json/CustomerList_new.json",
-			dataType : "JSON",
-			success : function(data) {
+		
+				var data = CustomerList_new_json;
 				var arr = [];
 				$.each(data.customers,function(ind,val){
 		    		arr.push($.extend({},customerAppendix,val));
@@ -1774,8 +1735,6 @@ var sdc = {
 				sdc.customerList = arr;
 				sdc.dynaBind();
 				map.loadMapInterval();
-			}
-		}); 
     },
     buildCustomerList : function(data) {
         var temple = Handlebars.compile($("#customer-template").html());
@@ -1966,18 +1925,12 @@ var sdc = {
 	loadInterestedProduct2:function(e){
 	   var item = $(e.target).closest($(".relative-pro")).data('INTERESTEDPROITEM');
         // var str = JSON_SERVER + "json/"+item.category+".json";
-        var str = JSON_SERVER + "json/ProductList_new.json";
-        $.ajax({
-            url : str,
-            dataType : "JSON",
-            success : function(data) {
+            	var data = ProductList_new_json;
                 $.each(data.products,function(index,value){
                     if(value.Item_Id == item.Item_Id){
                     	sdc.alertNotesNotSave2(value);
                     }
                 });
-            }
-        });
                 
 	},
     showMeetingNotes:function(date){
@@ -2634,14 +2587,9 @@ var contact = {
 			contact.dynaBind();
 		}else{
 			if(contact.allContacts == null){
-				var url = JSON_SERVER + "json/ContactList_new.json";
-				$.ajax({
-					url : url,
-					dataType : "JSON",
-					success : function(data) {
+				
+						var data = ContactList_new_json;
 						contact.allContacts = data.contacts;
-					}
-				});
 			}
 		}
 	},

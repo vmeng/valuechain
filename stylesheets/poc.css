@@ -257,12 +257,12 @@
     color: #3e3e3e;
     font-weight: 700;
     text-shadow: 0 1px 0 #fff;
-    background-image: -webkit-gradient(linear,left top,left bottom,from(#f0f0f0),to(#ddd));
-    background-image: -webkit-linear-gradient(#f0f0f0,#ddd);
-    background-image: -moz-linear-gradient(#f0f0f0,#ddd);
-    background-image: -ms-linear-gradient(#f0f0f0,#ddd);
-    background-image: -o-linear-gradient(#f0f0f0,#ddd);
-    background-image: linear-gradient(#f0f0f0,#ddd)
+    background-image: -webkit-gradient(linear,left top,left bottom,from(#eeeeee),to(#eeeeee));
+    background-image: -webkit-linear-gradient(#eeeeee,#eeeeee);
+    background-image: -moz-linear-gradient(#eeeeee,#eeeeee);
+    background-image: -ms-linear-gradient(#eeeeee,#eeeeee);
+    background-image: -o-linear-gradient(#eeeeee,#eeeeee);
+    background-image: linear-gradient(#eeeeee,#eeeeee)
 }
 .ui-bar-c .ui-link-inherit {
     color: #3e3e3e
@@ -4056,7 +4056,7 @@ ul {
     margin: 0;
     line-height: 50px;
     text-align: center;
-    color: #fc5412;
+    color: #CC9933;
     font-size: 22px;
 }
 .title-bar h3 {
@@ -4073,7 +4073,7 @@ ul {
     line-height: 50px;
     text-transform: capitalize;
     text-align: center;
-    color: #fc5412;
+    color: #CC9933;
     font-size: 22px;
 }
 
@@ -4337,11 +4337,11 @@ ul {
     height: 30px;
     font-size: 17px;
     text-align: center;
-    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#fc5412), to(#fd682e));
-    background: -webkit-linear-gradient(top, #fc5412, #fd682e);
-    background: -moz-linear-gradient(top, #fc5412, #fd682e);
-    background: -ms-linear-gradient(top, #fc5412, #fd682e);
-    background: -o-linear-gradient(top, #fc5412, #fd682e);
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#CC9933), to(#fd682e));
+    background: -webkit-linear-gradient(top, #CC9933, #fd682e);
+    background: -moz-linear-gradient(top, #CC9933, #fd682e);
+    background: -ms-linear-gradient(top, #CC9933, #fd682e);
+    background: -o-linear-gradient(top, #CC9933, #fd682e);
     color: white;
     text-shadow: none;
 }
@@ -4398,7 +4398,7 @@ ul {
     border-top-right-radius: 5px
 }
 #meetingNotes-tbody a {
-    color: #fc5412;
+    color: #CC9933;
 }
 
 .detail-related-prod .panel-heading {
@@ -4537,7 +4537,7 @@ ul {
     padding: 0 7px 0 7px;
     position: relative;
     text-decoration: none;
-    background-color: #fc5412;
+    background-color: #CC9933;
     top: 12px;
     color: white;
     text-shadow: none;
@@ -4622,7 +4622,7 @@ ul {
     border-radius: 2px;
 }
 #product-cart-page .btn-primary {
-    color: #fc5412;
+    color: #CC9933;
     border-color: rgb(196, 196, 196);
     background: -webkit-linear-gradient(top, #ffffff 50%, #e5e4e3 100%);
 }
@@ -4855,11 +4855,11 @@ ul {
 }
 #quoteslist-detail th {
     /*background-color:#428bca;*/
-    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#fc5412), to(#fd682e));
-    background: -webkit-linear-gradient(top, #fc5412, #fd682e);
-    background: -moz-linear-gradient(top, #fc5412, #fd682e);
-    background: -ms-linear-gradient(top, #fc5412, #fd682e);
-    background: -o-linear-gradient(top, #fc5412, #fd682e);
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#CC9933), to(#fd682e));
+    background: -webkit-linear-gradient(top, #CC9933, #fd682e);
+    background: -moz-linear-gradient(top, #CC9933, #fd682e);
+    background: -ms-linear-gradient(top, #CC9933, #fd682e);
+    background: -o-linear-gradient(top, #CC9933, #fd682e);
     color: white;
 }
 #quoteslist-detail .btn-primary {
@@ -4895,11 +4895,11 @@ ul {
 }
 #quote-status th {
     /*background-color:#428bca;*/
-    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#fc5412), to(#fd682e));
-    background: -webkit-linear-gradient(top, #fc5412, #fd682e);
-    background: -moz-linear-gradient(top, #fc5412, #fd682e);
-    background: -ms-linear-gradient(top, #fc5412, #fd682e);
-    background: -o-linear-gradient(top, #fc5412, #fd682e);
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#CC9933), to(#fd682e));
+    background: -webkit-linear-gradient(top, #CC9933, #fd682e);
+    background: -moz-linear-gradient(top, #CC9933, #fd682e);
+    background: -ms-linear-gradient(top, #CC9933, #fd682e);
+    background: -o-linear-gradient(top, #CC9933, #fd682e);
     color: white;
 }
 #title-bar {
@@ -5047,7 +5047,7 @@ ul {
 .cr4 {
     width: 350px;
     padding: 10px;
-    -webkit-box-shadow: #fc5412 0px 0px 5px 1px;
+    -webkit-box-shadow: #CC9933 0px 0px 5px 1px;
     border-radius: 10px;
 }
 .cr5 {
@@ -5245,7 +5245,7 @@ li .ui-li-heading {
     background: -o-linear-gradient(top, #ffffff, #e5e4e3);
 }
 .cr66-active {
-    -webkit-box-shadow: #fc5412 0px 0px 5px 1px;
+    -webkit-box-shadow: #CC9933 0px 0px 5px 1px;
     border: 0px;
 }
 .cr6666 {
@@ -5260,13 +5260,13 @@ li .ui-li-heading {
     height: 25px;
     font-family: helvetica;
     font-size: 14pt;
-    color: #fc5412;
+    color: #CC9933;
 }
 .cr-list {
     height: 25px;
     font-family: helvetica;
     font-size: 11pt;
-    color: #fc5412;
+    color: #CC9933;
     margin-top: 8px;
 }
 .cr-title {
@@ -5400,17 +5400,17 @@ li .ui-li-heading {
 
 .btn-primary {
     color: #ffffff;
-    background-color: #fc5412;
-    border-color: #fd682e;
+    background-color: #CC9933;
+    border-color: #F0B21F;
     text-shadow: none;
 }
 .btn-primary:active, .btn-primary:focus, .btn-primary:hover {
     color: #ffffff;
-    background-color: #fd682e;
-    border-color: #fc5412;
+    background-color: #F0B21F;
+    border-color: #F0B21F;
 }
 .ui-li-desc {
-    color: #fc5412;
+    color: #CC9933;
 }
 .rgb100 {
     color: rgb(100,100,100);
@@ -5478,4 +5478,8 @@ li .ui-li-heading {
     top: 0px;
     background: rgba(0,0,0,0);
     z-index: 9999;
+}
+
+.ui-li > .ui-btn-inner {
+background-color:white;
 }

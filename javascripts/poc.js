@@ -2550,7 +2550,7 @@ var contact = {
                     oauth_callback : callbackUrl
                 }
             }).signed_url;
-
+           console.log(url);
             $.get(url, function(data) {
                 contact.parseResponse(data);
                 var authorize_url = "https://www.linkedin.com/uas/oauth/authenticate?oauth_token=" + oauth_info.oauth_token;

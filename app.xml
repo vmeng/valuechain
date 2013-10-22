@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Module specificationVersion="1">
-  <ModulePrefs title="Demo for value chain application"
+  <ModulePrefs title="PwC ValueChain"
                description="Description of valuechain_poc"
                author="vmeng"
                author_affiliation="PWC"

@@ -1,5 +1,5 @@
 var lib = new localStorageDB('library', localStorage);
-// if( lib.isNew() ) {
+if( lib.isNew() ) {
   try{
     lib.dropTable('X_C_REVENUE_PER_MONTH');
   } catch (ex){
@@ -106,7 +106,7 @@ var lib = new localStorageDB('library', localStorage);
   });
   
   lib.commit();
-// }
+}
 
 function submitQuote(option){
   var quote_number = moment().format('YYYYMMDDhhmmss');

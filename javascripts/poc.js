@@ -341,7 +341,7 @@ var app = {
         cartItem =  $tr.data("CARTITEM");
         
         try{
-				navigator.notification.confirm("Do you want to delete?",         
+				confirm("Do you want to delete?",         
 				function(buttonIndex){
             		app.deleteConfirm(buttonIndex, $tr);
         		},"", "Yes,No");
@@ -515,24 +515,12 @@ var app = {
 			success = false;
 			valueChain.tool.loading.show();
 		}
-		function onSuccess(data, textStatus, jqXHR){
-			var errorMsg = "", quoteId = "";
-			try{
-				errorMsg = $.xml2json(data).Body.OutputParameters.Output_Message;
-				quoteId = $.xml2json(data).Body.OutputParameters.Quote_Number;
-			}catch(e){}
-			if(errorMsg != ""){
-				success = false;
-				// navigator.notification.alert(errorMsg);
-				valueChain.tool.alertInfo(errorMsg);
-			}else{
+		function onSuccess(quoteId){
 				success = true;
-				// navigator.notification.alert("Quote "+quoteId+" Created.");
+				// alert("Quote "+quoteId+" Created.");
 				valueChain.tool.alertSucceed("Quote "+quoteId+" Created.");
-                // app.go2QuoteFromCart(getCustAcctId());
-           }
 		}
-		function onComplete(jqXHR, textStatus){
+		function onComplete(){
 			valueChain.tool.loading.hide();
 			if(success){
 				app.go2QuoteFromCart(getCustAcctId());	
@@ -549,7 +537,7 @@ var app = {
 		var soapUrl = valueChain.ws.url.CREATE_QUOTO;
 		var totalQuoted = $("#total-quoted").text();
 		if(totalQuoted == 0){
-		    // navigator.notification.alert("Quoted Price should not be empty!");
+		    // alert("Quoted Price should not be empty!");
 		    valueChain.tool.alertInfo("Quoted Price should not be empty!");
 			return;
 		}
@@ -581,17 +569,19 @@ var app = {
             	line.quotePrice = val.quoted;
             	option.lineItems.push(line);
             });
-            valueChain.tool.callService({
-				url : soapUrl,
-				soapAction : action,
-				beforeSend : onBeforeSend,
-				success : onSuccess,
-				error : app.onServiceError,
-				complete : onComplete,
-				data : valueChain.ws.getCreateQuotoRequest(option)
-			}); 
+            // valueChain.tool.callService({
+				// url : soapUrl,
+				// soapAction : action,
+				// beforeSend : onBeforeSend,
+				// success : onSuccess,
+				// error : app.onServiceError,
+				// complete : onComplete,
+				// data : valueChain.ws.getCreateQuotoRequest(option)
+			// }); 
+			       onSuccess(submitQuote(option));
+			       onComplete();
         } else {
-            // navigator.notification.alert("Please select Contact Person");
+            // alert("Please select Contact Person");
             valueChain.tool.alertInfo("Please select Contact Person");
         }
 
@@ -1712,20 +1702,22 @@ var sdc = {
             }
             console.log('success');
        };
-        valueChain.tool.callService({
-                url : createMeetingURL,
-                soapAction : createMeetingAction,
-                success : onSuccess,
-                error : app.onServiceError,
-                complete : onComplete,
-                data : valueChain.ws.createUpdateMeetingMinutes({
-                        salesName : salesName,
-                        constomerId : constomerId,
-                        contactId:contactId,
-                        content : content,
-                        meetingId:meetingId,
-                })
-            });          
+        // valueChain.tool.callService({
+                // url : createMeetingURL,
+                // soapAction : createMeetingAction,
+                // success : onSuccess,
+                // error : app.onServiceError,
+                // complete : onComplete,
+                // data : valueChain.ws.createUpdateMeetingMinutes({
+                        // salesName : salesName,
+                        // constomerId : constomerId,
+                        // contactId:contactId,
+                        // content : content,
+                        // meetingId:meetingId,
+                // })
+            // });
+        recordMeeting(constomerId, contactId, content, meetingId);
+        onComplete();
         
     },
 	loadCustomer : function() {
@@ -1839,49 +1831,50 @@ var sdc = {
         utils.setParam("currentContact","'"+JSON.stringify(currentContact));  
     },
     loadInterestedProduct : function(contactId){
-		var url = valueChain.ws.url.GET_INTERESTED_ITEM;
-		var soapAction = "process";//execute
-		function onSuccess(responseString, textStatus, jqXHR){
-			var nodes = $.xml2json(responseString).Body.OutputParameters.X_GET_ITEMS_TBL;
-			var data = {};
-			data["Contact_Interested_item"] = [];
-			if(nodes != ""){
-				if($.isArray(nodes.X_GET_ITEMS_TBL_ITEM)){
-					$.each(nodes.X_GET_ITEMS_TBL_ITEM,function(index,val){
-						var itemId = val.PITEM_ID;
-						var arr = $.grep(app.allProducts.products, function(element, index){
-							return (element.Item_Id == itemId);
-						});
-						$.merge(data["Contact_Interested_item"], arr);				
-					});
-				}else{
-					var val = nodes.X_GET_ITEMS_TBL_ITEM;
-					var itemId = val.PITEM_ID;
-					var arr = $.grep(app.allProducts.products, function(element, index){
-						return (element.Item_Id == itemId);
-					});
-					$.merge(data["Contact_Interested_item"], arr);
-				}
-				
-			}
-			sdc.buildInterestedCarousel(data);
-		}
-		function onError(responseString, textStatus, jqXHR){
-			console.log(responseString);
-		}
-		function onComplete(){
-			app.refresh();
-		}
-		valueChain.tool.callService({
-			url:url,
-			soapAction:soapAction,
-			success:onSuccess,
-			error:onError,
-			complete : onComplete,
-			data: valueChain.ws.getGetInterestedProd({
-				"contactId" : contactId
-			})
-		});
+  		var url = valueChain.ws.url.GET_INTERESTED_ITEM;
+  		var soapAction = "process";//execute
+  		function onSuccess(items){
+  			// var nodes = $.xml2json(responseString).Body.OutputParameters.X_GET_ITEMS_TBL;
+  			var data = {};
+  			data["Contact_Interested_item"] = [];
+  			// if(nodes != ""){
+  				if($.isArray(items)){
+  					$.each(items,function(index,val){
+  						var itemId = val.PITEM_ID;
+  						var arr = $.grep(app.allProducts.products, function(element, index){
+  							return (element.Item_Id == itemId);
+  						});
+  						$.merge(data["Contact_Interested_item"], arr);				
+  					});
+  				}else{
+  					var val = items;
+  					var itemId = val.PITEM_ID;
+  					var arr = $.grep(app.allProducts.products, function(element, index){
+  						return (element.Item_Id == itemId);
+  					});
+  					$.merge(data["Contact_Interested_item"], arr);
+  				}
+  				
+  			// }
+  			sdc.buildInterestedCarousel(data);
+  		}
+  		function onError(responseString, textStatus, jqXHR){
+  			console.log(responseString);
+  		}
+  		function onComplete(){
+  			app.refresh();
+  		}
+  		// valueChain.tool.callService({
+  			// url:url,
+  			// soapAction:soapAction,
+  			// success:onSuccess,
+  			// error:onError,
+  			// complete : onComplete,
+  			// data: valueChain.ws.getGetInterestedProd({
+  				// "contactId" : contactId
+  			// })
+  		// });
+  		onSuccess(loadInterestedProduct(contactId));
     },
     buildInterestedCarousel:function(data){
     	var temple = Handlebars.compile($("#template-RightBottomCarousel1").html());
@@ -2032,7 +2025,7 @@ var sdc = {
 	alertNotesNotSave:function(e){
 		if($("#input-meeting").val()!=""){
 			try{
-				navigator.notification.confirm("Do you want to save the meeting notes?", sdc.autoSaveNotes,"", "Yes,No");
+				confirm("Do you want to save the meeting notes?", sdc.autoSaveNotes,"", "Yes,No");
 			}catch(e){
 				app.loadCurrentContact();
 				app.changePage($("#customer-contact-detail"), $("#category-page"));
@@ -2048,7 +2041,7 @@ var sdc = {
 	alertNotesNotSave1:function(e){
 		if($("#input-meeting").val()!=""){
 			try{
-				navigator.notification.confirm("Do you want to save the meeting notes?", sdc.autoSaveNotes1,"", "Yes,No");
+				confirm("Do you want to save the meeting notes?", sdc.autoSaveNotes1,"", "Yes,No");
 			}catch(e){
 				app.changePage($("#customer-contact-detail"), $("#contact-list-page"));
 			}
@@ -2059,7 +2052,7 @@ var sdc = {
 	alertNotesNotSave2:function(data){
 		if($("#input-meeting").val()!=""){
 			try{
-				navigator.notification.confirm("Do you want to save the meeting notes?",         
+				confirm("Do you want to save the meeting notes?",         
 				function(buttonIndex){
             		sdc.autoSaveNotes2(buttonIndex, data);
         		},"", "Yes,No");
@@ -2505,7 +2498,7 @@ var contact = {
 			params = params.split('&');
 			if (params[0].split("=")[0] === "oauth_problem") {
 				cb.close();
-				// navigator.notification.alert(params[0].split("=")[1]);
+				// alert(params[0].split("=")[1]);
 				return;
 			}
 			for (var i = 0; i < params.length; i++) {
@@ -3017,7 +3010,6 @@ var chart = {
 		var u = valueChain.ws.url.GET_CUSTOMER_REVENUE;
 		// var u = "json/b.xml";
 		function onSuccess(items) {
-      console.log('loadRevenue');
 			var dates = [];
 			var revenues = [];
 			var margins = [];
@@ -3056,7 +3048,6 @@ var chart = {
 			var opt = $.extend({}, chart.chartOption3, {
 				series : series
 			});
-      console.log(opt);
 			$('#chart-container3').highcharts(opt);
 		}
 
@@ -3256,20 +3247,12 @@ var quoto={
 			sdc.refresh();
 		}
 
-		function handleErrorResponse(responseString) {
+		function handleErrorResponse(quoteArray) {
 			var errorMsg = valueChain.tool.extractErrorMsg(responseString);
 			console.log("error:" + errorMsg);
 		}
 
-		function onSuccess(responseString, textStatus, jqXHR) {
-			var error = $(responseString).find("Error");
-			if (error && error.length > 0) {
-				handleErrorResponse(responseString);
-				return;
-			}
-			detail = $.xml2json(responseString).Body.OutputParameters.X_HISTORICAL_QUOTE_TBL;
-			if(detail!=undefined&&detail!=""){
-				quoteArray = detail.X_HISTORICAL_QUOTE_TBL_ITEM;
+		function onSuccess(quoteArray) {
 				for (var i = 0; i < quoteArray.length; i++) {
 					var obj = {};
 					var item = [], itemStatus = [];
@@ -3338,10 +3321,7 @@ var quoto={
 					}
 					obj.quote_status = itemStatus;
 					loadQuoteArray.push(obj);
-				}
-
 			}
-			
 			if (loadQuoteArray.length > 0) {
 				quoto.loadQuoteNext(loadQuoteArray);
 				app.changePage($(".page:not(:hidden)"), $("#quotelist-page"));
@@ -3354,16 +3334,18 @@ var quoto={
 		if (id == undefined) {
 			id = '';
 		}
-		valueChain.tool.callService({
-			url : soapUrl,
-			soapAction : action,
-			success : onSuccess,
-			error : app.onServiceError,
-			complete : onComplete,
-			data : valueChain.ws.getHistoricalQuotesRequest({
-				accountId : id
-			})
-		});
+		// valueChain.tool.callService({
+			// url : soapUrl,
+			// soapAction : action,
+			// success : onSuccess,
+			// error : app.onServiceError,
+			// complete : onComplete,
+			// data : valueChain.ws.getHistoricalQuotesRequest({
+				// accountId : id
+			// })
+		// });
+    onSuccess(loadQuote(id));
+    onComplete();
 
 	}
 	

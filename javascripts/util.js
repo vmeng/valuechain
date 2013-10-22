@@ -147,7 +147,7 @@ valueChain.tool={
 	},
 	
 	alertInfo:function(str){
-		navigator.notification.alert(
+		alert(
                 str,
                 callback,   // callback
                 "Information",      // title
@@ -158,7 +158,7 @@ valueChain.tool={
           }
 	},
 	alertWarning:function(str){
-		navigator.notification.alert(
+		alert(
                 str,
                 callback,   // callback
                 "Warning",      // title
@@ -169,7 +169,7 @@ valueChain.tool={
           }
 	},
 	alertSucceed:function(str){
-		navigator.notification.alert(
+		alert(
                 str,
                 callback,   // callback
                 "Success",      // title

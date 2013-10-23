@@ -17,6 +17,7 @@ if( lib.isNew() ) {
   }
   lib.createTable('QUOTE_HEADER', ['QUOTE_CREATE_DATE', 'QUOTE_STATUS', 'QUOTE_NUMBER', 'QUOTE_NAME', 'CUSTOMER_ID', 'CUSTOMER_NAME', 'PARTY_SITE_ID', 'CONTACT_ID', 'CONTACT_NAME']);
   
+  var num = 1;
   $.each(CustomerList_new_json.customers,function(index,value){
     var contacts = [];
     $.each(ContactList_new_json.contacts, function(contact_index, contact){
@@ -27,7 +28,6 @@ if( lib.isNew() ) {
     var random_day = Math.round(Math.random()*200);
     var random_contact = Math.floor(Math.random()*(contacts.length-1));
     if(contacts.length > 0){
-      var num = 1;
       lib.insert('QUOTE_HEADER', {QUOTE_CREATE_DATE: moment().add('days', -random_day).format('YYYY/MM/DD'), QUOTE_STATUS: 'Draft', QUOTE_NUMBER: '' + num, QUOTE_NAME: 'quote' + num, CUSTOMER_ID: '' + value.CUST_ACCOUNT_ID, CUSTOMER_NAME:value.PARTY_NAME, PARTY_SITE_ID: '' + value.PARTY_SITE_ID, CONTACT_ID: contacts[random_contact].Contact_id, CONTACT_NAME: contacts[random_contact].Contact_First_Name + ' ' + contacts[random_contact].Contact_Last_Name});
       num++;
       random_day = Math.round(Math.random()*200);

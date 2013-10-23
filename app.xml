@@ -40,7 +40,13 @@
 		</Service>
 		</OAuth>
 		-->
-
+<OAuth>
+         <Service name="linkedIn">
+           <Access url="https://api.linkedin.com/uas/oauth/accessToken" method="GET" />
+           <Request url="https://www.linkedin.com/uas/oauth/requestToken" method="GET" />
+           <Authorization url="http://api.twitter.com/oauth/authenticate" />
+         </Service>
+     </OAuth>
 		<!-- Lifecycle Events: https://developers.jivesoftware.com/community/docs/DOC-1119 -->
 		<!--
 		<Link rel="event.addapp" href="http://www.example.com/add" />

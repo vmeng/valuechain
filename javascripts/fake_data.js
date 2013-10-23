@@ -4397,6 +4397,75 @@ var ABC_Company_json = {
 	]
 };
 
+var Company_Feeds = [
+  {
+    'link': 'http://news.google.com/news?pz\u003d1\u0026amp;ned\u003dus\u0026amp;hl\u003den\u0026amp;q\u003dComputer+Service+and+Rentals',
+    'title': 'Computer Service and Rentals - Google News'
+  },
+  {
+    'link': 'http://news.google.com/news/url?sa\u003dt\u0026fd\u003dR\u0026usg\u003dAFQjCNEdpqamH9R53yy1Bl3znVdBwA7iXg\u0026url\u003dhttp://www.ryot.org/computer-rental-company-uses-webcams-spy-customers-intimate-moments/437261',
+    'title': 'WTF: Rent-to-Own Stores Have Been Using Products to Spy on People in Their ... - RYOT'
+  },
+  {
+    'link': 'http://news.google.com/news/url?sa\u003dt\u0026fd\u003dR\u0026usg\u003dAFQjCNEIZo9mVmHlzhXjTa1hSTS-kjg59g\u0026url\u003dhttp://www.dailyrecordnews.com/members/rocks-in-the-vantage-area-are-a-climbing-treasure/article_85de1d40-3b37-11e3-8071-001a4bcf887a.html',
+    'title': 'Rocks in the Vantage area are a climbing treasure - Daily Record (subscription)'
+  },
+  {
+    'link': "http://news.google.com/news/url?sa\u003dt\u0026fd\u003dR\u0026usg\u003dAFQjCNEbPnckIK3_OPmG5B5ee9m-GrhMPw\u0026url\u003dhttp://www.ipwatchdog.com/2013/10/22/aarons-rent-to-own-settles-ftc-computer-spying-charges/id%3D45852/",
+    'title': "Aaron's Rent-To-Own Settles FTC Computer Spying Charges - IPWatchdog.com"
+  },
+  {
+    'link': "http://news.google.com/news/url?sa\u003dt\u0026fd\u003dR\u0026usg\u003dAFQjCNH23tif8ClC4qFb8XJHDBGsK4vb2Q\u0026url\u003dhttp://www.pcworld.com/article/2056140/ditch-your-isps-modem-and-change-your-internet-experience-forever.html",
+    'title': "Ditch your ISP's modem and change your Internet experience forever - PCWorld"
+  },
+  {
+    'link': "http://news.google.com/news/url?sa\u003dt\u0026fd\u003dR\u0026usg\u003dAFQjCNFedcnQWY42uMvKhvbvtumDBBpClQ\u0026url\u003dhttp://dailynorthwestern.com/2013/10/22/campus/university-library-puts-mac-charger-loans-on-hold/",
+    'title': "University Library puts Mac charger loan service on hold - Daily Northwestern"
+  },
+  {
+    'link': "http://news.google.com/news/url?sa\u003dt\u0026fd\u003dR\u0026usg\u003dAFQjCNEy6lMHgvdKTl44EY1BZIKAezot6w\u0026url\u003dhttp://www.fayobserver.com/articles/2013/10/22/1291206?sac%3Dfo.local",
+    'title': "PWC customer gets utility bill for $91644 - Fayetteville Observer"
+  },
+  {
+    'link': "http://news.google.com/news/url?sa\u003dt\u0026fd\u003dR\u0026usg\u003dAFQjCNGG7-ZGZJyvKIGDcVE7PmQl9kS1Gw\u0026url\u003dhttp://www.dailynewstranscript.com/news/x1565402748/Record-number-of-homeless-living-in-hotels",
+    'title': "Record number of homeless living in hotels - Daily News Transcript"
+  }
+];
+
+var Industry_Feeds = [
+  {
+    'link': 'http://news.google.com/news?pz\u003d1\u0026amp;ned\u003dus\u0026amp;hl\u003den\u0026amp;q\u003dHigh+Technology',
+    'title': 'High Technology - Google News'
+  },
+  {
+    'link': "http://news.google.com/news/url?sa\u003dt\u0026fd\u003dR\u0026usg\u003dAFQjCNH4NpeCE7424Egz1ob7-9Z4RmBLTg\u0026url\u003dhttp://www.foxnews.com/tech/2013/10/21/high-tech-training-how-avatars-can-aid-athletes/",
+    'title': "High-tech training: How avatars can aid modern baseball players - Fox News"
+  },
+  {
+    'link': "http://news.google.com/news/url?sa\u003dt\u0026fd\u003dR\u0026usg\u003dAFQjCNGbNDc7rpeAgrMswEHtpTrRj5NVKw\u0026url\u003dhttp://www.huffingtonpost.com/helene-pavlov/healthy-living-news_b_3963576.html",
+    'title': "Patient Privacy and High Technology: Data Control - Huffington Post"
+  },
+  {
+    'link': "http://news.google.com/news/url?sa\u003dt\u0026fd\u003dR\u0026usg\u003dAFQjCNESO92Lgi2x7fBie6e2Za_9XEde3A\u0026url\u003dhttp://www.cnn.com/2013/10/18/tech/innovation/high-tech-halloween/",
+    'title': "Smartphone wounds and other high-tech Halloween tricks - CNN"
+  },
+  {
+    'link': "http://news.google.com/news/url?sa\u003dt\u0026fd\u003dR\u0026usg\u003dAFQjCNGG7-ZGZJyvKIGDcVE7PmQl9kS1Gw\u0026url\u003dhttp://www.dailynewstranscript.com/news/x1565402748/Record-number-of-homeless-living-in-hotels",
+    'title': "Record number of homeless living in hotels - Daily News Transcript"
+  },
+  {
+    'link': "http://news.google.com/news/url?sa\u003dt\u0026fd\u003dR\u0026usg\u003dAFQjCNE9n-U6MFec7KP85rKMPBT1aqxnsw\u0026url\u003dhttp://www.timesunion.com/business/article/CNSE-still-in-race-for-high-tech-center-4914798.php",
+    'title': "CNSE still in race for high-tech center - Albany Times Union"
+  },
+  {
+    'link': "http://news.google.com/news/url?sa\u003dt\u0026fd\u003dR\u0026usg\u003dAFQjCNGQVfzCHfWNQvs9B8N5l17GSfFrog\u0026url\u003dhttp://www.myfoxphoenix.com/story/23762031/2013/10/22/shea-homes-3-d",
+    'title': "High-tech home buying: Shea Homes unveils 3-D program - MyFox Phoenix"
+  },
+  {
+    'link': "http://news.google.com/news/url?sa\u003dt\u0026fd\u003dR\u0026usg\u003dAFQjCNFoBopSGnJkQiUDp5dE7ri7nZox-w\u0026url\u003dhttp://www.theguardian.com/technology/2013/oct/21/bitcoin-price-surges-to-post-crash-high?CMP%3Dtwt_gu",
+    'title': "Bitcoin price surges to post-crash high - The Guardian"
+  }
+];
 
 
 

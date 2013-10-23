@@ -108,11 +108,11 @@ var app = {
                 $("#email-quote").click(app.sendQuoteEmail);
         $("#industry-option").click(function(){
             var value = $("#industry-option").attr('data-attr');
-            contact.buildNewsList(value);
+            contact.buildNewsList(Industry_Feeds);
         });
         $("#company-option").click(function(){
              var value = $("#company-option").attr('data-attr');
-            contact.buildNewsList(value);
+            contact.buildNewsList(Company_Feeds);
         });
         
         $(".ui-listview-filter input.ui-input-text ").keyup(function(){
@@ -1645,6 +1645,7 @@ var sdc = {
                 //load data
                 var dataIndex = $(this).attr("data-index");
                 contact.onContactPageShow(sdc.customerList[dataIndex]);
+                $('#company-option').click();
     },
     clearCurrentContact:function(){
             utils.setParam("currentContact",""); 
@@ -2647,38 +2648,45 @@ var contact = {
         contact.initContactScroll();
         },
         buildNewsList : function(value){
-            if(value=="" || value == undefined){
-                newsTopic =  $("#company-option").attr('data-attr');
-            }
-            else{                
-                 newsTopic = value;
-            }
-
-                var feedcontainer = $("#news-feeds-content");
-                feedcontainer.html("");
-                // var topic = $("#customer-name").val();
-                var feedurl = 'http://news.google.com/news?q='+newsTopic+'&output=rss';
-                var feedlimit = 8;
-                var rssoutput = "";
-                rssfeedsetup();
-
-                function rssfeedsetup() {
-                        var feedpointer = new google.feeds.Feed(feedurl);
-                        feedpointer.setNumEntries(feedlimit);
-                        feedpointer.load(displayfeed);
-                }
-
-                function displayfeed(result) {
-                        if (!result.error) {
-                                var thefeeds = result.feed.entries;
-                                for (var i = 0; i < thefeeds.length; i++)
-                                        rssoutput += "<tr><td><div class='cr71'><p data-role='none' href='" + thefeeds[i].link + "'>" + thefeeds[i].title + "</p></div></td></tr>";
-                                feedcontainer.append(rssoutput);
-                                contact.initNewsScroll();
-                                $("#news-feeds-content tr").click(contact.showChildPage);
-                        } else
-                                 valueChain.tool.alertInfo("Error fetching feeds!");
-                }        
+          var feedcontainer = $("#news-feeds-content");
+          feedcontainer.html("");
+          var rssoutput = '';
+          for (var i = 0; i < value.length; i++)
+            rssoutput += "<tr><td><div class='cr71'><p data-role='none' href='" + value[i].link + "'>" + value[i].title + "</p></div></td></tr>";
+          feedcontainer.append(rssoutput);
+          contact.initNewsScroll();
+          $("#news-feeds-content tr").click(contact.showChildPage);
+          
+            // if(value=="" || value == undefined){
+                // newsTopic =  $("#company-option").attr('data-attr');
+            // }
+            // else{                
+                 // newsTopic = value;
+            // }
+// 
+                // // var topic = $("#customer-name").val();
+                // var feedurl = 'http://news.google.com/news?q='+newsTopic+'&output=rss';
+                // var feedlimit = 8;
+                // var rssoutput = "";
+                // rssfeedsetup();
+// 
+                // function rssfeedsetup() {
+                        // var feedpointer = new google.feeds.Feed(feedurl);
+                        // feedpointer.setNumEntries(feedlimit);
+                        // feedpointer.load(displayfeed);
+                // }
+// 
+                // function displayfeed(result) {
+                        // if (!result.error) {
+                                // var thefeeds = result.feed.entries;
+                                // for (var i = 0; i < thefeeds.length; i++)
+                                        // rssoutput += "<tr><td><div class='cr71'><p data-role='none' href='" + thefeeds[i].link + "'>" + thefeeds[i].title + "</p></div></td></tr>";
+                                // feedcontainer.append(rssoutput);
+                                // contact.initNewsScroll();
+                                // $("#news-feeds-content tr").click(contact.showChildPage);
+                        // } else
+                                 // valueChain.tool.alertInfo("Error fetching feeds!");
+                // }        
         },
                 
                 

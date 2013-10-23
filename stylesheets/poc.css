@@ -574,7 +574,7 @@
     color: #222
 }
 .ui-btn-hover-e {
-    border: 1px solid #f2c43d;
+    border: 1px solid #ccc;
     background: #fbe26f;
     font-weight: 700;
     color: #111;
@@ -3917,6 +3917,8 @@ div, .ui-panel-animate.ui-panel-closed.ui-panel-display-reveal > div, .ui-panel-
     border: 1px solid #d3d3d3;
     border-radius: 14px;
     width: 150px;
+    font-size: 10px;
+    padding:5px 10px;
 }
 .quote-form .col-sm-4, .quote-form .col-sm-2 {
     padding-left: 0px;
@@ -4006,6 +4008,10 @@ html, body {
     background-image: url(../images/brillant.png);
     display: none;
     overflow-x: hidden;
+    /*border: 1px solid #ccc;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;*/
+   box-shadow:0 0 10px #ccc;
 }
 ul {
     list-style: none;
@@ -4015,7 +4021,7 @@ ul {
     cursor: pointer;
     float: left;
     display: block;
-    margin-right: 10px;
+    margin-right: 5px;
     margin-bottom: 10px;
     width: 24.25%;
 }
@@ -4024,6 +4030,7 @@ ul {
 }
 .link-item > li {
     width: 31%;
+    margin-left:10px;
 }
 .product-img {
     height: 194px;
@@ -4033,6 +4040,7 @@ ul {
 #category-list img {
     height: 194px;
     position: absolute;
+   
 }
 .item-list {
     padding: 10px 20px;
@@ -4040,8 +4048,8 @@ ul {
 }
 .title-bar {
     background: rgb(247, 247, 247);
-    height: 50px;
     position: relative;
+     border-bottom: 1px solid #ccc;
 }
 .short .title-bar {
     width: 300px;
@@ -4049,8 +4057,8 @@ ul {
 }
 .title-bar-left {
     background: rgb(247,247,247);
-    height: 50px;
     position: relative;
+    border-bottom: 1px solid #ccc;
 }
 .title-bar h2 {
     margin: 0;
@@ -4803,6 +4811,8 @@ ul {
 
 .quote-list-div .ui-listview-filter {
     margin: 0px;
+    background-image: none;
+    background-color: white;
 }
 
 .quote-detail {
@@ -4953,12 +4963,8 @@ ul {
     float: left;
     width: 30%; /*Width of left column*/
     height: 698px;
-    background-color: #f0f0f0;
-    border: solid 1px rgb(209,209,209);
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
+    border-right: solid 1px rgb(209,209,209);
+
 }
 
 .customer-list {
@@ -5009,12 +5015,15 @@ ul {
     margin: auto;
 }
 .customer-list .ui-listview-filter {
-    margin: 0px;
+    background-image: none;
+    background-color: #ffffff;
+    margin: 1px 0px 0px 0px;
+    padding-right: 5px;
 }
 
 .cl1 {
     width: 33%;
-    background: rgb(240,240,240);
+    background:tra;
     height: 698px;
     padding: 0 20px 0 20px;
     float: left;
@@ -5066,6 +5075,7 @@ ul {
     border-bottom: grey 1px dashed;
     color: white;
     text-shadow: none;
+    margin:0px 10px;
 }
 .cr5-title-with-switch {
     height: 38px;
@@ -5329,6 +5339,7 @@ li .ui-li-heading {
     left: 125px;
     bottom: 0px;
     position: absolute;
+    padding-bottom:10px;
 }
 
 #kpi-indicator, #kpi-indicator > li {
@@ -5368,11 +5379,15 @@ li .ui-li-heading {
     width: 300px;
     height: 280px;
     position: relative;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
 .slide-chart {
     width: 300px;
     height: 260px;
     float: left;
+    padding-right:5px;
+
 }
 #quote-speed-meter > .highcharts-container {
     top: -13px;
@@ -5481,6 +5496,12 @@ li .ui-li-heading {
 }
 
 .ui-li > .ui-btn-inner {
-background-color:white;
+    background-color: white;
 }
 
+h2 {
+    font-family: Helvetica;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    background-color: #ffffff;
+}

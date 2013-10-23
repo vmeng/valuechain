@@ -10,7 +10,7 @@
 		<!-- Le styles -->
 		<link href="stylesheets/bootstrap.css" rel="stylesheet" type="text/css" media='all'>
 		<link href="stylesheets/poc.css" rel="stylesheet" type="text/css" media='all'/>
-    	<link href="stylesheets/toggle-switch.css" rel="stylesheet" type="text/css" media='all'/>
+    	    <link href="stylesheets/toggle-switch.css" rel="stylesheet" type="text/css" media='all'/>
 		<!-- Jive api key: gi4f39ttp3q3-->
 		<!-- Localhost api key: n9fvq3key7m8-->
 
@@ -18,7 +18,7 @@
 	<body>
 		<div class="page" id="customer-page">
 			<div class="title-bar-left">
-				<h2 style="font-family:Helvetica;border-top-left-radius: 3px;border-top-right-radius: 3px;background-color: #f9f9f9">Value Chain</h2>
+				<h2>Value Chain</h2>
 
 				<img src="images/pwc_logo.png" class="pwc-logo">
 			</div>
@@ -26,38 +26,38 @@
 				<div class="content-wrapper">
 					<div id="maincontainer" class="clearfix">
 						<div class="right-column">
-							<div id="right-column">
+							<div id="right-column" style="border-top: 1px solid #ccc">
 								<div class="customer-map">
-									<div id="map-canvas"></div>
+									<div id="map-canvas" ></div>
 								</div>
 
 								<div class="other-functions">
-									<ul class="link-item clearfix">
-										<li class="other-functions-li">
+									<ul class="link-item clearfix" style="text-align: center">
+										<li class="other-functions-li" >
 											<!-- <a href="#" ><img id="quotelist-img" src="images/openQuotes.png"></a> -->
-											<div id="gotoQuote" style="width:210px;
+											<div id="gotoQuote" style="
 											height:186px;
 											background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(232,232,232,1) 100%);
 											border-radius: 4px;
 											border: 1px solid rgb(184,184,184);
 											color: rgb(100,100,100);
 											">
-												<div  style="margin-left: 30px;margin-top:15px; font-weight:800;font-size:13.5pt;font-family: Helvetica;">
+												<div  style="margin-top:15px; font-weight:800;font-size:13.5pt;font-family: Helvetica;">
 													Historical Quotes
 												</div>
 												<div id="quote-speed-meter" style="width: 170px; height: 170px; margin-left: 23px;position: absolute; pointer-events:none"></div>
 											</div>
 										</li>
 										<li class="other-functions-li" id="historical-quotes">
-											<div style="width:210px;
+											<div style="
 											height:186px;
 											background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(232,232,232,1) 100%);
 											border-radius: 4px;
 											border: 1px solid rgb(184,184,184);
 											color: rgb(31,133,190);
 											">
-												<div class="clearfix" pointer-events:none style=" color: #fc5412; ">
-													<div class="pull-left" style="width:50%;height:186px;padding: 25px 0 25px 20px;">
+												<div class="clearfix" pointer-events:none style=" color: #CC9933; ">
+													<div class="pull-left" style="width:49%;height:186px;padding: 25px 0 25px 10px;">
 														<div style="font-size:8pt" class="rgb100">
 															Fulfillment Rate
 														</div>
@@ -71,7 +71,7 @@
 															<span id="v-revenue" style="font-size:32pt">0</span><span id="v-revenue-metric"></span>
 														</div>
 													</div>
-													<div class="pull-right" style="width:50%;height:186px;padding: 25px 0 25px 20px;">
+													<div class="pull-right" style="width:51%;height:186px;padding: 25px 20px 20px 10px;">
 														<div style="font-size:8pt" class="rgb100">
 															Open Quotes
 														</div>
@@ -116,7 +116,7 @@
 			<div class="title-bar-left">
 				<a data-role="none" class="nav-btn-home btnTohome" ><span class="icon-home"></span></a>
 				<a data-role="none" class="nav-btn-back btnTohome" id="btn-back-to-home" href="#"><span class="icon-back"></span></a>
-				<h2 id="customer-name" style="font-family:Helvetica;border-top-left-radius: 3px;border-top-right-radius: 3px;background-color: #f9f9f9"></h2>
+				<h2 id="customer-name"></h2>
 				<img src="images/pwc_logo.png" class="pwc-logo">
 			</div>
 			<div class="page-content c-page-content">
@@ -146,11 +146,11 @@
 						<div class="cr5">
 							<div class="cr5-title-with-switch">
 								<h6>News Feeds</h6>
-								<div data-role="none" id="news-select" class="switch candy oriange" style="width: 142px;margin-top: 2;position: absolute;left: 146px;top: 4px;">
+								<div data-role="none" id="news-select" class="switch candy yellow" style="width: 142px;margin-top: 2;position: absolute;left: 146px;top: 4px;">
 									<input data-role="none" id="week" name="view" type="radio" checked />
-									<label id="company-option" data-role="none" data-attr='' for="week" >Comp</label>
+									<label id="company-option" data-role="none" data-attr='' for="week" style="font-size: 12px;">Comp</label>
 									<input data-role="none" id="month" name="view" type="radio" />
-									<label id="industry-option" data-role="none" data-attr='' for="month">Indus</label>
+									<label id="industry-option" data-role="none" data-attr='' for="month" style="font-size: 12px;">Indus</label>
 									<span data-role="none" class="slide-button"></span>
 								</div>
 								<!-- 											<div class="containing-element">
@@ -169,8 +169,8 @@
 					</div>
 					<div class="cr1">
 						<div class="cr3 clearfix">
-							<h4 style="margin: 0 0 5px 0;color: #5A5A5A;">Contacts</h4>
-							<div class="pull-left" style=" width: 302px; margin-left: -12px">
+							<h4 style="margin: 0 0 15px 0;color: #5A5A5A;">Contacts</h4>
+							<div class="pull-left" style=" width: 302px; margin-left: -12px;">
 								<div id="contact-scroll" >
 									<div class="cr77" id="contact-list-wrap">
 										<div id="contact-content"></div>
@@ -313,7 +313,7 @@
 								<img class="contact-pic" id="crm-person-headPic" style=" width: 200px; margin-top: 20px; margin-left: 50px;" src="images/potrait1.png" style=" width: 300px; margin-top: 50px; "/>
 							</div>
 							<div class="customer-name">
-								<h3 style="color:#fc5412"><span id="crm-comp-name">ABC Company</span></h3>
+								<h3 style="color:#CC9933"><span id="crm-comp-name">ABC Company</span></h3>
 							</div>
 							<div class="role-title">
 								<h3><span id="crm-person-title">IT Manager</span></h3>

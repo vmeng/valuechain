@@ -5,9 +5,9 @@
 	author="PwC"
 	author_affiliation="PwC"
 	author_email="">
-		<Require feature="jive-connects-v1">
+		<!-- <Require feature="jive-connects-v1">
 			<Param name="alias:ws_all_revenue|title:All Revenue">http://12.154.232.121:8002/soa-infra/services/default/GetCustomerAllRevenue/getcustomerallrevenuebpelprocess_client_ep</Param>
-		</Require>
+		</Require> -->
 		<!-- Commonly used features -->
 		<Require feature="dynamic-height" />
 		<Require feature="jive-core-v2" />

@@ -25,7 +25,7 @@
 /* We can't test for a specific feature,
  * so we only target browsers with support for media queries.
  */
-@media only screen {
+/*@media only screen {*/
   /* Checkbox toggle
    */
   .toggle {
@@ -414,4 +414,4 @@
   to {
     position: relative;
   }
-}
+/*}*/

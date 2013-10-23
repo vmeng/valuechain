@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Module specificationVersion="1">
   <ModulePrefs title="PwC ValueChain"
-               description="Description of valuechain_poc"
-               author="vmeng"
-               author_affiliation="PWC"
-               author_email="jmeng2007@163.com">
+               description="A PwC's Value Chain Solution in JiveWorld"
+               author="PwC"
+               author_affiliation="PwC"
+               author_email="">
 
     <!-- Commonly used features -->
     <Require feature="dynamic-height" />

@@ -515,24 +515,12 @@ var app = {
                         success = false;
                         valueChain.tool.loading.show();
                 }
-                function onSuccess(data, textStatus, jqXHR){
-                        var errorMsg = "", quoteId = "";
-                        try{
-                                errorMsg = $.xml2json(data).Body.OutputParameters.Output_Message;
-                                quoteId = $.xml2json(data).Body.OutputParameters.Quote_Number;
-                        }catch(e){}
-                        if(errorMsg != ""){
-                                success = false;
-                                // alert(errorMsg);
-                                valueChain.tool.alertInfo(errorMsg);
-                        }else{
+                function onSuccess(quoteId){
                                 success = true;
                                 // alert("Quote "+quoteId+" Created.");
                                 valueChain.tool.alertSucceed("Quote "+quoteId+" Created.");
-                // app.go2QuoteFromCart(getCustAcctId());
-           }
                 }
-                function onComplete(jqXHR, textStatus){
+                function onComplete(){
                         valueChain.tool.loading.hide();
                         if(success){
                                 app.go2QuoteFromCart(getCustAcctId());        
@@ -581,15 +569,17 @@ var app = {
                     line.quotePrice = val.quoted;
                     option.lineItems.push(line);
             });
-            valueChain.tool.callService({
-                                url : soapUrl,
-                                soapAction : action,
-                                beforeSend : onBeforeSend,
-                                success : onSuccess,
-                                error : app.onServiceError,
-                                complete : onComplete,
-                                data : valueChain.ws.getCreateQuotoRequest(option)
-                        }); 
+            // valueChain.tool.callService({
+                                // url : soapUrl,
+                                // soapAction : action,
+                                // beforeSend : onBeforeSend,
+                                // success : onSuccess,
+                                // error : app.onServiceError,
+                                // complete : onComplete,
+                                // data : valueChain.ws.getCreateQuotoRequest(option)
+                        // }); 
+                               onSuccess(submitQuote(option));
+                               onComplete();
         } else {
             // alert("Please select Contact Person");
             valueChain.tool.alertInfo("Please select Contact Person");
@@ -1158,13 +1148,14 @@ var app = {
                                 console.log("error:" + errorMsg);
                         }
 
-                        function onSuccess(responseString, textStatus, jqXHR) {
-                                var error = $(responseString).find("Error");
-                                if (error && error.length > 0) {
-                                        handleErrorResponse(responseString);
-                                        return;
-                                }
-                                var item = $.xml2json(responseString).Body.OutputParameters.X_REVENUE_ALL_TBL_TYPE.X_REVENUE_ALL_TBL_TYPE_ITEM;
+                        function onSuccess(res) {
+                                // var error = $(responseString).find("Error");
+                                // if (error && error.length > 0) {
+                                        // handleErrorResponse(responseString);
+                                        // return;
+                                // }
+                                // var item = $.xml2json(responseString).Body.OutputParameters.X_REVENUE_ALL_TBL_TYPE.X_REVENUE_ALL_TBL_TYPE_ITEM;
+                                var item = res;
                                 if (item != undefined) {
                                          var rev = item.REVENUE_EARNED;
                                          if(rev==undefined||rev==""){
@@ -1227,16 +1218,17 @@ var app = {
                         if(id==="all"){
                                 requestId="";
                         }
-                        valueChain.tool.callServiceNoLoadingShow({
-                                url : soapUrl,
-                                soapAction : action,
-                                success : onSuccess,
-                                error : app.onServiceError,
-                                complete : onComplete,
-                                data : valueChain.ws.getCustomerStatisticRevenueRequest({
-                                        customerAccId : requestId
-                                })
-                        }); 
+                        // valueChain.tool.callServiceNoLoadingShow({
+                                // url : soapUrl,
+                                // soapAction : action,
+                                // success : onSuccess,
+                                // error : app.onServiceError,
+                                // complete : onComplete,
+                                // data : valueChain.ws.getCustomerStatisticRevenueRequest({
+                                        // customerAccId : requestId
+                                // })
+                        // }); 
+                        onSuccess(libLoadRevenue(requestId));
 
                 }
                 if (service.revenue[id] === undefined) {
@@ -1710,20 +1702,22 @@ var sdc = {
             }
             console.log('success');
        };
-        valueChain.tool.callService({
-                url : createMeetingURL,
-                soapAction : createMeetingAction,
-                success : onSuccess,
-                error : app.onServiceError,
-                complete : onComplete,
-                data : valueChain.ws.createUpdateMeetingMinutes({
-                        salesName : salesName,
-                        constomerId : constomerId,
-                        contactId:contactId,
-                        content : content,
-                        meetingId:meetingId,
-                })
-            });          
+        // valueChain.tool.callService({
+                // url : createMeetingURL,
+                // soapAction : createMeetingAction,
+                // success : onSuccess,
+                // error : app.onServiceError,
+                // complete : onComplete,
+                // data : valueChain.ws.createUpdateMeetingMinutes({
+                        // salesName : salesName,
+                        // constomerId : constomerId,
+                        // contactId:contactId,
+                        // content : content,
+                        // meetingId:meetingId,
+                // })
+            // });
+        recordMeeting(constomerId, contactId, content, meetingId);
+        onComplete();
         
     },
         loadCustomer : function() {
@@ -1837,49 +1831,50 @@ var sdc = {
         utils.setParam("currentContact","'"+JSON.stringify(currentContact));  
     },
     loadInterestedProduct : function(contactId){
-                var url = valueChain.ws.url.GET_INTERESTED_ITEM;
-                var soapAction = "process";//execute
-                function onSuccess(responseString, textStatus, jqXHR){
-                        var nodes = $.xml2json(responseString).Body.OutputParameters.X_GET_ITEMS_TBL;
-                        var data = {};
-                        data["Contact_Interested_item"] = [];
-                        if(nodes != ""){
-                                if($.isArray(nodes.X_GET_ITEMS_TBL_ITEM)){
-                                        $.each(nodes.X_GET_ITEMS_TBL_ITEM,function(index,val){
-                                                var itemId = val.PITEM_ID;
-                                                var arr = $.grep(app.allProducts.products, function(element, index){
-                                                        return (element.Item_Id == itemId);
-                                                });
-                                                $.merge(data["Contact_Interested_item"], arr);                                
-                                        });
-                                }else{
-                                        var val = nodes.X_GET_ITEMS_TBL_ITEM;
-                                        var itemId = val.PITEM_ID;
-                                        var arr = $.grep(app.allProducts.products, function(element, index){
-                                                return (element.Item_Id == itemId);
-                                        });
-                                        $.merge(data["Contact_Interested_item"], arr);
-                                }
-                                
-                        }
-                        sdc.buildInterestedCarousel(data);
-                }
-                function onError(responseString, textStatus, jqXHR){
-                        console.log(responseString);
-                }
-                function onComplete(){
-                        app.refresh();
-                }
-                valueChain.tool.callService({
-                        url:url,
-                        soapAction:soapAction,
-                        success:onSuccess,
-                        error:onError,
-                        complete : onComplete,
-                        data: valueChain.ws.getGetInterestedProd({
-                                "contactId" : contactId
-                        })
-                });
+                  var url = valueChain.ws.url.GET_INTERESTED_ITEM;
+                  var soapAction = "process";//execute
+                  function onSuccess(items){
+                          // var nodes = $.xml2json(responseString).Body.OutputParameters.X_GET_ITEMS_TBL;
+                          var data = {};
+                          data["Contact_Interested_item"] = [];
+                          // if(nodes != ""){
+                                  if($.isArray(items)){
+                                          $.each(items,function(index,val){
+                                                  var itemId = val.PITEM_ID;
+                                                  var arr = $.grep(app.allProducts.products, function(element, index){
+                                                          return (element.Item_Id == itemId);
+                                                  });
+                                                  $.merge(data["Contact_Interested_item"], arr);                                
+                                          });
+                                  }else{
+                                          var val = items;
+                                          var itemId = val.PITEM_ID;
+                                          var arr = $.grep(app.allProducts.products, function(element, index){
+                                                  return (element.Item_Id == itemId);
+                                          });
+                                          $.merge(data["Contact_Interested_item"], arr);
+                                  }
+                                  
+                          // }
+                          sdc.buildInterestedCarousel(data);
+                  }
+                  function onError(responseString, textStatus, jqXHR){
+                          console.log(responseString);
+                  }
+                  function onComplete(){
+                          app.refresh();
+                  }
+                  // valueChain.tool.callService({
+                          // url:url,
+                          // soapAction:soapAction,
+                          // success:onSuccess,
+                          // error:onError,
+                          // complete : onComplete,
+                          // data: valueChain.ws.getGetInterestedProd({
+                                  // "contactId" : contactId
+                          // })
+                  // });
+                  onSuccess(loadInterestedProduct(contactId));
     },
     buildInterestedCarousel:function(data){
             var temple = Handlebars.compile($("#template-RightBottomCarousel1").html());
@@ -1949,13 +1944,14 @@ var sdc = {
             console.log("error:" + errorMsg);
         };
 
-       function onSuccess(responseString, textStatus, jqXHR){
-            var error = $(responseString).find("Error");
-            if (error && error.length > 0) {
-                handleErrorResponse(responseString);
-                return;
-            }
-            notesList = $.xml2json(responseString).Body.OutputParameters.X_FETCH_MM_TBL_TYPE.X_FETCH_MM_TBL_TYPE_ITEM;
+       function onSuccess(notesList){
+            // var error = $(responseString).find("Error");
+            // if (error && error.length > 0) {
+                // handleErrorResponse(responseString);
+                // return;
+            // }
+            // notesList = $.xml2json(responseString).Body.OutputParameters.X_FETCH_MM_TBL_TYPE.X_FETCH_MM_TBL_TYPE_ITEM;
+            console.log(notesList);
             if(notesList !=undefined&&notesList!=''){ 
                 if ($.isArray(notesList)) {
                     $.each(notesList, function(index, val) {
@@ -2005,19 +2001,20 @@ var sdc = {
         }
         var createDate = moment(date,'YYYY-MM-DD').format('YYYY-MM-DD');
 
-               valueChain.tool.callService({
-                url : getMeetingURL,
-                soapAction : getMeetingAction,
-                success : onSuccess,
-                error : app.onServiceError,
-                complete : onComplete,
-                data : valueChain.ws.findMeetingMinutes({
-                    salesName : salesName,
-                    constomerId : constomerId,
-                    contactId : contactId,
-                    createDate:createDate
-                })
-            });            
+               // valueChain.tool.callService({
+                // url : getMeetingURL,
+                // soapAction : getMeetingAction,
+                // success : onSuccess,
+                // error : app.onServiceError,
+                // complete : onComplete,
+                // data : valueChain.ws.findMeetingMinutes({
+                    // salesName : salesName,
+                    // constomerId : constomerId,
+                    // contactId : contactId,
+                    // createDate:createDate
+                // })
+            // });            
+       onSuccess(showMeetingNotes(constomerId, contactId, createDate));
         }, 
         onMeetingNotesClick : function(e) {
         var $tr = $(this).closest("tr");
@@ -2553,7 +2550,7 @@ var contact = {
                     oauth_callback : callbackUrl
                 }
             }).signed_url;
-
+           console.log(url);
             $.get(url, function(data) {
                 contact.parseResponse(data);
                 var authorize_url = "https://www.linkedin.com/uas/oauth/authenticate?oauth_token=" + oauth_info.oauth_token;
@@ -2715,13 +2712,15 @@ var contact = {
                         console.log("error:" + errorMsg);
                 }
 
-                function onSuccess(responseString, textStatus, jqXHR) {
-                        var error = $(responseString).find("Error"), arr = [];
-                        if (error && error.length > 0) {
-                                handleErrorResponse(responseString);
-                                return;
-                        }
-                        var items = $.xml2json(responseString).Body.OutputParameters.X_VISIT_HISTORICAL_TBL.X_VISIT_HISTORICAL_TBL_ITEM;
+                function onSuccess(items) {
+                        // var error = $(responseString).find("Error")
+                        var arr = [];
+                        // if (error && error.length > 0) {
+                                // handleErrorResponse(responseString);
+                                // return;
+                        // }
+                        // var items = $.xml2json(responseString).Body.OutputParameters.X_VISIT_HISTORICAL_TBL.X_VISIT_HISTORICAL_TBL_ITEM;
+                        console.log(items);
                         var template = Handlebars.compile($("#visit-history-template").html());
                         if(!$.isArray(items)){
                 if (items != undefined && items != "") {
@@ -2763,23 +2762,24 @@ var contact = {
                         }
                         
                 }
-                valueChain.tool.callServiceNoLoadingShow({
-                        url : soapUrl,
-                        soapAction : action,
-                        success : onSuccess,
-                        error : app.onServiceError,
-                        complete : onComplete,
-                        data : valueChain.ws.getVisitHistoryRequest({
-
-                                name : "Lewis, Mr. David",
-                   // customerAccId:"5453",
-                    //customerContactId:"442698",
-                    //orgId:"204"
-                    customerAccId:contact.currentContact.Customer_account_id,
-                    customerContactId:contact.currentContact.Contact_id,
-                    orgId:"204"
-                        })
-                }); 
+                // valueChain.tool.callServiceNoLoadingShow({
+                        // url : soapUrl,
+                        // soapAction : action,
+                        // success : onSuccess,
+                        // error : app.onServiceError,
+                        // complete : onComplete,
+                        // data : valueChain.ws.getVisitHistoryRequest({
+// 
+                                // name : "Lewis, Mr. David",
+                   // // customerAccId:"5453",
+                    // //customerContactId:"442698",
+                    // //orgId:"204"
+                    // customerAccId:contact.currentContact.Customer_account_id,
+                    // customerContactId:contact.currentContact.Contact_id,
+                    // orgId:"204"
+                        // })
+                // }); 
+                onSuccess(buildVisitHistory(contact.currentContact.Customer_account_id, contact.currentContact.Contact_id));
         },
         buildContactDetail : function(){
                 $("#contact-phone-a").html(contact.currentContact.Contact_Phone_Number);
@@ -2936,17 +2936,17 @@ var chart = {
                 var a = valueChain.ws.soapAction.GETHISTORICALQUOTES;
                 var u = valueChain.ws.url.GET_HISTORICAL_QUOTES;
                 // var u = "json/a.xml";
-                function onSuccess(data, textStatus, jqXHR) {
+                function onSuccess(items) {
+                  console.log('LoadQuote');
                         var dates = [];
                         var series = [];
                         var openQuoteCount = {};
                         var closedQuoteCount = {};
-                        var $json = $.xml2json(data);
-                        if($json.Body.OutputParameters.X_HISTORICAL_QUOTE_TBL == undefined || $json.Body.OutputParameters.X_HISTORICAL_QUOTE_TBL == ""){
-                                $('#chart-container2').html("<div style='line-height:300px; height:300px;text-align:center'>No Data Found</div>");
-                                return false;
-                        }
-                        var items = $json.Body.OutputParameters.X_HISTORICAL_QUOTE_TBL.X_HISTORICAL_QUOTE_TBL_ITEM;
+                        // var $json = $.xml2json(data);
+                        // if(items == undefined || $json.Body.OutputParameters.X_HISTORICAL_QUOTE_TBL == ""){
+                                // $('#chart-container2').html("<div style='line-height:300px; height:300px;text-align:center'>No Data Found</div>");
+                                // return false;
+                        // }
                         $.each(items, function(index, val) {
                                 var transformedDate = moment(val.QUOTE_CREATE_DATE).format("MMM DD");
                                 if ($.inArray(transformedDate, dates)<0 && dates.length < 7) {
@@ -2998,15 +2998,7 @@ var chart = {
                         console.log(data);
                 }
 
-                valueChain.tool.callService({
-                        url : u,
-                        soapAction : a,
-                        success : onSuccess,
-                        error : onError,
-                        data : valueChain.ws.getHistoricalQuotesRequest({
-                                accountId : customerId
-                        })
-                }); 
+                onSuccess(loadQuote(customerId));
 
                 // $.ajax({
                         // url : u,
@@ -3017,16 +3009,16 @@ var chart = {
                 var a = valueChain.ws.soapAction.GETHISTORICALQUOTES;
                 var u = valueChain.ws.url.GET_CUSTOMER_REVENUE;
                 // var u = "json/b.xml";
-                function onSuccess(data, textStatus, jqXHR) {
+                function onSuccess(items) {
                         var dates = [];
                         var revenues = [];
                         var margins = [];
-                        var $json = $.xml2json(data);
-                        if($json.Body.OutputParameters.X_C_REVENUE_PER_MONTH_REC == undefined || $json.Body.OutputParameters.X_C_REVENUE_PER_MONTH_REC == ""){
-                                $('#chart-container3').html("<div style='line-height:300px; height:300px;text-align:center'>No Data Found</div>");
-                                return false;
-                        }
-                        var items = $json.Body.OutputParameters.X_C_REVENUE_PER_MONTH_REC.X_C_REVENUE_PER_MONTH_REC_ITEM;
+                        // var $json = $.xml2json(data);
+                        // if($json.Body.OutputParameters.X_C_REVENUE_PER_MONTH_REC == undefined || $json.Body.OutputParameters.X_C_REVENUE_PER_MONTH_REC == ""){
+                                // $('#chart-container3').html("<div style='line-height:300px; height:300px;text-align:center'>No Data Found</div>");
+                                // return false;
+                        // }
+                        // var items = $json.Body.OutputParameters.X_C_REVENUE_PER_MONTH_REC.X_C_REVENUE_PER_MONTH_REC_ITEM;
                         //sort the items
                         items.sort(function(a,b){
                                 var _a = Number(a.YEAR_)*12+Number(a.MONTH_);
@@ -3056,7 +3048,6 @@ var chart = {
                         var opt = $.extend({}, chart.chartOption3, {
                                 series : series
                         });
-
                         $('#chart-container3').highcharts(opt);
                 }
 
@@ -3065,15 +3056,16 @@ var chart = {
                 }
 
 
-                valueChain.tool.callService({
-                        url : u,
-                        soapAction : a,
-                        success : onSuccess,
-                        error : onError,
-                        data : valueChain.ws.getCustomerRevenueRequest({
-                                customerAccId : customerId
-                        })
-                }); 
+                // valueChain.tool.callService({
+                        // url : u,
+                        // soapAction : a,
+                        // success : onSuccess,
+                        // error : onError,
+                        // data : valueChain.ws.getCustomerRevenueRequest({
+                                // customerAccId : customerId
+                        // })
+                // }); 
+                onSuccess(loadRevenue(customerId));
 
                 // $.ajax({
                         // url : u,
@@ -3255,20 +3247,12 @@ var quoto={
                         sdc.refresh();
                 }
 
-                function handleErrorResponse(responseString) {
+                function handleErrorResponse(quoteArray) {
                         var errorMsg = valueChain.tool.extractErrorMsg(responseString);
                         console.log("error:" + errorMsg);
                 }
 
-                function onSuccess(responseString, textStatus, jqXHR) {
-                        var error = $(responseString).find("Error");
-                        if (error && error.length > 0) {
-                                handleErrorResponse(responseString);
-                                return;
-                        }
-                        detail = $.xml2json(responseString).Body.OutputParameters.X_HISTORICAL_QUOTE_TBL;
-                        if(detail!=undefined&&detail!=""){
-                                quoteArray = detail.X_HISTORICAL_QUOTE_TBL_ITEM;
+                function onSuccess(quoteArray) {
                                 for (var i = 0; i < quoteArray.length; i++) {
                                         var obj = {};
                                         var item = [], itemStatus = [];
@@ -3337,10 +3321,7 @@ var quoto={
                                         }
                                         obj.quote_status = itemStatus;
                                         loadQuoteArray.push(obj);
-                                }
-
                         }
-                        
                         if (loadQuoteArray.length > 0) {
                                 quoto.loadQuoteNext(loadQuoteArray);
                                 app.changePage($(".page:not(:hidden)"), $("#quotelist-page"));
@@ -3353,16 +3334,18 @@ var quoto={
                 if (id == undefined) {
                         id = '';
                 }
-                valueChain.tool.callService({
-                        url : soapUrl,
-                        soapAction : action,
-                        success : onSuccess,
-                        error : app.onServiceError,
-                        complete : onComplete,
-                        data : valueChain.ws.getHistoricalQuotesRequest({
-                                accountId : id
-                        })
-                });
+                // valueChain.tool.callService({
+                        // url : soapUrl,
+                        // soapAction : action,
+                        // success : onSuccess,
+                        // error : app.onServiceError,
+                        // complete : onComplete,
+                        // data : valueChain.ws.getHistoricalQuotesRequest({
+                                // accountId : id
+                        // })
+                // });
+    onSuccess(loadQuote(id));
+    onComplete();
 
         }
         

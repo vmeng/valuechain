@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Module specificationVersion="1">
 	<ModulePrefs title="PwC L2Q Network"
-               description="A social network solution on value chain (Leads to Quotes) by PwC"
-               author="Nick Yu"
-               author_affiliation="PwC"
-			   author_email="nick.yu@cnsdc01.pwc.com">
+     description="A social network solution on value chain (Leads to Quotes) by PwC"
+     author="Nick Yu"
+     author_affiliation="PwC"
+	 author_email="nick.yu@cnsdc01.pwc.com">
 		<!-- <Require feature="jive-connects-v1">
 			<Param name="alias:ws_all_revenue|title:All Revenue">http://12.154.232.121:8002/soa-infra/services/default/GetCustomerAllRevenue/getcustomerallrevenuebpelprocess_client_ep</Param>
 		</Require> -->

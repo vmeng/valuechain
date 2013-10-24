@@ -7,7 +7,7 @@ var consumer_key = "247fmvid6e8k";
 var shared_secret = "4WWHRnj9YbTsw4cr";
 var callbackUrl = "http://ec2-75-101-169-93.compute-1.amazonaws.com:8080/callback.html";
 var oauth_info = {};
-var jive_img_url = "https://sandbox.jiveon.com/gadgets/proxy?container=default&gadget=http%3A%2F%2Fapphosting.jivesoftware.com%2Fapps%2Fdev%2Fvaluechain_poc%2Fapp.xml&debug=0&nocache=1&html_tag_context=img&url=http%3A%2F%2Fapphosting.jivesoftware.com%2Fapps%2Fdev%2Fvaluechain_poc%2Fimages%2F";
+var jive_img_url = "https://sandbox.jiveon.com/gadgets/proxy?container=default&gadget=http%3A%2F%2Fapphosting.jivesoftware.com%2Fapps%2Fdev%2Fpwcvaluechain%2Fapp.xml&debug=0&nocache=1&html_tag_context=img&url=http%3A%2F%2Fapphosting.jivesoftware.com%2Fapps%2Fdev%2Fpwcvaluechain%2Fimages%2F";
 var oauth = OAuthSimple(consumer_key, shared_secret);
 var product={  
     id:0,  
